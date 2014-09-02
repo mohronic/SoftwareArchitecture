@@ -3,7 +3,7 @@ Use case name
 	BuyOneWayTicket
 
 Participating actor
-	Communicates with Traveler
+	Initiated by Traveler
 
 Flow of events
 	1.	The Traveler chooses to buy one way ticket
@@ -25,7 +25,7 @@ Use case name
 	BuyWeeklyCard
 
 Participating actor
-	Communicates with Traveler
+	Initiated by Traveler
 
 Flow of events
 	1.	The Traveler chooses to buy weekly card
@@ -47,7 +47,7 @@ Use case name
 	BuyMonthlyCard
 
 Participating actor
-	Communicates with Traveler
+	Initiated by Traveler
 
 Flow of events
 	1.	The Traveler chooses to buy a monthly card
@@ -69,7 +69,7 @@ Use case name
 	UpdateTariff
 
 Participating actor
-	Communicates with CentralComputer
+	Initiated by CentralComputer
 
 Flow of events
 	1.	The CentralComputer updates the tariff on the distributor.
@@ -85,19 +85,42 @@ Quality requirements
 
 
 Use case name
-	UpdateTariff
+	DistributorException
 
 Participating actor
-	Communicates with CentralComputer
+	Communicates with Traveler
 
 Flow of events
-	1.	The CentralComputer updates the tariff on the distributor.
+	...
 
 Entry condition
-	-	There has been changes to the tariff
+	-	This use case extends BuyOneWayTicket, BuyWeeklyCard and BuyMonthlyCard use cases. It is initiated whenever a problem occurs, as the Traveler is trying to buy a ticket.
 
 Exit condition
-	-	The Distributors tariff has been updated
+	-	...
 
 Quality requirements
 	-	...
+
+
+Use case name
+	TimeOut
+
+Participating actor
+	Inherited from DistributorException use case
+
+Flow of events
+	1.	Cancel transaction
+	2.	notify Traveler that too much time has been spent at one stage of the transaction
+
+Entry condition
+	-	Inherited from DistributorException, AND
+	-	XX time has been spent on one stage of the transaction.
+
+Exit condition
+	-	User has be notified
+
+Quality requirements
+	-	...
+
+
