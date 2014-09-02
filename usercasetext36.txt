@@ -1,0 +1,103 @@
+
+Use case name
+	BuyOneWayTicket
+
+Participating actor
+	Communicates with Traveler
+
+Flow of events
+	1.	The Traveler chooses to buy one way ticket
+	2.	The Traveler pays
+	3.	The ticket is printed
+
+Entry condition
+	-	The ticket distributor has change and paper
+
+Exit condition
+	-	The Traveler has received the ticker, OR
+	-	The Traveler has received an explanation indicating why the transaction can't be completed.
+
+Quality requirements
+	-	...
+
+
+Use case name
+	BuyWeeklyCard
+
+Participating actor
+	Communicates with Traveler
+
+Flow of events
+	1.	The Traveler chooses to buy weekly card
+	2.	The Traveler pays
+	3.	The card is printed
+
+Entry condition
+	-	The ticket distributor has change and paper
+
+Exit condition
+	-	The Traveler has received the card, OR
+	-	The Traveler has received an explanation indicating why the transaction can't be completed.
+
+Quality requirements
+	-	...
+
+
+Use case name
+	BuyMonthlyCard
+
+Participating actor
+	Communicates with Traveler
+
+Flow of events
+	1.	The Traveler chooses to buy a monthly card
+	2.	The Traveler pays
+	3.	The card is printed
+
+Entry condition
+	-	The ticket distributor has change and paper
+
+Exit condition
+	-	The Traveler has received the card, OR
+	-	The Traveler has received an explanation indicating why the transaction can't be completed.
+
+Quality requirements
+	-	...
+
+
+Use case name
+	UpdateTariff
+
+Participating actor
+	Communicates with CentralComputer
+
+Flow of events
+	1.	The CentralComputer updates the tariff on the distributor.
+
+Entry condition
+	-	There has been changes to the tariff
+
+Exit condition
+	-	The Distributors tariff has been updated
+
+Quality requirements
+	-	...
+
+
+Use case name
+	UpdateTariff
+
+Participating actor
+	Communicates with CentralComputer
+
+Flow of events
+	1.	The CentralComputer updates the tariff on the distributor.
+
+Entry condition
+	-	There has been changes to the tariff
+
+Exit condition
+	-	The Distributors tariff has been updated
+
+Quality requirements
+	-	...
