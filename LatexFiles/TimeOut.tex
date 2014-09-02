@@ -1,11 +1,11 @@
-\subsection{Buy monthly card}
+\subsection{Timeout}
 
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
 \end{tikzpicture}
 
 \flushleft{\textbf{Participating actors: }} \\
-Initiated by Traveler
+Inherited from DistributorException use case
 \\
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
@@ -14,9 +14,8 @@ Initiated by Traveler
 \flushleft{\textbf{Flow of events: }} \\
 \begin{itemize}
 
-\item The Traveler chooses to buy monthly card
-\item The Traveler pays
-\item The card is printed
+\item Cancel transaction
+\item Notify Traveler that too much time has been spent at one stage of the transaction
 
 \end{itemize}
 \begin{tikzpicture}
@@ -24,21 +23,14 @@ Initiated by Traveler
 \end{tikzpicture}
 
 \flushleft{\textbf{Entry conditions: }} \\
-The ticket distributor has change and paper
+Inherited from DistributorException, \textbf{AND} XX time has been spent on one stage of the transaction.
 \\
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
 \end{tikzpicture}
 
 \flushleft{\textbf{Exit conditions: }} \\
-The Traveler has received the card, \textbf{OR} the Traveler has received an explanation indicating why the transaction can't be completed.
-\\
-\begin{tikzpicture}
-\draw (0,0) -- (12,0);
-\end{tikzpicture}
-
-\flushleft{\textbf{Quality requirements: }} \\
---
+User has be notified
 \\
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
