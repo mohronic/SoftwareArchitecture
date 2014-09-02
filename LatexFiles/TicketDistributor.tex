@@ -1,0 +1,33 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\usepackage[pdftex]{graphicx}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage[danish]{babel}
+\renewcommand{\danishhyphenmins}{22}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[danish=quotes]{csquotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fixltx2e}
+\usepackage{subfiles}
+\usepackage{color}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\section{Use cases}
+Below the 8 use cases are listed
+
+\input{./BuyOneWayTicket.tex}
+\pagebreak
+\input{./BuyWeeklyCard.tex}
+\pagebreak
+\input{./BuyMonthlyCard.tex}
+\pagebreak
+\input{./UpdateTariff.tex}
+
+\end{document}
