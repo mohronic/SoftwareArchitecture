@@ -73,6 +73,7 @@ Participating actor
 
 Flow of events
 	1.	The CentralComputer updates the tariff on the distributor.
+	2.	Distributor confirms the tariff is updated.
 
 Entry condition
 	-	There has been changes to the tariff
@@ -114,13 +115,68 @@ Flow of events
 	2.	notify Traveler that too much time has been spent at one stage of the transaction
 
 Entry condition
-	-	Inherited from DistributorException, AND
 	-	XX time has been spent on one stage of the transaction.
 
 Exit condition
-	-	User has be notified
+	-	User has been notified
 
 Quality requirements
 	-	...
 
 
+Use case name
+	TransactionAborted
+
+Participating actor
+	Inherited from DistributorException use case
+
+Flow of events
+	1.	Cancel transaction
+	2.	notify Traveler that transaction has been aborted
+
+Entry condition
+	-	Some event has aborted the transaction
+
+Exit condition
+	-	User has been notified
+
+Quality requirements
+	-	...
+
+
+Use case name
+	DistributorOutOfPaper
+
+Participating actor
+	Inherited from DistributorException use case
+
+Flow of events
+	1.	notify Travelers that the distributor is out of paper.
+
+Entry condition
+	-	The distributor is out of paper.
+
+Exit condition
+	-	The distributor has been refilled with paper.
+
+Quality requirements
+	-	...
+
+
+Use case name
+	DistributorOutOfPaper
+
+Participating actor
+	Inherited from DistributorException use case
+
+Flow of events
+	1.	notify Travelers that the distributor is out of change.
+
+Entry condition
+	-	The distributor is out of change.
+
+Exit condition
+	-	The distributor has been refilled with change.
+
+Quality requirements
+	-	...
