@@ -164,7 +164,7 @@ Quality requirements
 
 
 Use case name
-	DistributorOutOfPaper
+	DistributorOutOfChange
 
 Participating actor
 	Inherited from DistributorException use case

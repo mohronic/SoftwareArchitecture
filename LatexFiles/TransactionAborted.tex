@@ -1,11 +1,11 @@
-\subsection{Update tariff}
+\subsection{Transaction aborted}
 
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
 \end{tikzpicture}
 
 \flushleft{\textbf{Participating actors: }} \\
-Initiated by CentralComputer
+Inherited from DistributorException use case
 \\
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
@@ -14,8 +14,8 @@ Initiated by CentralComputer
 \flushleft{\textbf{Flow of events: }} \\
 \begin{itemize}
 
-\item The CentralComputer updates the tariff on the distributor.
-\item Distributor confirms the tariff has been updated
+\item Cancel transaction
+\item Notify the traveler that the transaction has been aborted
 
 \end{itemize}
 \begin{tikzpicture}
@@ -23,14 +23,14 @@ Initiated by CentralComputer
 \end{tikzpicture}
 
 \flushleft{\textbf{Entry conditions: }} \\
-There has been changes to the tariff
+Some event has aborted the transaction
 \\
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
 \end{tikzpicture}
 
 \flushleft{\textbf{Exit conditions: }} \\
-The Distributors tariff has been updated
+Traveler has been notified
 \\
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
