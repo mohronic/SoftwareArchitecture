@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  8 SEP 2014 10:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  9 SEP 2014 13:24
 entering extended mode
-**ticketdistributor
+**TicketDistributor
 
-(C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\ticketdistri
+(C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\TicketDistri
 butor.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
@@ -534,46 +534,85 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 librarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count129
+\calc@Bcount=\count130
+\calc@Adimen=\dimen161
+\calc@Bdimen=\dimen162
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count131
+\calc@Cskip=\skip48
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box39
+\AM@toc@title=\toks40
+\c@AM@survey=\count132
+\AM@templatesizebox=\box40
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'danish'.
 
-(C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\ticketdistri
+(C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\TicketDistri
 butor.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 21.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
-\scratchdimen=\dimen161
-\scratchbox=\box39
-\nofMPsegments=\count130
-\nofMParguments=\count131
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count132
-\MPscratchDim=\dimen162
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count133
+\scratchdimen=\dimen163
+\scratchbox=\box41
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen164
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks42
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box42
+
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\BuyOneWayTic
 ket.tex
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 17.
@@ -606,25 +645,59 @@ borted.tex [6])
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\DistributorO
 utOfPaper.tex [7])
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\DistributorO
-utOfChange.tex [8]) [9]
-(C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\ticketdistri
+utOfChange.tex [8]) [9] <sequence.png, id=36, 588.39825pt x 459.51675pt>
+File: sequence.png Graphic file (type png)
+
+<use sequence.png>
+Package pdftex.def Info: sequence.png used on input line 48.
+(pdftex.def)             Requested size: 470.71924pt x 367.61389pt.
+
+Overfull \hbox (80.71924pt too wide) in paragraph at lines 48--49
+ [][] 
+ []
+
+[10 <C:/Users/Trondur/Documents/GitHub/SoftwareArchitecture/LatexFiles/sequence
+.png>] <class.png, id=42, 576.9555pt x 301.125pt>
+File: class.png Graphic file (type png)
+ <use class.png>
+Package pdftex.def Info: class.png used on input line 57.
+(pdftex.def)             Requested size: 403.86609pt x 210.78606pt.
+
+Overfull \hbox (13.86609pt too wide) in paragraph at lines 57--58
+ [][] 
+ []
+
+[11 <C:/Users/Trondur/Documents/GitHub/SoftwareArchitecture/LatexFiles/class.pn
+g>] <activity.png, id=47, 626.34pt x 283.65974pt>
+File: activity.png Graphic file (type png)
+ <use activity.png>
+Package pdftex.def Info: activity.png used on input line 64.
+(pdftex.def)             Requested size: 438.435pt x 198.56046pt.
+
+Overfull \hbox (48.435pt too wide) in paragraph at lines 64--65
+ [][] 
+ []
+
+[12 <C:/Users/Trondur/Documents/GitHub/SoftwareArchitecture/LatexFiles/activity
+.png>]
+(C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\TicketDistri
 butor.aux) ) 
 Here is how much of TeX's memory you used:
- 13333 strings out of 493921
- 257528 string characters out of 3147276
- 305253 words of memory out of 3000000
- 16346 multiletter control sequences out of 15000+200000
+ 14122 strings out of 493921
+ 270153 string characters out of 3147276
+ 322061 words of memory out of 3000000
+ 17107 multiletter control sequences out of 15000+200000
  23012 words of font info for 23 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,5n,54p,823b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,7n,54p,823b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/P
 rogram Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb
 >
-Output written on ticketdistributor.pdf (9 pages, 73484 bytes).
+Output written on TicketDistributor.pdf (12 pages, 140809 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
