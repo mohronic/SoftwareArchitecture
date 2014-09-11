@@ -1,0 +1,6 @@
+D:\ITU\BDSA\VS2013\BDSA2014\HelloWorld\bin\Debug\HelloWorld.exe.config
+D:\ITU\BDSA\VS2013\BDSA2014\HelloWorld\bin\Debug\HelloWorld.exe
+D:\ITU\BDSA\VS2013\BDSA2014\HelloWorld\bin\Debug\HelloWorld.pdb
+D:\ITU\BDSA\VS2013\BDSA2014\HelloWorld\obj\Debug\HelloWorld.csprojResolveAssemblyReference.cache
+D:\ITU\BDSA\VS2013\BDSA2014\HelloWorld\obj\Debug\HelloWorld.exe
+D:\ITU\BDSA\VS2013\BDSA2014\HelloWorld\obj\Debug\HelloWorld.pdb

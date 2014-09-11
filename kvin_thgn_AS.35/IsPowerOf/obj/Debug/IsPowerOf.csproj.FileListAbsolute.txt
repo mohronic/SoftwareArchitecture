@@ -1,0 +1,6 @@
+D:\ITU\BDSA\VS2013\BDSA2014\IsPowerOf\bin\Debug\IsPowerOf.exe.config
+D:\ITU\BDSA\VS2013\BDSA2014\IsPowerOf\bin\Debug\IsPowerOf.exe
+D:\ITU\BDSA\VS2013\BDSA2014\IsPowerOf\bin\Debug\IsPowerOf.pdb
+D:\ITU\BDSA\VS2013\BDSA2014\IsPowerOf\obj\Debug\IsPowerOf.exe
+D:\ITU\BDSA\VS2013\BDSA2014\IsPowerOf\obj\Debug\IsPowerOf.pdb
+D:\ITU\BDSA\VS2013\BDSA2014\IsPowerOf\obj\Debug\IsPowerOf.csprojResolveAssemblyReference.cache
