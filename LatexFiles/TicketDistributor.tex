@@ -20,8 +20,14 @@
 
 \begin{document}
 
+\title{Assignment 36}
+\author{Tróndur Høgnason \and  Kristian Mohr Nielsen}
+\date{\today}
+\maketitle
+\pagebreak
+
 \section{Use cases}
-Below the 8 use cases are listed
+Below the 9 use cases are listed. We have made an extra, more general, exceptional use-case, to make it more organized, instead of having lines from every exceptional use-case to every regular use-case. Quality requirements are left blank, since there where no requirements stated in the exercise and we didn't want make something up for all of the use-cases. But some examples could be that the payment transaction need to be completed in under xx seconds after the pin has been written. 
 
 \input{./BuyOneWayTicket.tex}
 \pagebreak
@@ -42,26 +48,31 @@ Below the 8 use cases are listed
 \input{./DistributorOutOfChange}
 \pagebreak
 
-\section{Sequence diagram}
+\section{Class diagram}
+Our class diagram (figur 1) is of the distributor and its parts, although simple. We've chosen it has: a touch display, for input and output of information, two terminals, one for paying with card and another for paying with cash and finally it has a printer, to print the pass (a ticket or a card).
 \begin{figure}[h]
 \centering
-\includegraphics[scale = 0.8]{sequence.png}
+\includegraphics[scale = 0.9]{class.png}
+\caption{Class diagram}
+\end{figure}
+
+\pagebreak
+
+\section{Sequence diagram}
+We've chosen to make a sequence diagram for the  interaction between a traveler, the distributor and parts of the distributor(figur 2), when the traveler buys a pass (a ticket or a card).
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.7]{sequence.png}
 \caption{Sequence diagram}
 \end{figure}
 
 \pagebreak
 
-\section{Class diagram}
-\begin{figure}[h]
-\centering
-\includegraphics[scale = 0.7]{class.png}
-\caption{Class diagram}
-\end{figure}
-\pagebreak
 \section{Activity diagram}
+Figur 3 shows our activity diagram of a traveler buying a pass. First the traveler has to choose which kind of pass he wants to buy, then the traveler can choose to pay with either card or cash. After paying the ticket is printed and the traveler can take it. If there is any change the raveler picks it up (atleast in a perfect world) and the transaction is over.
 \begin{figure}[h]
 \centering
-\includegraphics[scale = 0.7]{activity.png}
+\includegraphics[scale = 0.8]{activity.png}
 \caption{Activity diagram}
 \end{figure}
 
