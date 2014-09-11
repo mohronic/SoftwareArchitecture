@@ -1,0 +1,7 @@
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\obj\Debug\PolishCalculator.test.csprojResolveAssemblyReference.cache
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\bin\Debug\PolishCalculator.test.dll
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\bin\Debug\PolishCalculator.test.pdb
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\bin\Debug\PolishCalculator.exe
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\bin\Debug\PolishCalculator.pdb
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\obj\Debug\PolishCalculator.test.dll
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\obj\Debug\PolishCalculator.test.pdb

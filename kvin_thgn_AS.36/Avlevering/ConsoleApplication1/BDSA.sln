@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishCalculator", "ConsoleApplication1\PolishCalculator.csproj", "{F65DFB06-93D8-44E1-883F-BD5E3D15983E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishCalculator.test", "PolishCalculator.test\PolishCalculator.test.csproj", "{49388BDE-B804-4DE4-8A7A-BB93AAC44055}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F65DFB06-93D8-44E1-883F-BD5E3D15983E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65DFB06-93D8-44E1-883F-BD5E3D15983E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65DFB06-93D8-44E1-883F-BD5E3D15983E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65DFB06-93D8-44E1-883F-BD5E3D15983E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49388BDE-B804-4DE4-8A7A-BB93AAC44055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49388BDE-B804-4DE4-8A7A-BB93AAC44055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49388BDE-B804-4DE4-8A7A-BB93AAC44055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49388BDE-B804-4DE4-8A7A-BB93AAC44055}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

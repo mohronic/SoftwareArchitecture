@@ -1,0 +1,6 @@
+c:\users\trondur\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+c:\users\trondur\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\PolishCalculator.exe.config
+c:\users\trondur\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\PolishCalculator.exe
+c:\users\trondur\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\PolishCalculator.pdb
+c:\users\trondur\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\PolishCalculator.exe
+c:\users\trondur\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\PolishCalculator.pdb
