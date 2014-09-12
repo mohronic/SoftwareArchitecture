@@ -27,7 +27,7 @@
 \pagebreak
 
 \section{Use-case diagram}
-Our use-case diagram (figur 1) has an extra exceptional use-case, which we chose to include to make it more organized. There is two actors: the Traveler whom invokes the three use-cases: BuyOneWayTicket, BuyWeeklyCard and BuyMonthlyCard, and the CentralComputerSystem whom invokes the use-case UpdateTariff. The three use-cases invoked by the traveler each extends DistributorException whom generalise the other exceptional use-cases. This means that the three use-cases can invoke all the exceptional use-cases
+Our use-case diagram (figur 1) has an extra exceptional use-case, which we chose to include to make it more organized. There is two actors: the Traveler who invokes the three use-cases: BuyOneWayTicket, BuyWeeklyCard and BuyMonthlyCard, and the CentralComputerSystem who invokes the use-case UpdateTariff. Each one of the three use-cases invoked by the traveler extend DistributorException which generalises the other exceptional use-cases. This means that the three use-cases can invoke all of the exceptional use-cases
 \begin{figure}[h]
 \centering
 \includegraphics[scale = 0.9]{usecase.png}
@@ -36,7 +36,7 @@ Our use-case diagram (figur 1) has an extra exceptional use-case, which we chose
 \pagebreak
 
 \section{Use cases}
-Below the 9 use cases are listed. Quality requirements are left blank, since there where no requirements stated in the exercise and we didn't want make something up for all of the use-cases. But some examples could be that the payment transaction need to be completed in under xx seconds after the pin has been written. 
+Below the nine use cases are listed. Quality requirements are left blank, since there were no requirements stated in the exercise and we didn't want make something up for all of the use-cases. But some examples could be that the payment transaction needs to be completed in under xx seconds after the pin has been written. 
 
 \input{./BuyOneWayTicket.tex}
 \pagebreak
@@ -58,7 +58,7 @@ Below the 9 use cases are listed. Quality requirements are left blank, since the
 \pagebreak
 
 \section{Class diagram}
-Our class diagram (figur 2) is of the distributor and its parts, although simple. We've chosen it has: a touch display, for input and output of information, two terminals, one for paying with card and another for paying with cash and finally it has a printer, to print the pass (a ticket or a card).
+Our class diagram (figur 2) is of the distributor and its parts, although simple. We've chosen that it has: a touch display, for input and output of information, two terminals - one for paying with card and another for paying with cash and finally it has a printer to print the pass (a ticket or a card).
 \begin{figure}[h]
 \centering
 \includegraphics[scale = 0.9]{class.png}
@@ -78,7 +78,7 @@ We've chosen to make a sequence diagram for the  interaction between a traveler,
 \pagebreak
 
 \section{Activity diagram}
-Figur 4 shows our activity diagram of a traveler buying a pass. First the traveler has to choose which kind of pass he wants to buy, then the traveler can choose to pay with either card or cash. After paying the ticket is printed and the traveler can take it. If there is any change the raveler picks it up (atleast in a perfect world) and the transaction is over.
+Figure 4 shows our activity diagram of a traveler buying a pass. First the traveler has to choose which kind of pass he wants to buy, then the traveler can choose to pay with either card or cash. After paying the ticket is printed and the traveler can take it. If there is any change the traveler picks it up (at least in a perfect world) and the transaction is over.
 \begin{figure}[h]
 \centering
 \includegraphics[scale = 0.8]{activity.png}
