@@ -12,12 +12,13 @@ namespace PolishCalculator
         private static void Main(string[] args)
         {
                 Console.WriteLine("Input:");
-                foreach (var t in args)
-                {
-                    Console.Write(t + " ");
-                }
-                Console.WriteLine("");
-                Console.WriteLine("Result: " + DoThePolishStuff(args));
+                    foreach (var t in args)
+                    {
+                        Console.Write(t + " ");
+                    }
+                    Console.WriteLine("");
+                    Console.WriteLine("Result: " + DoThePolishStuff(args));
+        
         }
         /// <summary>
         /// Polish calculator. Method calculates the result of input numbers and operators.
@@ -36,7 +37,7 @@ namespace PolishCalculator
 
             foreach (var t in args)
             {
-                if (t == null || t == "")
+                if (string.IsNullOrEmpty(t))
                 {
                     Console.WriteLine("No input");
                     return 0;
@@ -76,9 +77,9 @@ namespace PolishCalculator
                     }
                 }
             }
-            if (numbers.Count > 1)
+            if (numbers.Count != 1)
             {
-                Console.WriteLine("You have too few operators...learn how to count...");
+                Console.WriteLine("You have too few operators, or your input is horribly weird");
                 return 0;
             }
             return numbers.Pop();
