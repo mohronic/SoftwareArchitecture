@@ -21,30 +21,7 @@ namespace TextSearch
             var matchingWords = SearchWords(word, "TestFile.txt", _command);
             string textFile = TextFileReader.ReadFile("TestFile.txt");
             string[] stringArr = StringToArray(matchingWords, textFile);
-            for (int i = 0; i < stringArr.Length; i++)
-            {
-                Console.Write(stringArr[i]);
-                Console.BackgroundColor = ConsoleColor.Yellow;
-                Console.ForegroundColor = ConsoleColor.Black;
-                if (matchingWords.Count > 0)
-                {
-                    if (matchingWords.First().StartsWith("http"))
-                    {
-                        Console.BackgroundColor = ConsoleColor.Blue;
-                    }
-                    else if (matchingWords.First().StartsWith("Sun") || matchingWords.First().StartsWith("Sat"))
-                    {
-                        Console.BackgroundColor = ConsoleColor.Red;
-                    }
-                    else
-                    {
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                    }
-                    Console.Write(matchingWords.First());
-                    matchingWords.RemoveAt(0);
-                }
-                Console.ResetColor();
-            }
+            PrintText(stringArr, matchingWords);
         }
         public static List<String> SearchWords(string word, string fileName, string command)
         {
@@ -111,6 +88,33 @@ namespace TextSearch
             }
             _command = "";
             return word;
+        }
+
+        public static void PrintText(string[] stringArr, List<string> matchingWords)
+        {
+            for (int i = 0; i < stringArr.Length; i++)
+            {
+                Console.Write(stringArr[i]);             
+                if (matchingWords.Count > 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    if (matchingWords.First().StartsWith("http"))
+                    {
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                    }
+                    else if (matchingWords.First().StartsWith("Sun") || matchingWords.First().StartsWith("Sat"))
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                    }
+                    Console.Write(matchingWords.First());
+                    matchingWords.RemoveAt(0);
+                }
+                Console.ResetColor();
+            }
         }
     }
     
