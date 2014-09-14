@@ -24,13 +24,81 @@ The calendar system supports 2 different kinds of users:
 \subsection{System models}
 
 \subsubsection{Scenarios}
-\textbf{Scenario name:} calendarEntryMeeting
-
-Participating actors: John, User.
-
+\textbf{Scenario name:} Create entry
+\\
+\textbf{Participating actors:} John (user)
+\\
 \textbf{Flow of events:}
 \begin{itemize}
 \item John is invited to meeting the 21st of July 2015. To remember it he wants to make an entry in his calendar. He accesses the create new entry function in the calendar system.
 \item John plots the information of the meeting and the date/time. He confirms the input and waits for the calendar to create the entry.
 \item The calendar system tells John that the entry has successfully been created.
 \end{itemize}
+\textbf{Scenario name:} Create account
+\\
+\textbf{Participating actors:} Alice (user)
+\\
+\textbf{Flow of events:}
+\begin{itemize}
+\item Alice has a lot of appointments, so she wants to create an account to the calendar system. She accesses the createUser function in the calendar system.
+\item Alice plots in all required information (for example login information and name). She then confirms the information and wait for the system to confirm the creation of her account.
+\item The calendar system confirms the notify Alice that her account has been successfully created.
+\end{itemize}
+\pagebreak
+\subsubsection{Use case model}
+Below is the use case model
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.8]{usecase}
+\caption{Use case model}
+\end{figure}
+\pagebreak
+\subsubsection{Use cases}
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm} |}
+    \hline
+    Use case name & CreateGroupEntry \\ \hline
+    Participating actors & Initiated by User - communicates with User \\ \hline
+    Flow of events & \tabitem The User creates a GroupEntry \\
+    \mbox{} & \tabitem The User searches for other Users and add them to the GroupEntry (Include use case FindUser and AddUser) \\
+    \mbox{} & \tabitem The User confirms input in the entry. \\
+    \mbox{} & \tabitem The system confirms entry has been created. \\
+    \mbox{} & \tabitem The system sends a notice to all added Users (Include use case NotifyUser). \\ \hline
+    Entry condition & The User creating the entry is logged in to the CalendarSystem \\ \hline
+    Exit condition & Entry has been created \\
+	\mbox{} & A notice has been sent to all added Users \\
+	\hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm} |}
+    \hline
+    Use case name & AddContact \\ \hline
+    Participating actors & Initiated by User - communicates with User \\ \hline
+    Flow of events & \tabitem The User opens the AddContact function. \\
+    \mbox{} & \tabitem The User searches for the User to add (Include use case FindUser). \\
+    \mbox{} & \tabitem The User adds the found User, to the ContactList (Include use case AddUser). \\
+    \mbox{} & \tabitem The system sends a Notice to the added User. \\ \hline
+    Entry condition & The User adding another User is logged on \\ \hline
+    Exit condition & The Users ContactList contains the added User \\
+    \mbox{} & A notice has been sent to the added Users \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm} |}
+    \hline
+    Use case name & Register \\ \hline
+    Participating actors & Initiated by User \\ \hline
+    Flow of events & \tabitem The User opens the register function and plots in any required information. \\
+    \mbox{} & \tabitem The User confirms the information and waits for the system. \\
+    \mbox{} & \tabitem The system notifies the User that the account has been successfully been created. \\
+    \hline
+    Entry conditions & The User has installed the Client part of the system \\ \hline
+    Exit condition & An account has been created for the User \\
+    \hline
+    \end{tabular}
+\end{center}
