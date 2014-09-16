@@ -1,0 +1,55 @@
+The program HighLighter is difficult to unit test. So we have chosen to do 
+some system tests also.
+
+--------------------------------------------------------------------------
+Test 1: Can the program find normal words?
+
+Input: neil, the, army
+
+Highlighting: Everything is displayed as it should
+
+--------------------------------------------------------------------------
+Test 2: Can the program use the + command?
+
+Input: two+members, with+winds, reaching+a
+
+Highlighting: Everything is displayed as it should
+
+--------------------------------------------------------------------------
+Test 3: Can the program use the * command in front of a word?
+
+Input: *ed, *sad, *lled
+
+Highlighting: Everything is displayed as it should
+
+--------------------------------------------------------------------------
+Test 4: Can the program use the * command at the end of a word?
+
+Input: ar*, th*, tr*
+
+Highlighting: Everything is displayed as it should
+
+--------------------------------------------------------------------------
+Test 5: What happens if no matches are found?
+
+Input: ababab
+
+Highlighting: Everything is displayed as it should
+
+--------------------------------------------------------------------------
+Test 6: What happens if no the searchword is the last word of the file?
+
+Input: first, idUSBRE87P03O20120826
+
+Highlighting: Everything is displayed as it should
+
+--------------------------------------------------------------------------
+Test 7: What happens if the searchword matches something found in an URL 
+	or a Date?
+
+Input: aug, http, ht*, *tp
+
+Highlighting: The program omits highlighting the searchword if it is 
+	      inside a date or an URL. Those take precedence over the 
+	      searchword.
+--------------------------------------------------------------------------
