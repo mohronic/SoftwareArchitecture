@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  14 SEP 2014 22:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  16 SEP 2014 12:19
 entering extended mode
-**CalendarSystem
+**CalendarSystem.tex
 
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
 .37\CalendarSystem.tex
@@ -632,40 +632,50 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box42
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 28.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 28.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 28.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 28.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 28.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 28.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 28.
+(C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
+.37\title.tex <./logo.jpg, id=4, 414.54875pt x 266.9975pt>
+File: ./logo.jpg Graphic file (type jpg)
+ <use ./logo.jpg>
+Package pdftex.def Info: ./logo.jpg used on input line 6.
+(pdftex.def)             Requested size: 58.49762pt x 37.67271pt.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Trondur/Document
+s/GitHub/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.37/logo.jpg>])
+(C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
+.37\CalendarSystem.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 3.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
+)
+\tf@toc=\write4
+ [1]
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
 .37\Introduction.tex
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 10.
@@ -678,37 +688,30 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
 .37\CurrentSystem.tex [2])
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
-.37\ProposedSystem.tex [3]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 11.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 11.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 11.
- [4] [5]
-<usecase.png, id=25, 535.40025pt x 325.215pt>
+.37\ProposedSystem.tex [3] [4] [5]
+<usecase.png, id=29, 535.40025pt x 325.215pt>
 File: usecase.png Graphic file (type png)
  <use usecase.png>
-Package pdftex.def Info: usecase.png used on input line 52.
+Package pdftex.def Info: usecase.png used on input line 49.
 (pdftex.def)             Requested size: 428.32079pt x 260.17235pt.
 
-Overfull \hbox (38.32079pt too wide) in paragraph at lines 52--53
+Overfull \hbox (38.32079pt too wide) in paragraph at lines 49--50
  [][] 
  []
 
 [6 <C:/Users/Trondur/Documents/GitHub/SoftwareArchitecture/LatexFiles/kvin_thgn
 _AS.37/usecase.png>]
-Overfull \hbox (20.26048pt too wide) in paragraph at lines 59--73
+Overfull \hbox (20.26048pt too wide) in paragraph at lines 56--70
  [] 
  []
 
 
-Overfull \hbox (20.26048pt too wide) in paragraph at lines 76--89
+Overfull \hbox (20.26048pt too wide) in paragraph at lines 73--86
  [] 
  []
 
 
-Overfull \hbox (20.26048pt too wide) in paragraph at lines 92--104
+Overfull \hbox (20.26048pt too wide) in paragraph at lines 89--101
  [] 
  []
 
@@ -718,22 +721,22 @@ Overfull \hbox (20.26048pt too wide) in paragraph at lines 92--104
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
 .37\CalendarSystem.aux) ) 
 Here is how much of TeX's memory you used:
- 14717 strings out of 493921
- 276264 string characters out of 3147276
+ 14720 strings out of 493921
+ 276640 string characters out of 3147276
  328802 words of memory out of 3000000
  17688 multiletter control sequences out of 15000+200000
- 51825 words of font info for 43 fonts, out of 3000000 for 9000
+ 63713 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,9n,54p,820b,675s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
-enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program F
+ 55i,9n,54p,824b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
+hsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on CalendarSystem.pdf (8 pages, 150583 bytes).
+onts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
+Output written on CalendarSystem.pdf (9 pages, 183123 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

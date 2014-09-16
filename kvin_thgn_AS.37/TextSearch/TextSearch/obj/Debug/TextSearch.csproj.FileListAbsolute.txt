@@ -3,3 +3,4 @@ C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch\bin
 C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch\bin\Debug\TextSearch.pdb
 C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch\obj\Debug\TextSearch.exe
 C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch\obj\Debug\TextSearch.pdb
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch\obj\Debug\TextSearch.csprojResolveAssemblyReference.cache

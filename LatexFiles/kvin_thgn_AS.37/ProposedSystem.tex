@@ -1,10 +1,7 @@
 \section{Proposed system}
 The proposed system is made of a system in two parts. The first part is the client, running on a regular computer, the second part is a server running on a centralised computer, available to all running clients through the internet.
 \subsection{Functional requirements}
-The calendar system supports 2 different kinds of users:
-\begin{itemize}
-\item Users who can manage entries in their calendar and manage their account.
-\end{itemize}
+The calendar system supports one actor - the user.
 \subsection{Nonfunctional requirements}
 
 \begin{center}
@@ -13,8 +10,8 @@ The calendar system supports 2 different kinds of users:
     Category & Nonfunctional requirements \\ \hline
     Usability & The UI of the client must resemble a paper calendar, as to ease learning process.\\ \hline
     Reliability & Loss of connection to the server must only cut off functions requiring connection, but not access to information already loaded.\\ \hline
-    Performance & The server must support multiple clients at once (e.g., 25).
-	The communication between client and server, when updating a server should be fast even with a low bandwidth connection. \\ \hline
+    Performance & \tabitem The server must support multiple clients at once (e.g., 25). \\
+    \mbox{} & \tabitem The communication between client and server, when updating a server should be fast even with a low bandwidth connection. \\ \hline
 	Supportability & ... \\ \hline
 	Implementation & The system should be implemented in C\# and work on all newer versions of Windows \\ \hline
 	Operation & ... \\ \hline

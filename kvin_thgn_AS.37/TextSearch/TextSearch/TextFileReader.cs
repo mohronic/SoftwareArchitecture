@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace BDSA14
+namespace TextSearch
 {
     /// <summary>
     ///   Utility class for reading text files into a single string.

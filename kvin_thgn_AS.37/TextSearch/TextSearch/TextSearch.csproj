@@ -60,7 +60,7 @@
     <Compile Include="TextFileReader.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TextHighLighter2.cs" />
+    <Compile Include="HighLighter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

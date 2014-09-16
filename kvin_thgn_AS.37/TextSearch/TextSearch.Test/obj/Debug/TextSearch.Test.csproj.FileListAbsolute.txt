@@ -1,0 +1,7 @@
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch.Test\bin\Debug\TextSearch.Test.dll
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch.Test\bin\Debug\TextSearch.Test.pdb
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch.Test\bin\Debug\TextSearch.exe
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch.Test\bin\Debug\TextSearch.pdb
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch.Test\obj\Debug\TextSearch.Test.csprojResolveAssemblyReference.cache
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch.Test\obj\Debug\TextSearch.Test.dll
+C:\Users\Trondur\Documents\Visual Studio 2013\Projects\TextSearch\TextSearch.Test\obj\Debug\TextSearch.Test.pdb
