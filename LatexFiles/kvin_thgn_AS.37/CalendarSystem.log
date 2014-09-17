@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  16 SEP 2014 12:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  17 SEP 2014 20:44
 entering extended mode
 **CalendarSystem.tex
 
@@ -721,10 +721,10 @@ Overfull \hbox (20.26048pt too wide) in paragraph at lines 89--101
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
 .37\CalendarSystem.aux) ) 
 Here is how much of TeX's memory you used:
- 14720 strings out of 493921
- 276640 string characters out of 3147276
+ 14726 strings out of 493921
+ 276717 string characters out of 3147276
  328802 words of memory out of 3000000
- 17688 multiletter control sequences out of 15000+200000
+ 17694 multiletter control sequences out of 15000+200000
  63713 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  55i,9n,54p,824b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -734,7 +734,7 @@ iles/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on CalendarSystem.pdf (9 pages, 183123 bytes).
+Output written on CalendarSystem.pdf (9 pages, 183708 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

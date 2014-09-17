@@ -6,7 +6,6 @@ namespace TextSearch.Test
     public class Test
     {
         [TestMethod]
-        [ExpectedException(typeof(System.IO.FileNotFoundException))]
         public void TestInvalidPath()
         {
             HighLighter.Print("Neil", "randomPath.txt");
@@ -31,6 +30,12 @@ namespace TextSearch.Test
         public void TestContainsCharacters()
         {
             HighLighter.Print("qwertyuiopasdfghjklzxcvbnmæøåQWERTYUIOPASDFGHJKLZXCVBNMÆØÅ", "TestFile.txt");
+        }
+
+        [TestMethod]
+        public void TestNoArguments()
+        {
+            HighLighter.Main(new string[0]);
         }
     }
 }

@@ -1,5 +1,5 @@
 \section{Proposed system}
-The proposed system is made of a system in two parts. The first part is the client, running on a regular computer, the second part is a server running on a centralised computer, available to all running clients through the internet.
+The proposed system is made of a system in two parts. The first part is the client, running on a regular computer that the user has access to. The second part is a server running on a centralised computer, available to all running clients through the internet. The server will not be physically available for the user.
 \subsection{Functional requirements}
 The calendar system supports one actor - the user.
 \subsection{Nonfunctional requirements}
@@ -8,12 +8,12 @@ The calendar system supports one actor - the user.
     \begin{tabular}{ | l | p{10cm} |}
     \hline
     Category & Nonfunctional requirements \\ \hline
-    Usability & The UI of the client must resemble a paper calendar, as to ease learning process.\\ \hline
+    Usability & The UI of the client must resemble a paper calendar to ease the learning process.\\ \hline
     Reliability & Loss of connection to the server must only cut off functions requiring connection, but not access to information already loaded.\\ \hline
     Performance & \tabitem The server must support multiple clients at once (e.g., 25). \\
     \mbox{} & \tabitem The communication between client and server, when updating a server should be fast even with a low bandwidth connection. \\ \hline
 	Supportability & ... \\ \hline
-	Implementation & The system should be implemented in C\# and work on all newer versions of Windows \\ \hline
+	Implementation & The system should be implemented in C\# and work on all newer versions of Windows. \\ \hline
 	Operation & ... \\ \hline
 	Legal & ... \\ \hline
     \end{tabular}
@@ -27,7 +27,7 @@ The calendar system supports one actor - the user.
 \\
 \textbf{Flow of events:}
 \begin{itemize}
-\item John is invited to meeting the 21st of July 2015. To remember it he wants to make an entry in his calendar. He accesses the create new entry function in the calendar system.
+\item John is invited to meeting the 21st of July 2015. To remember it he wants to make an entry in his calendar. He accesses the "create new entry" function in the calendar system.
 \item John plots the information of the meeting and the date/time. He confirms the input and waits for the calendar to create the entry.
 \item The calendar system tells John that the entry has successfully been created.
 \end{itemize}
@@ -37,9 +37,9 @@ The calendar system supports one actor - the user.
 \\
 \textbf{Flow of events:}
 \begin{itemize}
-\item Alice has a lot of appointments, so she wants to create an account to the calendar system. She accesses the createUser function in the calendar system.
-\item Alice plots in all required information (for example login information and name). She then confirms the information and wait for the system to confirm the creation of her account.
-\item The calendar system confirms the notify Alice that her account has been successfully created.
+\item Alice has a lot of appointments, so she wants to create an account in the calendar system. She accesses the "create user" function in the calendar system.
+\item Alice plots in all required information (for example login information and name). She then confirms the information and waits for the system to confirm the creation of her account.
+\item The calendar system confirms the creation of the account and notifies Alice that her account has been successfully created.
 \end{itemize}
 \pagebreak
 \subsubsection{Use case model}
@@ -58,10 +58,10 @@ Below is the use case model
     Use case name & CreateGroupEntry \\ \hline
     Participating actors & Initiated by User - communicates with User \\ \hline
     Flow of events & \tabitem The User creates a GroupEntry \\
-    \mbox{} & \tabitem The User searches for other Users and add them to the GroupEntry (Include use case FindUser and AddUser) \\
+    \mbox{} & \tabitem The User searches for other Users and add them to the GroupEntry (Includes the usecases: FindUser and AddUser) \\
     \mbox{} & \tabitem The User confirms input in the entry. \\
     \mbox{} & \tabitem The system confirms entry has been created. \\
-    \mbox{} & \tabitem The system sends a notice to all added Users (Include use case NotifyUser). \\ \hline
+    \mbox{} & \tabitem The system sends a notice to all added Users (Includes the use case NotifyUser). \\ \hline
     Entry condition & The User creating the entry is logged in to the CalendarSystem \\ \hline
     Exit condition & Entry has been created \\
 	\mbox{} & A notice has been sent to all added Users \\
@@ -75,8 +75,8 @@ Below is the use case model
     Use case name & AddContact \\ \hline
     Participating actors & Initiated by User - communicates with User \\ \hline
     Flow of events & \tabitem The User opens the AddContact function. \\
-    \mbox{} & \tabitem The User searches for the User to add (Include use case FindUser). \\
-    \mbox{} & \tabitem The User adds the found User, to the ContactList (Include use case AddUser). \\
+    \mbox{} & \tabitem The User searches for the User to add (Includes the use case FindUser). \\
+    \mbox{} & \tabitem The User adds the found User, to the ContactList (Includes the use case AddUser). \\
     \mbox{} & \tabitem The system sends a Notice to the added User. \\ \hline
     Entry condition & The User adding another User is logged on \\ \hline
     Exit condition & The Users ContactList contains the added User \\

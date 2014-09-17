@@ -1,3 +1,5 @@
+The test file is in folder \TextSearch\TextSearch\bin\Debug
+
 The program HighLighter is difficult to unit test. So we have chosen to do 
 some system tests also.
 

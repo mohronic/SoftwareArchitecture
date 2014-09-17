@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -14,7 +15,15 @@ namespace TextSearch
         /// <param name="args">A string of arguments</param>
         public static void Main(string[] args)
         {
-            Print(args[0], args[1]);
+            try
+            {
+                Print(args[0], args[1]);
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Please give the program some arguments.");
+                Console.WriteLine("First argument is the searchword, and the second is the filename.");
+            }
         }
         /// <summary>
         /// Reads a file from a filepath and find and highlights a given searchword, all URL's (words starting with http://) 
@@ -28,21 +37,35 @@ namespace TextSearch
         /// <param name="path">filepath</param>
         public static void Print(string search, string path)
         {
-            string word = FindCommand(search);
-            string textFile = TextFileReader.ReadFile(path);
-            var withoutSpecial = new string(word.Where(c => Char.IsLetterOrDigit(c)
-                                                || Char.IsWhiteSpace(c)).ToArray());
-            if (word != withoutSpecial)
+            try
             {
-                Console.WriteLine("Your string contains special regex characters. Please remove these and try again." +
-                                  "The program only accepts letters and numbers");
+                string word = FindCommand(search);
+                string textFile = TextFileReader.ReadFile(path);
+                var withoutSpecial = new string(word.Where(c => Char.IsLetterOrDigit(c)
+                                                                || Char.IsWhiteSpace(c)).ToArray());
+                if (word != withoutSpecial)
+                {
+                    Console.WriteLine(
+                        "Your string contains special regex characters. Please remove these and try again." +
+                        "The program only accepts letters and numbers");
+                }
+                else
+                {
+                    var searchWords = SearchWords(word, path, _command);
+
+
+                    PrintAndHighlight(textFile, searchWords);
+                }
             }
-            else
+            catch (FileNotFoundException)
             {
-                var searchWords = SearchWords(word, path, _command);
-
-
-                PrintAndHighlight(textFile, searchWords);
+                Console.WriteLine("File not found. Specify another file or check for misspelling.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something weird went on, please try again");
+                Console.WriteLine("Error message:");
+                Console.Write(e.Message);
             }
         }
         private static string FindCommand(string word)
@@ -84,7 +107,7 @@ namespace TextSearch
             MatchCollection matches;
             if (command.Equals("startsWith"))
             {
-                matches = Regex.Matches(text, @"(^| )" + word + @"\S*", RegexOptions.IgnoreCase);
+                matches = Regex.Matches(text, @"\b" + word + @"\S*", RegexOptions.IgnoreCase);
             }
             else if (command.Equals("endsWith"))
             {
@@ -95,16 +118,33 @@ namespace TextSearch
                 matches = Regex.Matches(text, @"\b" + word + @"\b", RegexOptions.IgnoreCase);
             }
             MatchCollection urls = Regex.Matches(text, @"\S*" + "http://" + @"\S*", RegexOptions.IgnoreCase);
-            MatchCollection dates = Regex.Matches(text, @"\S*" + "[a-zA-z]{3}, [0-9]{2} [a-zA-z]{3} [0-9]{4} [0-2][0-9]:[0-5][0-9]:[0-5][0-9] -?[0-9]{4}" + @"\b", RegexOptions.IgnoreCase);
-            foreach (Match match in matches)
-            {
-                words.Add(match);
-            }
+            MatchCollection dates = Regex.Matches(text, @"\S*" + "(mon|tue|wed|thu|fri|sat|sun), [0-9]{2} (jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec) [0-9]{4} [0-2][0-9]:[0-5][0-9]:[0-5][0-9] -?[0-9]{4}" + @"\b", RegexOptions.IgnoreCase);
             foreach (Match match in urls)
             {
                 words.Add(match);
             }
             foreach (Match match in dates)
+            {
+                words.Add(match);
+            }
+            var tempWords = new List<Match>();
+            foreach (Match match in matches)
+            {
+                bool foundBefore = false;
+                foreach (var addedValue in words)
+                {
+                    if (match.Index >= addedValue.Index && match.Index+match.Length <= (addedValue.Index+addedValue.Length))
+                    {
+                        foundBefore = true;
+                        break;
+                    }
+                }
+                if (!foundBefore)
+                {
+                    tempWords.Add(match);
+                }
+            }
+            foreach (var match in tempWords)
             {
                 words.Add(match);
             }
