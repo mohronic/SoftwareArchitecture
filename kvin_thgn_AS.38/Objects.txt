@@ -1,0 +1,25 @@
+Entity objects:
+	User
+	Entry
+		Private
+		Group
+	ContactList
+
+Boundary objects:
+	RegisterForm
+	ManageAccountForm
+	Notification
+	CreateEntryForm
+		Private
+		Group
+	ManageEntryForm
+	FindUserForm
+	AddUserToEntryButton
+	AddUserToContactButton
+	
+Control objects:
+	EntryControl
+	AccountControl
+	NotificationControl
+	SearchControl
+	ContactControl
