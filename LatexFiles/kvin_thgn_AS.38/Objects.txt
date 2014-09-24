@@ -1,0 +1,64 @@
+Entity objects:
+	User
+	- Name
+	- Phone number
+	- Email
+	- Contact list
+	- Entry list?
+	Entry (by default private)
+	- DateTime
+	- Place
+	- Duration (can be null)
+	- Description
+		
+		Group (extends)
+		- Participants
+		- Creator
+	ContactList
+	- User list?
+
+Boundary objects:
+	UserForm
+	- Form used to create or edit a new acount. 
+	  The user will have to provide name, email and phonenumber.
+	  Is also used to edit user detail
+	Notification
+	- Notification users receive when added to an entry
+	- Type
+	- Time
+	- Notice description
+	EntryForm
+	- Form used when user creates or modifies an entry
+		Group
+	FindUserForm
+	- Form used to find a user
+	CreateEntryButton
+	- Button used to initiate "CreateEntry" use case
+	AddUserToEntryButton
+	- Button used to initiate the "AddUserToEntry" use case
+	AddUserToContactButton
+	- Button used to initiate the "AddUserToContact" use case
+	FindUserButton
+	- Button used to initiate the "FindUser" use case. Is present in both the "EntryForm" and the "UserForm".
+
+Control objects:
+	EntryControl
+	- Is created when a user creates or opens/edits a EntryForm. If the user choses to create a
+	  new entry, the EntryControl creates a new EntryForm. If the user choses to edit an already existing
+	  entry, a new EntryForm is created with the existing data. When the data has been filled in or edited
+	  a new entry is created or the existing updated. The entryControl then sends a notification to the user
+	  that the task is complete or, if something has gone wrong, what has gone wrong. If the entry is a group
+	  entry the EntryControl creates a NotificationControl object which notifies all the current users in the
+	  group entry about the the creation or modification of this Entry.
+	AccountControl
+	- Is created when the user creates or edits a UserForm. Creates a empty userform if the user wants to
+	  create an account, or a userform with the existing data, if the user wants to modify his existing 
+	  account. When the data has been filled in or edited a new account is created or the existing 
+	  updated. The accountControl then sends a notification to the user that the task is complete or, 
+ 	  if something has gone wrong, what has gone wrong.
+	NotificationControl
+	- Is created when an user has been added to an entry or a group entry has been updated.
+	    The NotificationControl object sends a notification to all users in the group entry.
+	SearchControl
+	- Is created when a user presses the "FindUser" button. Creates a "FindUser" form. Terminates when
+	  the user has selected one or several existing users and has chosen to add them to either his contact list or an entry.
