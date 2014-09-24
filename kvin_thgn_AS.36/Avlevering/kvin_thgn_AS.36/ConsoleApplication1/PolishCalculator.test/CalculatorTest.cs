@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Globalization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PolishCalculator;
 
 namespace PolishCalculator.test
 {
@@ -11,102 +9,109 @@ namespace PolishCalculator.test
         [TestMethod]
         public void RequiredTest()
         {
-            string[] input = { "5", "1", "2", "+", "4", "*", "+", "3", "-" };
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = 14;
+            Calculator c = new Calculator();
+            string input = "5 1 2 + 4 * + 3 -";
+            double actual = c.Calc(input);
+            double expected = 14;
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
         public void NullTest()
         {
-            string[] input = new string[1];
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = 0;
+            Calculator c = new Calculator();
+            string input = null;
+            double actual = c.Calc(input);
+            double expected = 0;
         	Assert.AreEqual(expected, actual);
         }
         [TestMethod]
         public void EmptyStringTest()
         {
-            string[] input = {""};
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = 0;
+            Calculator c = new Calculator();
+            string input = "";
+            double actual = c.Calc(input);
+            double expected = 0;
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
         public void TooFewOperatorsTest()
         {
-            string[] input = { "5", "1", "2", "4", "*", "+", "3", "-" };
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = 0;
+            Calculator c = new Calculator();
+            string input = "5 1 2 4 * + 3 -";
+            double actual = c.Calc(input);
+            double expected = 0;
             Assert.AreEqual(expected, actual);
+
         }
         [TestMethod]
         public void DivideByZeroTest()
         {
-            string[] input = { "5", "1", "2", "+", "4", "*", "+", "0", "/" };
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = 0;
-            Assert.AreEqual(expected, actual);
+            Calculator c = new Calculator();
+            string input = "5 1 2 + 4 * + 0 /";
+            double actual = c.Calc(input);
+            Assert.IsTrue(double.IsInfinity(actual));
         }
         [TestMethod]
         public void WrongOperatorTest()
         {
-            string[] input = { "5", "1", "2", "j", "4", "*", "+", "4", "/" };
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = 0;
+            Calculator c = new Calculator();
+            string input = "5 1 2 j 4 * + 4 /";
+            double actual = c.Calc(input);
+            double expected = 0;
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
-        public void MaxIntegerTest()
-        {
-            
-            string[] input = { Int32.MaxValue.ToString(), "1", "+" };
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = Int32.MinValue;
-            Assert.AreEqual(expected, actual);
-        }
-        [TestMethod]
-        public void MinIntegerTest()
-        {
 
-            string[] input = { Int32.MinValue.ToString(), "1", "-" };
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = Int32.MaxValue;
-            Assert.AreEqual(expected, actual);
-        }
         [TestMethod]
         public void SimpleTests()
         {
-            string[] input;
-            int actual;
-            int expected;
+            Calculator c = new Calculator();
+            string input;
+            double actual;
+            double expected;
+
             // Addition
-            input = new []{"5", "5", "+"};
-            actual = Calculator.DoThePolishStuff(input);
+            input = "5 5 +";
+            actual = c.Calc(input);
             expected = 10;
             Assert.AreEqual(expected, actual);
             // Subtraction
-            input = new[] { "12", "5", "-" };
-            actual = Calculator.DoThePolishStuff(input);
+            input = "12 5 -";
+            actual = c.Calc(input);
             expected = 7;
             Assert.AreEqual(expected, actual);
             // Multiplication
-            input = new[] { "5", "5", "*" };
-            actual = Calculator.DoThePolishStuff(input);
+            input = "5 5 *";
+            actual = c.Calc(input);
             expected = 25;
             Assert.AreEqual(expected, actual);
             // Division
-            input = new[] { "21", "7", "/" };
-            actual = Calculator.DoThePolishStuff(input);
+            input = "21 7 /";
+            actual = c.Calc(input);
+            expected = 3;
+            Assert.AreEqual(expected, actual);
+            // Power
+            input = "2 3 ^";
+            actual = c.Calc(input);
+            expected = 8;
+            Assert.AreEqual(expected, actual);
+            // Absolute
+            input = "-21 abs";
+            actual = c.Calc(input);
+            expected = 21;
+            Assert.AreEqual(expected, actual);
+            // Squareroot
+            input = "9 sqrt";
+            actual = c.Calc(input);
             expected = 3;
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
         public void ComplexTest()
         {
-            string[] input = { "3", "4", "*", "1", "+", "2", "/", "3", "-"};
-            int actual = Calculator.DoThePolishStuff(input);
-            int expected = 3;
+            Calculator c = new Calculator();
+            string input = "3 4 * 1 + 2 / 3 -";
+            double actual = c.Calc(input);
+            double expected = 3.5;
             Assert.AreEqual(expected, actual);
         }
     }

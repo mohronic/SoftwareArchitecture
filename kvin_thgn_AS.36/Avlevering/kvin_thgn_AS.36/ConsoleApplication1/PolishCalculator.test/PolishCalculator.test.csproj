@@ -54,8 +54,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApplication1\PolishCalculator.csproj">
-      <Project>{f65dfb06-93d8-44e1-883f-bd5e3d15983e}</Project>
+    <ProjectReference Include="..\..\..\..\..\..\..\BDSA\VS2013\BDSA2014\ReversePolish\PolishCalculator.csproj">
+      <Project>{05488654-60d0-440d-8831-e6ec114bc8f6}</Project>
       <Name>PolishCalculator</Name>
     </ProjectReference>
   </ItemGroup>
