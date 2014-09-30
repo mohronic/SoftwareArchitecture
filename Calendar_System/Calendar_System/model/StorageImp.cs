@@ -13,7 +13,7 @@ namespace Calendar_System.model
             
         }
 
-        public override List<Entry> GetEntries()
+        public override List<Entry> GetEntries(User user)
         {
             throw new NotImplementedException();
         }
