@@ -8,6 +8,15 @@ namespace Calendar_System.model
 {
     class Entry
     {
-        private DateTime startTime;
+        private DateTime StartTime { get; set; }
+        private DateTime EndTime { get; set; }
+        private String Location { get; set; }
+
+        public Entry(DateTime startTime, DateTime endTime, String location)
+        {
+            StartTime = startTime;
+            EndTime = endTime;
+            Location = location;
+        }
     }
 }
