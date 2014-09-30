@@ -28,6 +28,11 @@ namespace Calendar_System.model
             throw new NotImplementedException();
         }
 
+        public override void DeleteEntry(Entry entry)
+        {
+            throw new NotImplementedException();
+        }
+
         public override void CreateUser(User user)
         {
             throw new NotImplementedException();

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Calendar_System.view
 {
-    class CalendarClient
+    class CalendarClient : Form
     {
         private control.ClientControl _cControl;
         private ÁbstractCalendar _calendarView;
@@ -21,8 +18,21 @@ namespace Calendar_System.view
 
         private void Setup()
         {
+            Console.Out.WriteLine("Hello");
             //TODO create menu
             //TODO add calendarView
+        }
+        //Changes the view from weekView to monthView and vice versa.
+        private void ChangeView()
+        {
+            if (_calendarView.GetType() == typeof(CalendarWeekly))
+            {
+                _calendarView = new CalendarMonthly();
+            }
+            else
+            {
+                _calendarView = new CalendarWeekly();
+            }
         }
     }
 }

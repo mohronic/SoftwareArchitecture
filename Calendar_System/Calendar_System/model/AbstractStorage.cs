@@ -12,6 +12,7 @@ namespace Calendar_System.model
         public abstract List<Entry> GetEntries(User user);
         public abstract void UpdateEntry(Entry entry);
         public abstract void CreateEntry(Entry entry);
+        public abstract void DeleteEntry(Entry entry);
         public abstract void CreateUser(User user);
         public abstract List<User> GetUsers();
         public abstract void UpdateUser(User user);
