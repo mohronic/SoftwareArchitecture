@@ -8,5 +8,6 @@ namespace Calendar_System.model
 {
     class Entry
     {
+        private DateTime startTime;
     }
 }
