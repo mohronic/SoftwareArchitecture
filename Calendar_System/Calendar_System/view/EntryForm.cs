@@ -9,6 +9,7 @@ namespace Calendar_System.view
 {
     class EntryForm
     {
+        private List<User> _addedUsers; 
         public EntryForm(Entry entry)
         {
             
