@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calendar_System.model
+namespace Calendar_System.view
 {
-    class StorageInterface
+    class AdminClient
     {
     }
 }
