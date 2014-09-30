@@ -41,12 +41,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\AccountControl.cs" />
+    <Compile Include="control\ClientControl.cs" />
+    <Compile Include="control\EntryControl.cs" />
+    <Compile Include="control\SyncControl.cs" />
+    <Compile Include="control\WorkgroupControl.cs" />
+    <Compile Include="model\Entry.cs" />
+    <Compile Include="model\StorageImp.cs" />
+    <Compile Include="model\StorageInterface.cs" />
+    <Compile Include="model\User.cs" />
+    <Compile Include="model\Workgroup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Observable.cs" />
+    <Compile Include="Utility\Observer.cs" />
+    <Compile Include="view\AccountForm.cs" />
+    <Compile Include="view\AddPeopleForm.cs" />
+    <Compile Include="view\CalendarClient.cs" />
+    <Compile Include="view\CalendarInterface.cs" />
+    <Compile Include="view\CalendarMonthly.cs" />
+    <Compile Include="view\CalendarWeekly.cs" />
+    <Compile Include="view\EntryForm.cs" />
+    <Compile Include="view\SyncForm.cs" />
+    <Compile Include="view\WorkgroupForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

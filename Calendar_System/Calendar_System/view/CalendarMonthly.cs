@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calendar_System.view
+{
+    class CalendarMonthly : ÁbstractCalendar
+    {
+        public override void Update()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
