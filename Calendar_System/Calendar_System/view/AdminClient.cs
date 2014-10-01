@@ -63,6 +63,7 @@ namespace Calendar_System.view
 
         private void _modifyAccountButton_Click(object sender, EventArgs e)
         {
+            Console.Out.WriteLine(e);
             User user = _abstractStorage.GetUsers().First();
             AccountControl ac = new AccountControl();
             ac.AccountFormModifyAccount(user);

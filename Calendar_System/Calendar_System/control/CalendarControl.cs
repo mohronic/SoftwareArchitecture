@@ -14,5 +14,10 @@ namespace Calendar_System.control
         {
             
         }
+
+        public void CreateEntryControl()
+        {
+            EntryControl ec = new EntryControl();
+        }
     }
 }

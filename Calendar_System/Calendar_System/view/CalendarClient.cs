@@ -65,8 +65,7 @@ namespace Calendar_System.view
 
         private void _createEntryButton_Click(object sender, EventArgs e)
         {
-            EntryControl ec = new EntryControl();
-            ec.EntryFormModifyEntry(_abstractStorage.GetEntriesForUser(_abstractStorage.GetUsers().First()).First());
+            _cControl.CreateEntryControl();
         }
     }
 }
