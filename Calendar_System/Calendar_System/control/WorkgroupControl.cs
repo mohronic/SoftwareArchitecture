@@ -10,7 +10,7 @@ namespace Calendar_System.control
 {
     class WorkgroupControl
     {
-        public void CreateWorkgroup()
+        public void WorkGroupFormCreateWorkgroup()
         {
             var workgroupForm = new WorkgroupForm();
         }
@@ -20,7 +20,7 @@ namespace Calendar_System.control
             var workgroupForm = new WorkgroupForm(workgroup);
         }
 
-        public void DeleteWordgroup()
+        public void DeleteWordgroup(Workgroup workgroup)
         {
             
         }

@@ -44,7 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="control\AccountControl.cs" />
-    <Compile Include="control\ClientControl.cs" />
+    <Compile Include="control\AdminControl.cs" />
+    <Compile Include="control\CalendarControl.cs" />
     <Compile Include="control\EntryControl.cs" />
     <Compile Include="control\SyncControl.cs" />
     <Compile Include="control\WorkgroupControl.cs" />
@@ -60,8 +61,12 @@
     <Compile Include="view\AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\AddPeopleForm.cs" />
-    <Compile Include="view\AdminClient.cs" />
+    <Compile Include="view\AddPeopleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AdminClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view\CalendarClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,17 +77,31 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\SyncForm.cs" />
-    <Compile Include="view\WorkgroupForm.cs" />
+    <Compile Include="view\WorkgroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\DataSources\Calendar_System.view.WorkgroupForm.datasource" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="view\AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\AdminClient.resx">
+      <DependentUpon>AdminClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CalendarClient.resx">
+      <DependentUpon>CalendarClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\EntryForm.resx">
       <DependentUpon>EntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\WorkgroupForm.resx">
+      <DependentUpon>WorkgroupForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

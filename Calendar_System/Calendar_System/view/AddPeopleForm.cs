@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Calendar_System.model;
 
 namespace Calendar_System.view
 {
-    class AddPeopleForm
+    class AddPeopleForm : Form
     {
         private List<User> _addedUsers;
 

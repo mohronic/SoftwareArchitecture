@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Calendar_System.control;
@@ -24,22 +25,28 @@ namespace Calendar_System.view
         private Label _endTimeLabel;
         private Button _createEntryButton;
         private Button _cancelButton;
+        private Button _addPeopleButton;
+        private Button _addWorkgroupButton;
         private AddPeopleForm _addPeopleForm;
         public EntryForm(EntryControl entryControl, Entry entry)
         {
             _entryControl = entryControl;
-            _addPeopleForm = new AddPeopleForm(entry.UserList);
+            InitializeComponent();
+            _entryNameTb.Text = entry.EntryName;
+            _startTimePicker.Value = entry.StartTime;
+            _endTimePicker.Value = entry.EndTime;
+            _locationTb.Text = entry.Location;
         }
 
         public EntryForm(EntryControl entryControl)
         {
             _entryControl = entryControl;
-            _addPeopleForm = new AddPeopleForm(new List<User>());
+            InitializeComponent();
         }
 
         public void SendEntryToControl()
         {
-            var entry = new Entry(_startTimePicker.Value, _endTimePicker.Value, _locationTb.Text, _addPeopleForm.GetUserList());
+            var entry = new Entry(_startTimePicker.Value, _endTimePicker.Value, _locationTb.Text, _addPeopleForm.GetUserList(), _entryNameTb.Text);
             _entryControl.SendEntryToDb(entry);
         }
 
@@ -57,6 +64,8 @@ namespace Calendar_System.view
             this._endTimeLabel = new System.Windows.Forms.Label();
             this._createEntryButton = new System.Windows.Forms.Button();
             this._cancelButton = new System.Windows.Forms.Button();
+            this._addPeopleButton = new System.Windows.Forms.Button();
+            this._addWorkgroupButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _entryNameLabel
@@ -142,25 +151,46 @@ namespace Calendar_System.view
             // 
             // _createEntryButton
             // 
-            this._createEntryButton.Location = new System.Drawing.Point(15, 354);
+            this._createEntryButton.Location = new System.Drawing.Point(12, 403);
             this._createEntryButton.Name = "_createEntryButton";
-            this._createEntryButton.Size = new System.Drawing.Size(120, 23);
+            this._createEntryButton.Size = new System.Drawing.Size(120, 29);
             this._createEntryButton.TabIndex = 10;
             this._createEntryButton.Text = "Create entry";
             this._createEntryButton.UseVisualStyleBackColor = true;
             // 
             // _cancelButton
             // 
-            this._cancelButton.Location = new System.Drawing.Point(391, 354);
+            this._cancelButton.Location = new System.Drawing.Point(391, 403);
             this._cancelButton.Name = "_cancelButton";
-            this._cancelButton.Size = new System.Drawing.Size(75, 23);
+            this._cancelButton.Size = new System.Drawing.Size(75, 29);
             this._cancelButton.TabIndex = 11;
             this._cancelButton.Text = "Cancel";
             this._cancelButton.UseVisualStyleBackColor = true;
             // 
+            // _addPeopleButton
+            // 
+            this._addPeopleButton.Location = new System.Drawing.Point(138, 403);
+            this._addPeopleButton.Name = "_addPeopleButton";
+            this._addPeopleButton.Size = new System.Drawing.Size(122, 29);
+            this._addPeopleButton.TabIndex = 12;
+            this._addPeopleButton.Text = "Add people:";
+            this._addPeopleButton.UseVisualStyleBackColor = true;
+            this._addPeopleButton.Click += new System.EventHandler(this._addPeopleButton_Click);
+            // 
+            // _addWorkgroupButton
+            // 
+            this._addWorkgroupButton.Location = new System.Drawing.Point(268, 403);
+            this._addWorkgroupButton.Name = "_addWorkgroupButton";
+            this._addWorkgroupButton.Size = new System.Drawing.Size(115, 29);
+            this._addWorkgroupButton.TabIndex = 13;
+            this._addWorkgroupButton.Text = "Add workgroup:";
+            this._addWorkgroupButton.UseVisualStyleBackColor = true;
+            // 
             // EntryForm
             // 
-            this.ClientSize = new System.Drawing.Size(478, 389);
+            this.ClientSize = new System.Drawing.Size(478, 444);
+            this.Controls.Add(this._addWorkgroupButton);
+            this.Controls.Add(this._addPeopleButton);
             this.Controls.Add(this._cancelButton);
             this.Controls.Add(this._createEntryButton);
             this.Controls.Add(this._endTimeLabel);
@@ -178,6 +208,11 @@ namespace Calendar_System.view
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void _addPeopleButton_Click(object sender, EventArgs e)
+        {
+            _addPeopleForm = new AddPeopleForm(_entryControl.GetAllUsersFromDb());
         }
     }
 }

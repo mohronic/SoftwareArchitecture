@@ -18,11 +18,18 @@ namespace Calendar_System.control
         public void EntryFormCreateEntry()
         {
             var entryForm = new EntryForm(this);
+            entryForm.ShowDialog();
         }
         // Creates a new EntryForm with an already existing Entry. Used when modifying an existing Entry.
         public void EntryFormModifyEntry(Entry entry)
         {
             var entryForm = new EntryForm(this, entry);
+            entryForm.ShowDialog();
+        }
+
+        public List<User> GetAllUsersFromDb()
+        {
+            return _abstractStorage.GetUsers();
         }
 
         public void DeleteEntryFromDb(Entry entry)

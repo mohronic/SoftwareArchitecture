@@ -14,25 +14,22 @@ namespace Calendar_System.view
         private TextBox _lastNameTB;
         private TextBox _firstNameTB;
         private Label _emailLabel;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox _emailTB;
+        private TextBox _phoneTB;
         private Label _telephoneLabel;
         private Label _firstNameLabel;
         //For new account
         public AccountForm() { }
         
         //For existing account
-        public AccountForm(User user) { }
-        
-        //Setup window with form
-        private void Setup(){}
-        
-        //When some button is pushed.
-        private void ButtonEvent()
+        public AccountForm(User user)
         {
-            Console.WriteLine("Some button");
+            InitializeComponent();
+            _firstNameTB.Text = user.FirstName;
+            _lastNameTB.Text = user.LastName;
+            _phoneTB.Text = user.Phone;
+            _emailTB.Text = user.Email;
         }
-
         private void InitializeComponent()
         {
             this._firstNameLabel = new System.Windows.Forms.Label();
@@ -40,8 +37,8 @@ namespace Calendar_System.view
             this._lastNameTB = new System.Windows.Forms.TextBox();
             this._firstNameTB = new System.Windows.Forms.TextBox();
             this._emailLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this._emailTB = new System.Windows.Forms.TextBox();
+            this._phoneTB = new System.Windows.Forms.TextBox();
             this._telephoneLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -86,19 +83,19 @@ namespace Calendar_System.view
             this._emailLabel.TabIndex = 4;
             this._emailLabel.Text = "Email:";
             // 
-            // textBox1
+            // _emailTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(332, 22);
-            this.textBox1.TabIndex = 5;
+            this._emailTB.Location = new System.Drawing.Point(15, 74);
+            this._emailTB.Name = "_emailTB";
+            this._emailTB.Size = new System.Drawing.Size(332, 22);
+            this._emailTB.TabIndex = 5;
             // 
-            // textBox2
+            // _phoneTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(332, 22);
-            this.textBox2.TabIndex = 6;
+            this._phoneTB.Location = new System.Drawing.Point(15, 119);
+            this._phoneTB.Name = "_phoneTB";
+            this._phoneTB.Size = new System.Drawing.Size(332, 22);
+            this._phoneTB.TabIndex = 6;
             // 
             // _telephoneLabel
             // 
@@ -113,8 +110,8 @@ namespace Calendar_System.view
             // 
             this.ClientSize = new System.Drawing.Size(363, 393);
             this.Controls.Add(this._telephoneLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this._phoneTB);
+            this.Controls.Add(this._emailTB);
             this.Controls.Add(this._emailLabel);
             this.Controls.Add(this._firstNameTB);
             this.Controls.Add(this._lastNameTB);

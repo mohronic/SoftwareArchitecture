@@ -10,14 +10,16 @@ namespace Calendar_System.control
 {
     class AccountControl
     {
-        public void CreateAccount()
+        public void AccountFormCreateAccount()
         {
             var accountForm = new AccountForm();
+            accountForm.ShowDialog();
         }
 
-        public void ModifyAccount(User user)
+        public void AccountFormModifyAccount(User user)
         {
             var accountForm = new AccountForm(user);
+            accountForm.ShowDialog();
         }
 
         public void DeleteAccount()
