@@ -39,6 +39,12 @@ namespace Calendar_System.control
             entryForm.ShowDialog();
         }
 
+        public void CreateAddPeopleForm()
+        {
+            //_addPeopleForm = new AddPeopleForm(_entryControl.GetAllUsersFromDb());
+            throw new NotImplementedException();
+        }
+
         public List<User> GetAllUsersFromDb()
         {
             return _abstractStorage.GetUsers();

@@ -27,7 +27,6 @@ namespace Calendar_System.view
         private Button _cancelButton;
         private Button _addPeopleButton;
         private Button _addWorkgroupButton;
-        private AddPeopleForm _addPeopleForm;
         public EntryForm(EntryControl entryControl, Entry entry)
         {
             _entryControl = entryControl;
@@ -209,8 +208,7 @@ namespace Calendar_System.view
 
         private void _addPeopleButton_Click(object sender, EventArgs e)
         {
-            //_addPeopleForm = new AddPeopleForm(_entryControl.GetAllUsersFromDb());
-            throw new NotImplementedException();
+            _entryControl.CreateAddPeopleForm();
         }
 
         private void _cancelButton_Click(object sender, EventArgs e)
