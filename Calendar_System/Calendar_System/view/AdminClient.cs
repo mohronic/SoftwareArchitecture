@@ -11,12 +11,15 @@ namespace Calendar_System.view
 {
     class AdminClient : Form
     {
-        private AbstractStorage _abstractStorage = new StorageImp();
+        private AbstractStorage _abstractStorage;
+        private AdminControl _adminControl ;
         private Button _createAccountButton;
         private Button _modifyAccountButton;
 
-        public AdminClient()
+        public AdminClient(AdminControl adminControl, AbstractStorage abstractStorage)
         {
+            _abstractStorage = abstractStorage;
+            _adminControl = adminControl;
             InitializeComponent();
         }
         private void InitializeComponent()
@@ -57,16 +60,12 @@ namespace Calendar_System.view
 
         private void _createAccountButton_Click(object sender, EventArgs e)
         {
-            AccountControl ac = new AccountControl();
-            ac.AccountFormCreateAccount();
+            _adminControl.CreateAccountControl("newAccount");
         }
 
         private void _modifyAccountButton_Click(object sender, EventArgs e)
         {
-            Console.Out.WriteLine(e);
-            User user = _abstractStorage.GetUsers().First();
-            AccountControl ac = new AccountControl();
-            ac.AccountFormModifyAccount(user);
+            _adminControl.CreateAccountControl("modifyAccount");
         }
     }
 }

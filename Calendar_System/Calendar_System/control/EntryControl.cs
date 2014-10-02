@@ -10,9 +10,21 @@ namespace Calendar_System.control
 {
     class EntryControl
     {
-        readonly AbstractStorage _abstractStorage = new StorageImp();
-        public EntryControl()
+        AbstractStorage _abstractStorage;
+        public EntryControl(String message, AbstractStorage abstractStorage)
         {
+            _abstractStorage = abstractStorage;
+            if (message.Equals("newEntry"))
+            {
+                EntryFormCreateEntry();
+            }
+            if (message.Equals("modifyEntry"))
+            {
+                // Just to simulate editing. Searching will be enabled.
+                var user = _abstractStorage.GetUsers().First();
+                var entry = _abstractStorage.GetEntriesForUser(user).First();
+                EntryFormModifyEntry(entry);   
+            }
         }
         // Creates a new EntryForm from scratch.
         public void EntryFormCreateEntry()

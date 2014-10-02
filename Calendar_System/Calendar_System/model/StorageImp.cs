@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Calendar_System.model
 {
@@ -10,7 +11,8 @@ namespace Calendar_System.model
     {
         private List<Entry> _entryList;
         private List<User> _userList;
-        private List<Workgroup> _workgroupList; 
+        private List<Workgroup> _workgroupList;
+        private Dictionary<string, string> _passwordDictionary;
         public StorageImp()
         {
             _entryList = new List<Entry>();
@@ -24,6 +26,8 @@ namespace Calendar_System.model
 
             Workgroup workgroup1 = new Workgroup("Lecturers", _userList);
             _workgroupList.Add(workgroup1);
+            _passwordDictionary = new Dictionary<string, string>();
+            _passwordDictionary.Add(user1.FirstName, "12345");
         }
 
         public override List<Entry> GetEntriesForUser(User user)
@@ -56,6 +60,11 @@ namespace Calendar_System.model
 
         public override void CreateUser(User user)
         {
+            _userList.Add(user);
+        }
+
+        public override void DeleteUser(User user)
+        {
             throw new NotImplementedException();
         }
 
@@ -82,6 +91,22 @@ namespace Calendar_System.model
         public override void DeleteWorkgroup(Workgroup wg)
         {
             throw new NotImplementedException();
+        }
+        public override void SyncAccount()
+        {
+            throw new NotImplementedException();
+        }
+        public override bool CheckPassword(string userName, string password)
+        {
+            string value;
+            if (_passwordDictionary.TryGetValue(userName, out value))
+            {
+                if (value.Equals(password))
+                {
+                    return true;
+                }   
+            }
+            return false;
         }
     }
 }

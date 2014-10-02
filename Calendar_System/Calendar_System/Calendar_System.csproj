@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{68DD76C4-AC63-4BE2-9D15-CB3AEC0293BA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Calendar_System</RootNamespace>
     <AssemblyName>Calendar_System</AssemblyName>
@@ -30,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -76,15 +79,18 @@
     <Compile Include="view\EntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\SyncForm.cs" />
+    <Compile Include="view\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\SyncForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view\WorkgroupForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\DataSources\Calendar_System.view.WorkgroupForm.datasource" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\EntryForm.resx">
       <DependentUpon>EntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\SyncForm.resx">
+      <DependentUpon>SyncForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\WorkgroupForm.resx">
       <DependentUpon>WorkgroupForm.cs</DependentUpon>
