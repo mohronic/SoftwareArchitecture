@@ -8,7 +8,7 @@ using Calendar_System.model;
 
 namespace Calendar_System.view
 {
-    class AddPeopleForm : Form
+    public class AddPeopleForm : Form
     {
         private List<User> _addedUsers;
 

@@ -9,7 +9,7 @@ using Calendar_System.model;
 
 namespace Calendar_System.view
 {
-    class AdminClient : Form
+    public class AdminClient : Form
     {
         private AbstractStorage _abstractStorage;
         private AdminControl _adminControl ;

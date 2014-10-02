@@ -8,7 +8,7 @@ using Calendar_System.model;
 
 namespace Calendar_System.view
 {
-    class WorkgroupForm : Form
+    public class WorkgroupForm : Form
     {
         private List<User> _userList; 
         private TextBox textBox1;

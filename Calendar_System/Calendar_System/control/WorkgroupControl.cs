@@ -8,7 +8,7 @@ using Calendar_System.view;
 
 namespace Calendar_System.control
 {
-    class WorkgroupControl
+    public class WorkgroupControl
     {
         public void WorkGroupFormCreateWorkgroup()
         {

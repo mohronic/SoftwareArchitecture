@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace Calendar_System.model
 {
-    class StorageImp : AbstractStorage
+    public class StorageImp : AbstractStorage
     {
-        private List<Entry> _entryList;
+        public List<Entry> _entryList;
         private List<User> _userList;
         private List<Workgroup> _workgroupList;
         private Dictionary<string, string> _passwordDictionary;
@@ -50,7 +50,7 @@ namespace Calendar_System.model
 
         public override void CreateEntry(Entry entry)
         {
-            throw new NotImplementedException();
+            _entryList.Add(entry);
         }
 
         public override void DeleteEntry(Entry entry)

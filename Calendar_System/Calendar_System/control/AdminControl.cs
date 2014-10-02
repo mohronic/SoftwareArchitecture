@@ -8,7 +8,7 @@ using Calendar_System.view;
 
 namespace Calendar_System.control
 {
-    class AdminControl
+    public class AdminControl
     {
         AbstractStorage _abstractStorage = new StorageImp();
         public AdminControl()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calendar_System.model
 {
-    class Workgroup
+    public class Workgroup
     {
         private String Name { get; set; }
         private List<User> UserList { get; set; }

@@ -8,7 +8,7 @@ using Calendar_System.Utility;
 
 namespace Calendar_System.model
 {
-    abstract class AbstractStorage : Observable
+    public abstract class AbstractStorage : Observable
     {
         public abstract List<Entry> GetEntriesForUser(User user);
         public abstract void UpdateEntry(Entry entry);

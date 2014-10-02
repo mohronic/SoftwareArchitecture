@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calendar_System.Utility
 {
-    abstract class Observable
+    public abstract class Observable
     {
         private List<Observer> _observers = new List<Observer>();
 

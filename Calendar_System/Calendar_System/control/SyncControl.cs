@@ -8,7 +8,7 @@ using Calendar_System.view;
 
 namespace Calendar_System.control
 {
-    class SyncControl
+    public class SyncControl
     {
         private AbstractStorage _abstractStorage;
         public SyncControl(AbstractStorage abstractStorage)

@@ -9,7 +9,7 @@ using Calendar_System.model;
 
 namespace Calendar_System.view
 {
-    class AccountForm : Form
+    public class AccountForm : Form
     {
         private readonly AccountControl _accountControl;
         private Label _lastNameLabel;

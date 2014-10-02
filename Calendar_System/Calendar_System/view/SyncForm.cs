@@ -8,7 +8,7 @@ using Calendar_System.control;
 
 namespace Calendar_System.view
 {
-    class SyncForm : Form
+    public class SyncForm : Form
     {
         private Button _syncButton;
         private SyncControl _syncControl;

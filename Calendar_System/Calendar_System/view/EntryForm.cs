@@ -10,7 +10,7 @@ using Calendar_System.model;
 
 namespace Calendar_System.view
 {
-    class EntryForm : Form
+    public class EntryForm : Form
     {
         private readonly EntryControl _entryControl;
         private Label _entryNameLabel;

@@ -6,7 +6,7 @@ using Calendar_System.model;
 
 namespace Calendar_System.view
 {
-    class CalendarClient : Form
+    public class CalendarClient : Form
     {
         private AbstractStorage _abstractStorage;
         private control.CalendarControl _cControl;

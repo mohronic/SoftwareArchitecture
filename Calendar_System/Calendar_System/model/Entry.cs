@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calendar_System.model
 {
-    class Entry
+    public class Entry
     {
         public String EntryName { get; set; }
         public DateTime StartTime { get; set; }

@@ -8,7 +8,7 @@ using Calendar_System.control;
 
 namespace Calendar_System.view
 {
-    class LoginForm : Form
+    public class LoginForm : Form
     {
         private CalendarControl _cControl;
         private Button _cancelButton;
