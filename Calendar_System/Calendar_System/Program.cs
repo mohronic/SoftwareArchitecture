@@ -5,6 +5,7 @@ namespace Calendar_System
 {
     class Program
     {
+        // If you want to run as user in current implementation
         static void Main2()
         {
             CalendarControl cControl = new CalendarControl();
