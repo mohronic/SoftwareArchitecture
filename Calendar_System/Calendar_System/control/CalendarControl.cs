@@ -11,7 +11,7 @@ namespace Calendar_System.control
 {
     public class CalendarControl
     {
-        AbstractStorage _abstractStorage = new StorageImp();
+        IStorage _abstractStorage = new FileStorage();
         public CalendarControl()
         {
             LoginForm loginForm = new LoginForm(this);

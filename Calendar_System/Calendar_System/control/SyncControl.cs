@@ -10,8 +10,8 @@ namespace Calendar_System.control
 {
     public class SyncControl
     {
-        private AbstractStorage _abstractStorage;
-        public SyncControl(AbstractStorage abstractStorage)
+        private IStorage _abstractStorage;
+        public SyncControl(IStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             SyncForm sf = new SyncForm(this);

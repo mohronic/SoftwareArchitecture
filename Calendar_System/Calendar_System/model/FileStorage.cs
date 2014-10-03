@@ -7,13 +7,13 @@ using System.Windows.Forms;
 
 namespace Calendar_System.model
 {
-    public class StorageImp : AbstractStorage
+    public class FileStorage : IStorage
     {
-        public List<Entry> _entryList;
+        private List<Entry> _entryList;
         private List<User> _userList;
         private List<Workgroup> _workgroupList;
         private Dictionary<string, string> _passwordDictionary;
-        public StorageImp()
+        public FileStorage()
         {
             _entryList = new List<Entry>();
             _userList = new List<User>();
@@ -30,7 +30,12 @@ namespace Calendar_System.model
             _passwordDictionary.Add(user1.FirstName, "12345");
         }
 
-        public override List<Entry> GetEntriesForUser(User user)
+        public bool IsConnected()
+        {
+            return true;
+        }
+
+        public List<Entry> GetEntriesForUser(User user)
         {
             List<Entry> entries = new List<Entry>();
             foreach (var entry in _entryList)
@@ -43,60 +48,65 @@ namespace Calendar_System.model
             return entries;
         }
 
-        public override void UpdateEntry(Entry entry)
+        public void SetEntriesForUser(List<Entry> entries, User user)
         {
             throw new NotImplementedException();
         }
 
-        public override void CreateEntry(Entry entry)
+        public void UpdateEntry(Entry entry)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateEntry(Entry entry)
         {
             _entryList.Add(entry);
         }
 
-        public override void DeleteEntry(Entry entry)
+        public void DeleteEntry(Entry entry)
         {
             throw new NotImplementedException();
         }
 
-        public override void CreateUser(User user)
+        public void CreateUser(User user)
         {
             _userList.Add(user);
         }
 
-        public override void DeleteUser(User user)
+        public void DeleteUser(User user)
         {
             throw new NotImplementedException();
         }
 
-        public override List<User> GetUsers()
+        public List<User> GetUsers()
         {
             return _userList;
         }
 
-        public override void UpdateUser(User user)
+        public void UpdateUser(User user)
         {
             throw new NotImplementedException();
         }
 
-        public override void CreateWorkgroup(Workgroup wg)
+        public void CreateWorkgroup(Workgroup wg)
         {
             throw new NotImplementedException();
         }
 
-        public override List<Workgroup> GetWorkgroups()
+        public List<Workgroup> GetWorkgroups()
         {
             throw new NotImplementedException();
         }
 
-        public override void DeleteWorkgroup(Workgroup wg)
+        public void DeleteWorkgroup(Workgroup wg)
         {
             throw new NotImplementedException();
         }
-        public override void SyncAccount()
+        public void SyncAccount()
         {
             throw new NotImplementedException();
         }
-        public override bool CheckPassword(string userName, string password)
+        public bool CheckPassword(string userName, string password)
         {
             string value;
             if (_passwordDictionary.TryGetValue(userName, out value))

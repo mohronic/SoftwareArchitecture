@@ -11,12 +11,12 @@ namespace Calendar_System.view
 {
     public class AdminClient : Form
     {
-        private AbstractStorage _abstractStorage;
+        private IStorage _abstractStorage;
         private AdminControl _adminControl ;
         private Button _createAccountButton;
         private Button _modifyAccountButton;
 
-        public AdminClient(AdminControl adminControl, AbstractStorage abstractStorage)
+        public AdminClient(AdminControl adminControl, IStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             _adminControl = adminControl;

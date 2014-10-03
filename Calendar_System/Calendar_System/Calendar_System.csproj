@@ -52,9 +52,16 @@
     <Compile Include="control\EntryControl.cs" />
     <Compile Include="control\SyncControl.cs" />
     <Compile Include="control\WorkgroupControl.cs" />
-    <Compile Include="model\Entry.cs" />
-    <Compile Include="model\StorageImp.cs" />
     <Compile Include="model\AbstractStorage.cs" />
+    <Compile Include="model\DatabaseStorage.cs" />
+    <Compile Include="model\Entry.cs" />
+    <Compile Include="model\IAbstractStorage.cs" />
+    <Compile Include="model\IEntry.cs" />
+    <Compile Include="model\FileStorage.cs" />
+    <Compile Include="model\IStorage.cs" />
+    <Compile Include="model\SerializeEntries.cs" />
+    <Compile Include="model\Serializer.cs" />
+    <Compile Include="model\TemporaryStorage.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="model\Workgroup.cs" />
     <Compile Include="Program.cs" />
@@ -91,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\Calendar_System.view.WorkgroupForm.datasource" />
   </ItemGroup>
   <ItemGroup>

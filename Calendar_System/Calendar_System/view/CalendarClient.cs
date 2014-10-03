@@ -8,14 +8,14 @@ namespace Calendar_System.view
 {
     public class CalendarClient : Form
     {
-        private AbstractStorage _abstractStorage;
+        private IStorage _abstractStorage;
         private control.CalendarControl _cControl;
         private Button _createEntryButton;
         private Button _modifyEntryButton;
         private Button _syncButton;
         private ÁbstractCalendar _calendarView;
 
-        public CalendarClient(control.CalendarControl cControl, AbstractStorage abstractStorage)
+        public CalendarClient(control.CalendarControl cControl, IStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             _cControl = cControl;

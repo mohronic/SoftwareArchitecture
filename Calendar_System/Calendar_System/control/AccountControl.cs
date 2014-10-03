@@ -10,8 +10,8 @@ namespace Calendar_System.control
 {
     public class AccountControl
     {
-        AbstractStorage _abstractStorage;
-        public AccountControl(String message, AbstractStorage abstractStorage)
+        IStorage _abstractStorage;
+        public AccountControl(String message, IStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             if (message.Equals("newAccount"))

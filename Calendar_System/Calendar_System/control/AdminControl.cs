@@ -10,7 +10,7 @@ namespace Calendar_System.control
 {
     public class AdminControl
     {
-        AbstractStorage _abstractStorage = new StorageImp();
+        IStorage _abstractStorage = new FileStorage();
         public AdminControl()
         {
             AdminClient adminClient = new AdminClient(this, _abstractStorage);

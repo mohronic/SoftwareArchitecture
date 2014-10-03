@@ -15,7 +15,7 @@ namespace Calendar_System.Test
         [TestMethod]
         public void CreateEntryTest()
         {
-            StorageImp abst = new StorageImp();
+            FileStorage abst = new FileStorage();
             EntryControl ec = new EntryControl("newEntry", abst);
             ec.SendEntryToDb(new Entry(DateTime.Now, DateTime.Now, "hello", new List<User>(), "New entry"));
             Assert.IsTrue(abst._entryList.Count > 0);
