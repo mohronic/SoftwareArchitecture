@@ -47,8 +47,9 @@ namespace Calendar_System.control
             _abstractStorage.DeleteUser(user);
         }
 
-        public void SendAccountToDb(User user)
+        public void SendAccountToDb(string firstName, string lastName, string email, string phone)
         {
+            var user = new User(firstName, lastName, email, phone);
             _abstractStorage.CreateUser(user);
             Console.Out.WriteLine(_abstractStorage.GetUsers().Count);
         }

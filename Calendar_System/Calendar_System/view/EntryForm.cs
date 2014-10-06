@@ -219,8 +219,7 @@ namespace Calendar_System.view
         private void _createEntryButton_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
-            //var entry = new Entry(_startTimePicker.Value, _endTimePicker.Value, _locationTb.Text, _addPeopleForm.GetUserList(), _entryNameTb.Text);
-            //_entryControl.SendEntryToDb(entry);
+            //_entryControl.SendEntryToDb(_startTimePicker.Value, _endTimePicker.Value, _locationTb.Text, _addPeopleForm.GetUserList(), _entryNameTb.Text);
             //this.Dispose();
         }
 

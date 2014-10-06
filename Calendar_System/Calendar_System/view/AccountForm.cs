@@ -157,8 +157,7 @@ namespace Calendar_System.view
 
         private void _saveAccountButton_Click(object sender, EventArgs e)
         {
-            var user = new User(_firstNameTB.Text, _lastNameTB.Text, _emailTB.Text, _phoneTB.Text);
-            _accountControl.SendAccountToDb(user);
+            _accountControl.SendAccountToDb(_firstNameTB.Text, _lastNameTB.Text, _emailTB.Text, _phoneTB.Text);
             this.Dispose();
         }
 

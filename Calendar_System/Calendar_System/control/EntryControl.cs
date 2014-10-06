@@ -55,8 +55,9 @@ namespace Calendar_System.control
             _abstractStorage.DeleteEntry(entry);
         }
 
-        public void SendEntryToDb(Entry entry)
+        public void SendEntryToDb(DateTime startTime, DateTime endTime, string location, List<User> userList, string entryName)
         {
+            var entry = new Entry(startTime, endTime, location, userList, entryName);
             _abstractStorage.CreateEntry(entry);
         }
     }
