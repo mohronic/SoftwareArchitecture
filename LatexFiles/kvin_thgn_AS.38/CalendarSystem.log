@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  6 OCT 2014 15:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  6 OCT 2014 22:03
 entering extended mode
 **CalendarSystem.tex
 
@@ -743,21 +743,43 @@ Package pdftex.def Info: statemachine.png used on input line 129.
 File: sequenceDiagram2.png Graphic file (type png)
 
 <use sequenceDiagram2.png>
-Package pdftex.def Info: sequenceDiagram2.png used on input line 136.
-(pdftex.def)             Requested size: 345.38953pt x 243.3084pt.
+Package pdftex.def Info: sequenceDiagram2.png used on input line 137.
+(pdftex.def)             Requested size: 414.47163pt x 291.97305pt.
+
+Overfull \hbox (24.47163pt too wide) in paragraph at lines 137--138
+ [][] 
+ []
+
+<sequenceDiagram1.png, id=52, 752.0597pt x 377.15906pt>
+File: sequenceDiagram1.png Graphic file (type png)
+
+<use sequenceDiagram1.png>
+Package pdftex.def Info: sequenceDiagram1.png used on input line 143.
+(pdftex.def)             Requested size: 451.2393pt x 226.29718pt.
+
+Overfull \hbox (61.2393pt too wide) in paragraph at lines 143--144
+ [][] 
+ []
+
 )
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
-.38\Glossary.tex [11 <C:/Users/Trondur/Documents/GitHub/SoftwareArchitecture/La
-texFiles/kvin_thgn_AS.38/statemachine.png>] [12 <C:/Users/Trondur/Documents/Git
-Hub/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.38/sequenceDiagram2.png>])
-[13]
+.38\Glossary.tex
+Underfull \hbox (badness 10000) in paragraph at lines 126--1
+\T1/lmr/m/n/12 through. 
+ []
+
+[11 <C:/Users/Trondur/Documents/GitHub/SoftwareArchitecture/LatexFiles/kvin_thg
+n_AS.38/statemachine.png>] [12 <C:/Users/Trondur/Documents/GitHub/SoftwareArchi
+tecture/LatexFiles/kvin_thgn_AS.38/sequenceDiagram2.png>] [13 <C:/Users/Trondur
+/Documents/GitHub/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.38/sequenceDiagr
+am1.png>]) [14]
 (C:\Users\Trondur\Documents\GitHub\SoftwareArchitecture\LatexFiles\kvin_thgn_AS
 .38\CalendarSystem.aux) ) 
 Here is how much of TeX's memory you used:
- 14992 strings out of 493921
- 279849 string characters out of 3147276
+ 14997 strings out of 493921
+ 279968 string characters out of 3147276
  327802 words of memory out of 3000000
- 17953 multiletter control sequences out of 15000+200000
+ 17957 multiletter control sequences out of 15000+200000
  59451 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  55i,9n,54p,824b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -767,9 +789,9 @@ iles/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on CalendarSystem.pdf (14 pages, 289005 bytes).
+Output written on CalendarSystem.pdf (15 pages, 302704 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
