@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.27)  25 SEP 2014 15:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.27)  6 OCT 2014 12:37
 entering extended mode
 **D:/ITU/Github/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.38/CalendarSystem.
 tex
@@ -746,27 +746,34 @@ Package pdftex.def Info: class22.png used on input line 120.
 (pdftex.def)             Requested size: 354.95023pt x 182.18018pt.
  [10 <D:/ITU/Github/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.38/class21.png
 > <D:/ITU/Github/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.38/class22.png>]
-<sequenceDiagram2.png, id=50, 860.61525pt x 514.3215pt>
+<statemachine.png, id=50, 632.3625pt x 478.78876pt>
+File: statemachine.png Graphic file (type png)
+ <use statemachine.png>
+Package pdftex.def Info: statemachine.png used on input line 129.
+(pdftex.def)             Requested size: 316.18048pt x 239.39378pt.
+
+<sequenceDiagram2.png, id=51, 860.61525pt x 514.3215pt>
 File: sequenceDiagram2.png Graphic file (type png)
 
 <use sequenceDiagram2.png>
-Package pdftex.def Info: sequenceDiagram2.png used on input line 129.
+Package pdftex.def Info: sequenceDiagram2.png used on input line 136.
 (pdftex.def)             Requested size: 430.30658pt x 257.16013pt.
 
-Overfull \hbox (40.30658pt too wide) in paragraph at lines 129--130
+Overfull \hbox (40.30658pt too wide) in paragraph at lines 136--137
  [][] 
  []
 
 ) (D:\ITU\Github\SoftwareArchitecture\LatexFiles\kvin_thgn_AS.38\Glossary.tex
-[11 <D:/ITU/Github/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.38/sequenceDiag
-ram2.png>]) [12]
+[11 <D:/ITU/Github/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.38/statemachine
+.png>] [12 <D:/ITU/Github/SoftwareArchitecture/LatexFiles/kvin_thgn_AS.38/seque
+nceDiagram2.png>]) [13]
 (D:\ITU\Github\SoftwareArchitecture\LatexFiles\kvin_thgn_AS.38\CalendarSystem.a
 ux) ) 
 Here is how much of TeX's memory you used:
- 14987 strings out of 493921
- 280996 string characters out of 3144855
+ 14992 strings out of 493921
+ 281095 string characters out of 3144855
  327802 words of memory out of 3000000
- 17949 multiletter control sequences out of 15000+200000
+ 17953 multiletter control sequences out of 15000+200000
  59451 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  55i,9n,54p,886b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -777,9 +784,9 @@ ogram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x8
 ype1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.p
 fb>
-Output written on CalendarSystem.pdf (13 pages, 282303 bytes).
+Output written on CalendarSystem.pdf (14 pages, 299212 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

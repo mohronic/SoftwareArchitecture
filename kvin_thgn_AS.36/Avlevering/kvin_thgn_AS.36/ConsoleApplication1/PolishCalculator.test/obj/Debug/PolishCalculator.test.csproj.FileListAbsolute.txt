@@ -5,10 +5,3 @@ C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\Polis
 C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\bin\Debug\PolishCalculator.pdb
 C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\obj\Debug\PolishCalculator.test.dll
 C:\Users\Trondur\Documents\Visual Studio 2013\Projects\ConsoleApplication1\PolishCalculator.test\obj\Debug\PolishCalculator.test.pdb
-D:\ITU\Github\SoftwareArchitecture\kvin_thgn_AS.36\Avlevering\kvin_thgn_AS.36\ConsoleApplication1\PolishCalculator.test\bin\Debug\PolishCalculator.test.dll
-D:\ITU\Github\SoftwareArchitecture\kvin_thgn_AS.36\Avlevering\kvin_thgn_AS.36\ConsoleApplication1\PolishCalculator.test\bin\Debug\PolishCalculator.test.pdb
-D:\ITU\Github\SoftwareArchitecture\kvin_thgn_AS.36\Avlevering\kvin_thgn_AS.36\ConsoleApplication1\PolishCalculator.test\bin\Debug\ReversePolish.exe
-D:\ITU\Github\SoftwareArchitecture\kvin_thgn_AS.36\Avlevering\kvin_thgn_AS.36\ConsoleApplication1\PolishCalculator.test\bin\Debug\ReversePolish.pdb
-D:\ITU\Github\SoftwareArchitecture\kvin_thgn_AS.36\Avlevering\kvin_thgn_AS.36\ConsoleApplication1\PolishCalculator.test\obj\Debug\PolishCalculator.test.csprojResolveAssemblyReference.cache
-D:\ITU\Github\SoftwareArchitecture\kvin_thgn_AS.36\Avlevering\kvin_thgn_AS.36\ConsoleApplication1\PolishCalculator.test\obj\Debug\PolishCalculator.test.dll
-D:\ITU\Github\SoftwareArchitecture\kvin_thgn_AS.36\Avlevering\kvin_thgn_AS.36\ConsoleApplication1\PolishCalculator.test\obj\Debug\PolishCalculator.test.pdb

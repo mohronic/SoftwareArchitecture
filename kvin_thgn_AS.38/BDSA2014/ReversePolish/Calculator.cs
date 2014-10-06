@@ -9,13 +9,6 @@ namespace PolishCalculator
         // Dictinary used to make adding operations easier.
         private Dictionary<string, IOperation> _dictionary = new Dictionary<string, IOperation>();
 
-        static void Main(string[] args)
-        {
-            //string input = "5 1 2 + 4 * + 0 /";
-            Calculator td = new Calculator();
-            Console.WriteLine("Result: "+td.Calc(args[0]));
-        }
-
         public Calculator()
         {
             _dictionary.Add("+", new BinaryOperation((x,y)=> x+y));
@@ -34,7 +27,7 @@ namespace PolishCalculator
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
-        public double Calc(string s)
+        public double Calc(string s) 
         {
              if (s == null || s.Equals(""))
             {
@@ -66,65 +59,22 @@ namespace PolishCalculator
                     }
                     else
                     {
-                        Console.WriteLine("too many tokens");
-                        return 0;
+                        throw new Exception("too many tokens");
                     }
 
                 }
                 else
                 {
-                    Console.WriteLine("Wrong token: " + c + ", check input");
-                    return 0;
+                    throw new Exception("Wrong token: " + c + ", check input");
                 }
             }
             if (stack.Count() != 1)
             {
-                Console.WriteLine("too many numbers");
-                return 0;
+                throw new Exception("too many numbers");
             }
             return stack.Pop();
         }
 
-    }
-
-    /// <summary>
-    /// IOperation is an interface which generalize an operation
-    /// </summary>
-    public interface IOperation
-    {
-        double Execute(double arg1, params double[] argn);
-    }
-        
-    /// <summary>
-    /// UnaryOperation generalize an operation with one parameter by using a delegate.
-    /// </summary>
-    public class UnaryOperation : IOperation
-    {
-        private Func<double, double> _operation;
-        public UnaryOperation(Func<double, double> function)
-        {
-            _operation = function;
-        }
-        public double Execute(double arg1, params double[] argn)
-        {
-            return _operation(arg1);
-        }
-    }
-
-    /// <summary>
-    /// BinaryOperation generalize an operation with two parameters by using a delegate
-    /// </summary>
-    public class BinaryOperation : IOperation
-    {
-        private Func<double, double, double> _operation;
-        public BinaryOperation(Func<double, double, double> function)
-        {
-            _operation = function;
-        }
-        public double Execute(double arg1, params double[] argn)
-        {
-            return _operation(arg1, argn[0]);
-        }
     }
 
 }

@@ -1,6 +1,0 @@
-D:\ITU\BDSA\VS2013\BDSA2014\ReversePolish\bin\Debug\ReversePolish.exe.config
-D:\ITU\BDSA\VS2013\BDSA2014\ReversePolish\bin\Debug\ReversePolish.exe
-D:\ITU\BDSA\VS2013\BDSA2014\ReversePolish\bin\Debug\ReversePolish.pdb
-D:\ITU\BDSA\VS2013\BDSA2014\ReversePolish\obj\Debug\ReversePolish.csprojResolveAssemblyReference.cache
-D:\ITU\BDSA\VS2013\BDSA2014\ReversePolish\obj\Debug\ReversePolish.exe
-D:\ITU\BDSA\VS2013\BDSA2014\ReversePolish\obj\Debug\ReversePolish.pdb

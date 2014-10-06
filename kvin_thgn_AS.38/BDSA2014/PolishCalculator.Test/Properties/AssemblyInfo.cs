@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ReversePolish.Test")]
+[assembly: AssemblyTitle("PolishCalculator.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ReversePolish.Test")]
+[assembly: AssemblyProduct("PolishCalculator.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5509b305-e847-4f2f-ba42-7f0d096adc14")]
+[assembly: Guid("34c4def2-23e1-4268-b714-b09d1d365951")]
 
 // Version information for an assembly consists of the following four values:
 //

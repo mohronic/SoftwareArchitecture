@@ -22,7 +22,7 @@ namespace PolishCalculator.test
             string input = null;
             double actual = c.Calc(input);
             double expected = 0;
-        	Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual);
         }
         [TestMethod]
         public void EmptyStringTest()
@@ -137,3 +137,4 @@ namespace PolishCalculator.test
         }
     }
 }
+
