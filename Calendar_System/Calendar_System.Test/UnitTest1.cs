@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Calendar_System.control;
 using Calendar_System.model;
+using Calendar_System.model.Storage;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Calendar_System.Test
@@ -15,10 +16,10 @@ namespace Calendar_System.Test
         [TestMethod]
         public void CreateEntryTest()
         {
-            FileStorage abst = new FileStorage();
+            TestStorageImplementor abst = new TestStorageImplementor();
             EntryControl ec = new EntryControl("newEntry", abst);
-            ec.SendEntryToDb(new Entry(DateTime.Now, DateTime.Now, "hello", new List<User>(), "New entry"));
-            Assert.IsTrue(abst._entryList.Count > 0);
+            ec.SendEntryToDb(DateTime.Now, DateTime.Now, "hello", new List<User>(), "New entry");
+            Assert.IsTrue(abst.GetEntriesForUser().Count > 0);
 
         }
     }

@@ -42,20 +42,21 @@
       <FileName>control\WorkgroupControl.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Calendar_System.model.AbstractStorage" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="Calendar_System.model.Storage.AbstractStorage" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAAAACAIAAwAA=</HashCode>
-      <FileName>model\AbstractStorage.cs</FileName>
+      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAIAACAIAAwAA=</HashCode>
+      <FileName>model\Storage\AbstractStorage.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Calendar_System.model.DatabaseStorage" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="Calendar_System.model.Storage.DatabaseStorageImplementor" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="10.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAAAACAIAAQAA=</HashCode>
-      <FileName>model\DatabaseStorage.cs</FileName>
+      <FileName>model\Storage\DatabaseStorageImplementor.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Calendar_System.model.Entry" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="12.25" Y="1.5" Width="1.5" />
@@ -65,12 +66,13 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Calendar_System.model.FileStorage" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="Calendar_System.model.Storage.TestStorageImplementor" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="8.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IDAAAAAAAQAQAABEAAAAAAAMAQAIAFBAAAACAIgAQIA=</HashCode>
-      <FileName>model\FileStorage.cs</FileName>
+      <FileName>model\Storage\TestStorageImplementor.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Calendar_System.model.SerializeEntries" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="7" Y="3.5" Width="1.5" />
@@ -90,7 +92,7 @@
   <Class Name="Calendar_System.model.User" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="5.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAACAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAg=</HashCode>
+      <HashCode>AAAAAEAAACAAAAQAAAAAAAAgAAAAAAAAAAAAIAAAAAg=</HashCode>
       <FileName>model\User.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -182,7 +184,7 @@
   <Class Name="Calendar_System.view.LoginForm" Collapsed="true">
     <Position X="10.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAQAAAAAAAAAAAAAAAAAAqAIAAAAAAAAQAAAEAEAA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAqAIIABAAAAAQAAAEAEAA=</HashCode>
       <FileName>view\LoginForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -200,11 +202,11 @@
       <FileName>view\WorkgroupForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Calendar_System.model.IAbstractStorage" Collapsed="true">
+  <Interface Name="Calendar_System.model.Storage.IAbstractStorage" Collapsed="true">
     <Position X="5.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAAAACAIAAQAA=</HashCode>
-      <FileName>model\IAbstractStorage.cs</FileName>
+      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAIAACAIAAQAA=</HashCode>
+      <FileName>model\Storage\IAbstractStorage.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Calendar_System.model.IEntry" Collapsed="true">

@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Calendar_System.model
+namespace Calendar_System.model.Storage
 {
-    class DatabaseStorage : IStorage
+    class FileStorageImplementor : IStorage
     {
         public bool IsConnected()
         {
-            // Mock connect
-            var random = new Random();
-            var next = random.Next(2);
-            return next.Equals(0);
+            throw new NotImplementedException();
         }
+
         public List<Entry> GetEntriesForUser(User user)
         {
             throw new NotImplementedException();
@@ -80,7 +75,7 @@ namespace Calendar_System.model
             throw new NotImplementedException();
         }
 
-        public bool CheckPassword(string userName, string password)
+        public bool CheckPassword(User user, string password)
         {
             throw new NotImplementedException();
         }

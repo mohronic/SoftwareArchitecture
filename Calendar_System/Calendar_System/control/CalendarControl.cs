@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calendar_System.model;
+using Calendar_System.model.Storage;
 using Calendar_System.view;
 
 namespace Calendar_System.control
 {
     public class CalendarControl
     {
-        IStorage _abstractStorage = new FileStorage();
+        IStorage _abstractStorage = new TestStorageImplementor();
         public CalendarControl()
         {
             LoginForm loginForm = new LoginForm(this);
@@ -32,9 +33,9 @@ namespace Calendar_System.control
         {
             SyncControl sc = new SyncControl(_abstractStorage);
         }
-        public bool CheckLogin(string userName, string password)
+        public bool CheckLogin(User user, string password)
         {
-            return _abstractStorage.CheckPassword(userName, password);
+            return _abstractStorage.CheckPassword(user, password);
         }
     }
 }

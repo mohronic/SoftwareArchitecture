@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Calendar_System.model
+namespace Calendar_System.model.Storage
 {
     interface IAbstractStorage
     {
         bool IsConnected();
         void CreateUser(User user);
-        bool CheckPassword(string userName, string passWord);
+        bool CheckPassword(User user, string password);
         void CreateEntry(Entry entry);
         void CreateWorkgroup(Workgroup workgroup);
         void DeleteEntry(Entry entry);
@@ -23,5 +19,6 @@ namespace Calendar_System.model
         void SyncAccount();
         void UpdateEntry(Entry entry);
         void UpdateUser(User user);
+        void SetStorage(IStorage storage);
     }
 }

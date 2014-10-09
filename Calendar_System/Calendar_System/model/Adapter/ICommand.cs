@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calendar_System.model
+namespace Calendar_System.model.Adapter
 {
-    class TemporaryStorage
+    interface ICommand
     {
-
+        void Execute();
     }
 }

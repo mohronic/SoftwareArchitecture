@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using Calendar_System.control;
 using Calendar_System.model;
+using Calendar_System.model.Storage;
 using Calendar_System.view;
 
 namespace Calendar_System
@@ -12,12 +13,12 @@ namespace Calendar_System
     {
         // If you want to run as user in current implementation
         // Username is Hans (case sensitive!) and password is 12345.
-        static void Main1()
+        static void Main()
         {
             CalendarControl cControl = new CalendarControl();
         }
         // If you want to run as admin in current implementation
-        static void Main()
+        static void Main1()
         {
             AdminControl ac = new AdminControl();
         }
@@ -26,7 +27,7 @@ namespace Calendar_System
         /// </summary>
         static void Main2()
         {
-            AbstractStorage a = new AbstractStorage(new FileStorage());
+            AbstractStorage a = new AbstractStorage();
             var user = a.GetUsers().First();
             List<Entry> entries = a.GetEntriesForUser(user);
             

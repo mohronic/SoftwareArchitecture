@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Calendar_System.model
 {
     [Serializable()]
-    public class User : ISerializable
+    public class User : ISerializable, IComparable
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -37,6 +37,17 @@ namespace Calendar_System.model
             info.AddValue("LastName", FirstName);
             info.AddValue("Email", FirstName);
             info.AddValue("Phone", Phone);
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj != null) return 1;
+            User otherUser = obj as User;
+            if (otherUser.FirstName == FirstName && otherUser.LastName == LastName && otherUser.Phone == Phone && otherUser.Email == Email)
+            {
+                return 0;
+            }
+            return 1;
         }
     }
 }

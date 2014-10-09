@@ -1,20 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Calendar_System.model
+namespace Calendar_System.model.Storage
 {
     class AbstractStorage : IAbstractStorage
     {
         private IStorage _storage;
-
-        public AbstractStorage(IStorage storage)
-        {
-            _storage = storage;
-        }
 
         public bool IsConnected()
         {
@@ -26,9 +16,9 @@ namespace Calendar_System.model
             _storage.CreateUser(user);
         }
 
-        public bool CheckPassword(string userName, string passWord)
+        public bool CheckPassword(User user, string password)
         {
-            return _storage.CheckPassword(userName, passWord);
+            return _storage.CheckPassword(user, password);
         }
 
         public void CreateEntry(Entry entry)
@@ -99,6 +89,11 @@ namespace Calendar_System.model
         public void UpdateUser(User user)
         {
             _storage.UpdateUser(user);
-        }     
+        }
+
+        public void SetStorage(IStorage storage)
+        {
+            _storage = storage;
+        }
     }
 }

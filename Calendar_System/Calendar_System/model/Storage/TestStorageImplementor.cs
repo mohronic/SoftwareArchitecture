@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Calendar_System.model
+namespace Calendar_System.model.Storage
 {
-    public class FileStorage : IStorage
+    public class TestStorageImplementor : IStorage
     {
         private List<Entry> _entryList;
         private List<User> _userList;
         private List<Workgroup> _workgroupList;
-        private Dictionary<string, string> _passwordDictionary;
-        public FileStorage()
+        private Dictionary<User, string> _passwordDictionary;
+        public TestStorageImplementor()
         {
             _entryList = new List<Entry>();
             _userList = new List<User>();
             _workgroupList = new List<Workgroup>();
-            User user1 = new User("Hans", "Hansen", "hans@itu.dk", "42913392");
+            var user1 = new User("Hans", "Hansen", "hans@itu.dk", "42913392");
             _userList.Add(user1);
 
             Entry entry1 = new Entry(new DateTime(2014, 10, 10), new DateTime(2014, 10, 10), "Atrium", _userList, "Meeting");
@@ -26,8 +22,8 @@ namespace Calendar_System.model
 
             Workgroup workgroup1 = new Workgroup("Lecturers", _userList);
             _workgroupList.Add(workgroup1);
-            _passwordDictionary = new Dictionary<string, string>();
-            _passwordDictionary.Add(user1.FirstName, "12345");
+            _passwordDictionary = new Dictionary<User, string>();
+            _passwordDictionary.Add(user1, "12345");
         }
 
         public bool IsConnected()
@@ -106,10 +102,11 @@ namespace Calendar_System.model
         {
             throw new NotImplementedException();
         }
-        public bool CheckPassword(string userName, string password)
+
+        public bool CheckPassword(User user, string password)
         {
             string value;
-            if (_passwordDictionary.TryGetValue(userName, out value))
+            if (_passwordDictionary.TryGetValue(user, out value))
             {
                 if (value.Equals(password))
                 {

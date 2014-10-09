@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Calendar_System.control;
+using Calendar_System.model;
+using Calendar_System.model.Storage;
 
 namespace Calendar_System.view
 {
@@ -14,12 +16,14 @@ namespace Calendar_System.view
         private Button _cancelButton;
         private Label _userNameLable;
         private Label _passwordLabel;
-        private TextBox _userNameTB;
         private TextBox _passwordTB;
+        private ComboBox _userTB;
         private Button _loginButton;
-
+        private IAbstractStorage _abstractStorage = new AbstractStorage();
+        
         public LoginForm(CalendarControl calendarControl)
         {
+            _abstractStorage.SetStorage(new TestStorageImplementor());
             _cControl = calendarControl;
             InitializeComponent();
         }
@@ -30,8 +34,8 @@ namespace Calendar_System.view
             this._cancelButton = new System.Windows.Forms.Button();
             this._userNameLable = new System.Windows.Forms.Label();
             this._passwordLabel = new System.Windows.Forms.Label();
-            this._userNameTB = new System.Windows.Forms.TextBox();
             this._passwordTB = new System.Windows.Forms.TextBox();
+            this._userTB = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // _loginButton
@@ -72,13 +76,6 @@ namespace Calendar_System.view
             this._passwordLabel.TabIndex = 3;
             this._passwordLabel.Text = "Password:";
             // 
-            // _userNameTB
-            // 
-            this._userNameTB.Location = new System.Drawing.Point(97, 9);
-            this._userNameTB.Name = "_userNameTB";
-            this._userNameTB.Size = new System.Drawing.Size(173, 22);
-            this._userNameTB.TabIndex = 2;
-            // 
             // _passwordTB
             // 
             this._passwordTB.Location = new System.Drawing.Point(97, 38);
@@ -87,11 +84,23 @@ namespace Calendar_System.view
             this._passwordTB.Size = new System.Drawing.Size(173, 22);
             this._passwordTB.TabIndex = 5;
             // 
+            // _userTB
+            // 
+            this._userTB.FormattingEnabled = true;
+            this._userTB.Location = new System.Drawing.Point(97, 9);
+            this._userTB.Name = "_userTB";
+            this._userTB.Size = new System.Drawing.Size(173, 24);
+            this._userTB.TabIndex = 1;
+            foreach (var user in _abstractStorage.GetUsers())
+            {
+                _userTB.Items.Add(user.FirstName + " " + user.LastName);
+            }
+            // 
             // LoginForm
             // 
             this.ClientSize = new System.Drawing.Size(282, 255);
+            this.Controls.Add(this._userTB);
             this.Controls.Add(this._passwordTB);
-            this.Controls.Add(this._userNameTB);
             this.Controls.Add(this._passwordLabel);
             this.Controls.Add(this._userNameLable);
             this.Controls.Add(this._cancelButton);
@@ -104,7 +113,10 @@ namespace Calendar_System.view
 
         private void _loginButton_Click(object sender, EventArgs e)
         {
-            bool loginStatus = _cControl.CheckLogin(_userNameTB.Text, _passwordTB.Text);
+            int selectedIndex = _userTB.SelectedIndex;
+            var user = _abstractStorage.GetUsers().ElementAt(selectedIndex);
+            bool loginStatus = _cControl.CheckLogin(user, _passwordTB.Text);
+            Console.Out.WriteLine(user.FirstName);
             if (loginStatus)
             {
                 this.Dispose();
