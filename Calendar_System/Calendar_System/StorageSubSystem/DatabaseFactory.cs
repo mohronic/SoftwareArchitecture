@@ -9,21 +9,37 @@
     {
         AbstractStorage _storage;
 
-        public DatabaseFactory(AbstractStorage storage)
+        public DatabaseFactory()
         {
-            _storage = storage;
+
         }
-        public void CreateOnlineStorage()
+        public AbstractStorage CreateStorage(string databaseType)
+        {
+            IStorage iStorage;
+            if (databaseType == "online")
+            {
+                iStorage = new DatabaseStorageImplementor();   
+            }
+            else if (databaseType == "offline")
+            {
+                iStorage = new FileStorageImplementor();
+            }
+            else
+            {
+                iStorage = new TestStorageImplementor();
+            }
+            return new AbstractStorage(iStorage);
+        }
+
+        public void SetOnlineStorage()
         {
             _storage.SetStorage(new DatabaseStorageImplementor());
         }
-
-        public void CreateFileStorage()
+        public void SetOfflineStorage()
         {
-            _storage.SetStorage(new TestStorageImplementor());
+            _storage.SetStorage(new FileStorageImplementor());
         }
-
-        public void CreateTestStorage()
+        public void SetTestStorage()
         {
             _storage.SetStorage(new TestStorageImplementor());
         }

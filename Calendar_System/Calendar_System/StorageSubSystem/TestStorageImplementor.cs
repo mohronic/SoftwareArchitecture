@@ -20,7 +20,7 @@ namespace Calendar_System.StorageSubSystem
             var user1 = new User("Hans", "Hansen", "hans@itu.dk", "42913392", true);
             _userList.Add(user1);
 
-            Entry entry1 = new Entry(new DateTime(2014, 10, 10), new DateTime(2014, 10, 10), "Atrium", _userList, "Meeting");
+            Entry entry1 = new Entry(new DateTime(2014, 11, 10, 12, 30, 00), new DateTime(2014, 12, 10, 14, 30, 00), "Atrium", _userList, "Meeting");
             _entryList.Add(entry1);
 
             Workgroup workgroup1 = new Workgroup("Lecturers", _userList);

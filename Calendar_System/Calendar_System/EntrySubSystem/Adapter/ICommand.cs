@@ -1,6 +1,6 @@
 ﻿namespace Calendar_System.EntrySubSystem.Adapter
 {
-    interface ICommand
+    public interface ICommand
     {
         void Execute();
     }

@@ -10,6 +10,10 @@ namespace Calendar_System.StorageSubSystem
     {
         private IStorage _storage;
 
+        public AbstractStorage(IStorage storage)
+        {
+            _storage = storage;
+        }
         public bool IsConnected()
         {
             return _storage.IsConnected();

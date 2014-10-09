@@ -7,8 +7,8 @@ namespace Calendar_System.EntrySubSystem
     interface IEntry
     {
         String EntryName { get; set; }
-        DateTime StartTime { get; set; }
-        DateTime EndTime { get; set; }
+        DateTime StartDate { get; set; }
+        DateTime EndDate { get; set; }
         String Location { get; set; }
         List<User> UserList { get; set; }
     }

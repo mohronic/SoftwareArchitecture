@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountSubSystem\AccountControl.cs" />
+    <Compile Include="EntrySubSystem\Adapter\AuthorizeCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\CreateEntryCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\GetEntryCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\GoogleInvoker.cs" />
+    <Compile Include="EntrySubSystem\Adapter\ModifyEntryCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\SendEntriesCommand.cs" />
     <Compile Include="MainSystem\AdminControl.cs" />
     <Compile Include="MainSystem\CalendarControl.cs" />
     <Compile Include="EntrySubSystem\EntryControl.cs" />
@@ -81,7 +87,7 @@
     <Compile Include="MainSystem\AddPeopleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainSystem\AdminClient.cs">
+    <Compile Include="MainSystem\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainSystem\ClientForm.cs">
@@ -112,8 +118,8 @@
     <EmbeddedResource Include="AccountSubSystem\AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainSystem\AdminClient.resx">
-      <DependentUpon>AdminClient.cs</DependentUpon>
+    <EmbeddedResource Include="MainSystem\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainSystem\ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>

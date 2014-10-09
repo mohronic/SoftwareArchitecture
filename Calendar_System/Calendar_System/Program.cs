@@ -23,9 +23,10 @@ namespace Calendar_System
         /// </summary>
         static void Main2()
         {
-            AbstractStorage a = new AbstractStorage();
-            var user = a.GetUsers().First();
-            List<Entry> entries = a.GetEntriesForUser(user);
+            var factory = new DatabaseFactory();
+            var abstractStorage = factory.CreateStorage("test");
+            var user = abstractStorage.GetUsers().First();
+            List<Entry> entries = abstractStorage.GetEntriesForUser(user);
             
             //save the car list to a file
             SerializeEntries objectToSerialize = new SerializeEntries();

@@ -14,11 +14,12 @@ namespace Calendar_System.MainSystem
         private TextBox _passwordTB;
         private ComboBox _userTB;
         private Button _loginButton;
-        private IAbstractStorage _abstractStorage = new AbstractStorage();
+        private IAbstractStorage _abstractStorage;
         
         public LoginForm(CalendarControl calendarControl)
         {
-            _abstractStorage.SetStorage(new TestStorageImplementor());
+            var factory = new DatabaseFactory();
+            _abstractStorage = factory.CreateStorage("test");
             _cControl = calendarControl;
             InitializeComponent();
             foreach (var user in _abstractStorage.GetUsers())

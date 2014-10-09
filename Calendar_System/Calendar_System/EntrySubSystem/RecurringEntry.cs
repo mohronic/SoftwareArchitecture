@@ -8,8 +8,8 @@ namespace Calendar_System.EntrySubSystem
     class RecurringEntry : IEntry
     {
         public string EntryName { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string Location { get; set; }
         public List<User> UserList { get; set; }
         public List<Entry> EntryList { get; set; }

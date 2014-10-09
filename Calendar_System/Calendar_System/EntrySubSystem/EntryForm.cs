@@ -27,9 +27,11 @@ namespace Calendar_System.EntrySubSystem
             _entryControl = entryControl;
             InitializeComponent();
             _entryNameTb.Text = entry.EntryName;
-            _startDatePicker.Value = entry.StartTime;
-            _endDatePicker.Value = entry.EndTime;
+            _startDatePicker.Value = entry.StartDate;
+            _endDatePicker.Value = entry.EndDate;
             _locationTb.Text = entry.Location;
+            _startTimePicker.Value = entry.StartDate;
+            _endTimePicker.Value = entry.EndDate;
         }
 
         public EntryForm(EntryControl entryControl)
