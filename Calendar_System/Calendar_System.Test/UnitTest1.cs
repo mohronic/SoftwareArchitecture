@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Calendar_System.control;
-using Calendar_System.model;
-using Calendar_System.model.Storage;
+using Calendar_System.AccountSubSystem;
+using Calendar_System.EntrySubSystem;
+using Calendar_System.StorageSubSystem;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Calendar_System.Test

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using Calendar_System.control;
-using Calendar_System.model;
-using Calendar_System.model.Storage;
-using Calendar_System.view;
+using Calendar_System.AccountSubSystem;
+using Calendar_System.EntrySubSystem;
+using Calendar_System.MainSystem;
+using Calendar_System.StorageSubSystem;
+using Calendar_System.Utility;
 
 namespace Calendar_System
 {
@@ -16,11 +17,6 @@ namespace Calendar_System
         static void Main()
         {
             CalendarControl cControl = new CalendarControl();
-        }
-        // If you want to run as admin in current implementation
-        static void Main1()
-        {
-            AdminControl ac = new AdminControl();
         }
         /// <summary>
         /// Serialization test

@@ -1,107 +1,134 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Calendar_System.control.AccountControl" Collapsed="true">
+  <Class Name="Calendar_System.AccountSubSystem.AccountControl" Collapsed="true">
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAABABAAAQAAAAQEAAAA=</HashCode>
-      <FileName>control\AccountControl.cs</FileName>
+      <FileName>AccountSubSystem\AccountControl.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Calendar_System.control.AdminControl" Collapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
+  <Class Name="Calendar_System.AccountSubSystem.AccountForm" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAAQAAAAABBAAAAkAAAAABGAIAAAAQAQAAAAAEACAA=</HashCode>
+      <FileName>AccountSubSystem\AccountForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.AccountSubSystem.AdminClient" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAQAAAAAAAAAAACCAAABAAAAAgAAAAAAQA=</HashCode>
+      <FileName>MainSystem\AdminClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.AccountSubSystem.AdminControl" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
-      <FileName>control\AdminControl.cs</FileName>
+      <FileName>MainSystem\AdminControl.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Calendar_System.control.CalendarControl" Collapsed="true">
-    <Position X="8.75" Y="1.5" Width="1.5" />
+  <Class Name="Calendar_System.AccountSubSystem.User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAABACAAAAAAABgAAAAAAAAAAAAA=</HashCode>
-      <FileName>control\CalendarControl.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.control.EntryControl" Collapsed="true">
-    <Position X="5.25" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>CACAAABAAAAQAAAAAAAAAAABAAAABAAAAAAAAAAAIAA=</HashCode>
-      <FileName>control\EntryControl.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.control.SyncControl" Collapsed="true">
-    <Position X="10.5" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAAAAAA=</HashCode>
-      <FileName>control\SyncControl.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.control.WorkgroupControl" Collapsed="true">
-    <Position X="8.75" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
-      <FileName>control\WorkgroupControl.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.model.Storage.AbstractStorage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAIAACAIAAwAA=</HashCode>
-      <FileName>model\Storage\AbstractStorage.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="Calendar_System.model.Storage.DatabaseStorageImplementor" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAAAACAIAAQAA=</HashCode>
-      <FileName>model\Storage\DatabaseStorageImplementor.cs</FileName>
+      <HashCode>AAAAAEAAACAAAAQAAAAAAQAgAAAAAAAAAAAAIAAAAAg=</HashCode>
+      <FileName>AccountSubSystem\User.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Calendar_System.model.Entry" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="Calendar_System.EntrySubSystem.Adapter.GetEntriesCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>EntrySubSystem\Adapter\GetEntriesCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Calendar_System.EntrySubSystem.Adapter.GoogleAdapter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAQAAAAAAAAAAgQAAABAAAAAAIAACAAA=</HashCode>
+      <FileName>EntrySubSystem\Adapter\GoogleAdapter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Calendar_System.EntrySubSystem.Entry" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="12.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAIAAAAgIAAgAAQAAAAAAAAAAAA=</HashCode>
-      <FileName>model\Entry.cs</FileName>
+      <FileName>EntrySubSystem\Entry.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Calendar_System.model.Storage.TestStorageImplementor" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="8.75" Y="2.5" Width="1.5" />
+  <Class Name="Calendar_System.EntrySubSystem.EntryControl" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IDAAAAAAAQAQAABEAAAAAAAMAQAIAFBAAAACAIgAQIA=</HashCode>
-      <FileName>model\Storage\TestStorageImplementor.cs</FileName>
+      <HashCode>CACAAABAAAAQAAAAAAAAAAABAAAABAAAAAAAAAAAIAA=</HashCode>
+      <FileName>EntrySubSystem\EntryControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.EntrySubSystem.EntryForm" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQUAQIAAAAAIAiABAAABAAkCAIAIAAAEAAAAgAACABA=</HashCode>
+      <FileName>EntrySubSystem\EntryForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.EntrySubSystem.RecurringEntry" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAAAAAAEAAAAAIAAAEAIAAgAAQAABAAAAAAAAA=</HashCode>
+      <FileName>EntrySubSystem\RecurringEntry.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Calendar_System.model.SerializeEntries" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="3.5" Width="1.5" />
+  <Class Name="Calendar_System.MainSystem.AddPeopleForm" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>model\SerializeEntries.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="Calendar_System.model.Serializer" Collapsed="true">
-    <Position X="8.75" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>model\Serializer.cs</FileName>
+      <HashCode>AAAAAAIACAAAAAAEAAAAAAAAAAAgAAggAQAAAAAAAAA=</HashCode>
+      <FileName>MainSystem\AddPeopleForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Calendar_System.model.User" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="4.5" Width="1.5" />
+  <Class Name="Calendar_System.MainSystem.CalendarClient" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAACAAAAQAAAAAAAAgAAAAAAAAAAAAIAAAAAg=</HashCode>
-      <FileName>model\User.cs</FileName>
+      <HashCode>AIUAAAAAQAAAAAAAAAAAAgECQAAABEAAAAQAAAAAAIA=</HashCode>
+      <FileName>MainSystem\CalendarClient.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Calendar_System.model.Workgroup" Collapsed="true">
-    <Position X="7" Y="4.5" Width="1.5" />
+  <Class Name="Calendar_System.MainSystem.CalendarControl" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAGAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
-      <FileName>model\Workgroup.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAAABACAAAAAAABgAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainSystem\CalendarControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.MainSystem.ÁbstractCalendar" Collapsed="true">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>MainSystem\CalendarInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.MainSystem.CalendarMonthly" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainSystem\CalendarMonthly.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.MainSystem.CalendarWeekly" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainSystem\CalendarWeekly.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.MainSystem.LoginForm" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAqAIIABAAAAAQAAAEAEAA=</HashCode>
+      <FileName>MainSystem\LoginForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calendar_System.Program" Collapsed="true">
@@ -111,8 +138,54 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Calendar_System.StorageSubSystem.AbstractStorage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAIAACAIAAwAA=</HashCode>
+      <FileName>StorageSubSystem\AbstractStorage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Calendar_System.StorageSubSystem.DatabaseFactory" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAIAgAAgAA=</HashCode>
+      <FileName>StorageSubSystem\DatabaseFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.StorageSubSystem.DatabaseStorageImplementor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAAAACAIAAQAA=</HashCode>
+      <FileName>StorageSubSystem\DatabaseStorageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Calendar_System.StorageSubSystem.FileStorageImplementor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAAAACAIAAQAA=</HashCode>
+      <FileName>StorageSubSystem\FileStorageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Calendar_System.StorageSubSystem.TemporaryStorage" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StorageSubSystem\TemporaryStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.StorageSubSystem.TestStorageImplementor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IDAAAAAAAQAQAABEAAAAAAAMAQAIAFBAAAACAIgAQIA=</HashCode>
+      <FileName>StorageSubSystem\TestStorageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
   <Class Name="Calendar_System.Utility.Observable" Collapsed="true">
-    <Position X="12.25" Y="2.5" Width="1.5" />
+    <Position X="14" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAIAAAABAAAAAAAQAAAA=</HashCode>
       <FileName>utility\Observable.cs</FileName>
@@ -125,95 +198,89 @@
       <FileName>utility\Observer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Calendar_System.view.AccountForm" Collapsed="true">
-    <Position X="8.75" Y="0.5" Width="1.5" />
+  <Class Name="Calendar_System.Utility.SerializeEntries" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAQAAAAAABAAAAkAAAAABGAIAAAAQAQAAAAAEACAA=</HashCode>
-      <FileName>view\AccountForm.cs</FileName>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>utility\SerializeEntries.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Calendar_System.Utility.Serializer" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>utility\Serializer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Calendar_System.view.AddPeopleForm" Collapsed="true">
-    <Position X="10.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAEAAAAAAAAAAAgAAggBQAAAAAAAAA=</HashCode>
-      <FileName>view\AddPeopleForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.view.AdminClient" Collapsed="true">
-    <Position X="12.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAABAAAAQAAAAAAAAAAACCAAABAAAAAgAAAAAAQA=</HashCode>
-      <FileName>view\AdminClient.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.view.CalendarClient" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AIUAAAAAQAAAAAAAAAAAAgECQAAABAAAAAQAAAAAAIA=</HashCode>
-      <FileName>view\CalendarClient.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.view.ÁbstractCalendar" Collapsed="true">
-    <Position X="1.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
-      <FileName>view\CalendarInterface.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.view.CalendarMonthly" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>view\CalendarMonthly.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.view.CalendarWeekly" Collapsed="true">
-    <Position X="2.75" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>view\CalendarWeekly.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.view.EntryForm" Collapsed="true">
-    <Position X="7" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQUAQIAAAAAIAiABAAABAAkCAIAIAAAEAAAAgAACABA=</HashCode>
-      <FileName>view\EntryForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.view.LoginForm" Collapsed="true">
-    <Position X="10.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAqAIIABAAAAAQAAAEAEAA=</HashCode>
-      <FileName>view\LoginForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Calendar_System.view.SyncForm" Collapsed="true">
+  <Class Name="Calendar_System.Utility.SyncControl" Collapsed="true">
     <Position X="12.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAQAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>view\SyncForm.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>utility\SyncControl.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Calendar_System.view.WorkgroupForm" Collapsed="true">
+  <Class Name="Calendar_System.Utility.SyncForm" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAQAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>utility\SyncForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.WorkgroupSubSystem.Workgroup" Collapsed="true">
     <Position X="10.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIEAAAAAAAgAAAAAAAGAAAAKAAgAAAAAEAAAAAAAABE=</HashCode>
-      <FileName>view\WorkgroupForm.cs</FileName>
+      <HashCode>AAGAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>WorkgroupSubSystem\Workgroup.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Calendar_System.model.Storage.IAbstractStorage" Collapsed="true">
+  <Class Name="Calendar_System.WorkgroupSubSystem.WorkgroupControl" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>WorkgroupSubSystem\WorkgroupControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendar_System.WorkgroupSubSystem.WorkgroupForm" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAAAgABAAAAAGAAAAKAIgAAAAAEAAAAAAAABE=</HashCode>
+      <FileName>WorkgroupSubSystem\WorkgroupForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Calendar_System.EntrySubSystem.Adapter.IAdapter" Collapsed="true">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAQAAAAAAAAAAgAAAABAAAAAAIAACAAA=</HashCode>
+      <FileName>EntrySubSystem\Adapter\IAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Calendar_System.EntrySubSystem.Adapter.ICommand" Collapsed="true">
+    <Position X="8.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntrySubSystem\Adapter\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Calendar_System.EntrySubSystem.IEntry" Collapsed="true">
+    <Position X="10.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAIAAAAAIAAgAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>EntrySubSystem\IEntry.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Calendar_System.StorageSubSystem.IAbstractStorage" Collapsed="true">
     <Position X="5.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAIAACAIAAQAA=</HashCode>
-      <FileName>model\Storage\IAbstractStorage.cs</FileName>
+      <FileName>StorageSubSystem\IAbstractStorage.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Calendar_System.model.IEntry" Collapsed="true">
-    <Position X="7" Y="5.75" Width="1.5" />
+  <Interface Name="Calendar_System.StorageSubSystem.IStorage" Collapsed="true">
+    <Position X="12.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAIAAAAAIAAgAAQAAAAAAAAAAAA=</HashCode>
-      <FileName>model\IEntry.cs</FileName>
+      <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAAAACAIAAQAA=</HashCode>
+      <FileName>StorageSubSystem\IStorage.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
