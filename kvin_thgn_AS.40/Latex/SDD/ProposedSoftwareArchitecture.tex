@@ -1,0 +1,68 @@
+\section{Proposed software architecture}
+
+\subsection{Overview}
+The following chapter will go through: the chosen architecture patterns and design of the calendar system, the design patterns used to implement it and how the control flow of the program.
+\subsection{Subsystem decomposition}
+The figure below shows the subsystem decomposition of the User part of the program.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.6]{systemModel}
+\caption{Subsystems and their decomposition}
+\end{figure}
+
+\subsection{Hardware/software mapping}
+
+\subsection{Persistent data management}
+\flushleft{\textbf{Identifying persistent objects}}
+
+The calendar system works with four entities, which need to be stored: The administrator and user entities, which need to be persistent, so accounts  doesn’t have to be made every time the system starts again. The workgroups also have to be saved since they would be useless unless persistent.
+	Since it’s a calendar, the entries also need to be persistent, else it wouldn’t be a calendar, which is used to write down and remember events.
+\flushleft{\textbf{Selecting a storage strategy}}
+
+A mixed strategy has been chosen for the system, between relational database and flat file. The relational database will save all persistent information, which is then available online, while the flat file will save all relevant information to the specific user locally.
+	This makes the system able to function off- and online. The relational database will be updated when online while also updating the local file.
+\subsection{Access control and security}
+There are only two kinds of actors that will be using the Calendar System: User and Administrator. Below is the access matrix, which specifies which parts of the Calendar System the two different actors will have access to.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.8]{accessControl}
+\caption{Access matrix for the Calendar System}
+\end{figure}
+
+\subsection{Global software control}
+The server should be using threads as to allow multiple clients connected, updating their calendar at the same time. While the local client should be event-based, since it’s simpler than threads and there is no reason for the clients to use threads.
+
+\subsection{Boundary conditions}
+\flushleft{\textbf{Configuration use cases:}}
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm} |}
+    \hline
+    InstallClient & An administrator creates the calendar server, allowing the creation of new administrators and users, who can make use of the systems functions. \\ \hline
+    \end{tabular}
+\end{center}
+
+\flushleft{\textbf{Start-up and shutdown use cases:}}
+\begin{center}
+    \begin{tabular}{ | l | p{10cm} |}
+    \hline
+    StartCalendarServer & An administrators starts the calendar server. As soon as the server is up and running, users will be able to synchronize their local calendar with the servers. \\ \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm} |}
+    \hline
+    ShutDownCalendarServer & An administrator stops the calendar server. Any changes made to entries, by users will instead be saved in the local storage and uploaded when the server becomes available again. \\ \hline
+    \end{tabular}
+\end{center}
+
+\flushleft{\textbf{Exception use cases:}}
+
+The calendar system can experience two major classes of system failures
+\begin{itemize}
+\item A network failure between the client and the server.
+\item A failure causing the calendar server to unexpectedly terminate.
+\end{itemize}
