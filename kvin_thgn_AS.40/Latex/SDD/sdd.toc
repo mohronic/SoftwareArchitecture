@@ -8,8 +8,8 @@
 \contentsline {section}{\numberline {2}Proposed software architecture}{3}
 \contentsline {subsection}{\numberline {2.1}Overview}{3}
 \contentsline {subsection}{\numberline {2.2}Subsystem decomposition}{3}
-\contentsline {subsection}{\numberline {2.3}Hardware/software mapping}{3}
-\contentsline {subsection}{\numberline {2.4}Persistent data management}{3}
+\contentsline {subsection}{\numberline {2.3}Hardware/software mapping}{4}
+\contentsline {subsection}{\numberline {2.4}Persistent data management}{4}
 \contentsline {subsection}{\numberline {2.5}Access control and security}{4}
-\contentsline {subsection}{\numberline {2.6}Global software control}{4}
-\contentsline {subsection}{\numberline {2.7}Boundary conditions}{4}
+\contentsline {subsection}{\numberline {2.6}Global software control}{5}
+\contentsline {subsection}{\numberline {2.7}Boundary conditions}{5}
