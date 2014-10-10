@@ -43,6 +43,14 @@ There are only two kinds of actors that will be using the Calendar System: User 
 \subsection{Global software control}
 The server should be using threads as to allow multiple clients connected, updating their calendar at the same time. While the local client should be event-based, since it’s simpler than threads and there is no reason for the clients to use threads.
 
+The figure below shows the subsystem decomposition with services:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.7]{services}
+\caption{Subsystem services}
+\end{figure}
+
 \subsection{Boundary conditions}
 \flushleft{\textbf{Configuration use cases:}}
 
