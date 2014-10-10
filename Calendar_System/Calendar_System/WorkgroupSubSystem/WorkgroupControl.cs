@@ -1,20 +1,35 @@
-﻿namespace Calendar_System.WorkgroupSubSystem
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using Calendar_System.AccountSubSystem;
+
+namespace Calendar_System.WorkgroupSubSystem
 {
     public class WorkgroupControl
     {
-        public void WorkGroupFormCreateWorkgroup()
+        public WorkgroupControl(string message)
         {
-            var workgroupForm = new WorkgroupForm();
+            if (message == "newWorkgroup")
+            {
+                WorkgroupFormCreateWorkgroup();
+            }
+            if (message == "modifyWorkgroup")
+            {
+                // Simulates searching - not implemented yet.
+                var workgroup = new Workgroup("bla", new List<User>());
+                WorkgroupFormModifyWorkgroup(workgroup);
+            }
         }
 
-        public void ModifyWorkgroup(Workgroup workgroup)
+        public void WorkgroupFormCreateWorkgroup()
         {
-            var workgroupForm = new WorkgroupForm(workgroup);
+            var wgf = new WorkgroupForm();
+            wgf.Show();
         }
 
-        public void DeleteWordgroup(Workgroup workgroup)
+        public void WorkgroupFormModifyWorkgroup(Workgroup workgroup)
         {
-            
+            var wgf = new WorkgroupForm(workgroup);
+            wgf.Show();
         }
     }
 }

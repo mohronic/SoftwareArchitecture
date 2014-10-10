@@ -6,8 +6,8 @@ namespace Calendar_System.WorkgroupSubSystem
 {
     public class Workgroup
     {
-        private String Name { get; set; }
-        private List<User> UserList { get; set; }
+        public String Name { get; set; }
+        public List<User> UserList { get; set; }
 
         public Workgroup(String name, List<User> userList)
         {

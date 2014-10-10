@@ -7,7 +7,7 @@ namespace Calendar_System.WorkgroupSubSystem
     public class WorkgroupForm : Form
     {
         private List<User> _userList; 
-        private TextBox textBox1;
+        private TextBox _workgroupNameTB;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn _firstName;
         private DataGridViewTextBoxColumn _lastName;
@@ -22,19 +22,26 @@ namespace Calendar_System.WorkgroupSubSystem
     
         public WorkgroupForm()
         {
-            
+            InitializeComponent();   
         }
 
         public WorkgroupForm(Workgroup workgroup)
         {
-            
+            _workgroupNameTB.Text = workgroup.Name;
+            if (workgroup.UserList != null||workgroup.UserList.Count !=0)
+            {
+                foreach (var user in workgroup.UserList)
+                {
+                    // Add users to list and display them
+                }
+            }
         }
 
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this._workgroupNameLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this._workgroupNameTB = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this._firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +64,12 @@ namespace Calendar_System.WorkgroupSubSystem
             this._workgroupNameLabel.TabIndex = 0;
             this._workgroupNameLabel.Text = "Workgroup name:";
             // 
-            // textBox1
+            // _workgroupNameTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 22);
-            this.textBox1.TabIndex = 1;
+            this._workgroupNameTB.Location = new System.Drawing.Point(141, 13);
+            this._workgroupNameTB.Name = "_workgroupNameTB";
+            this._workgroupNameTB.Size = new System.Drawing.Size(340, 22);
+            this._workgroupNameTB.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -135,7 +142,7 @@ namespace Calendar_System.WorkgroupSubSystem
             this.Controls.Add(this._cancelButton);
             this.Controls.Add(this._saveChangesButton);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this._workgroupNameTB);
             this.Controls.Add(this._workgroupNameLabel);
             this.Name = "WorkgroupForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
