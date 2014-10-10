@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-10-10T14:02:58" Importance="High" Text="Reverse Engineering Started." />
+  <Error Timestamp="2014-10-10T14:03:05" Importance="High" Text="Length cannot be less than zero.&#xD;&#xA;Parameter name: length Reverse engineer process was stopped." />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'eaa62d6f-7456-4274-8ee9-caadeee2453f' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::AccountSubSystem' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::AccountSubSystem::User' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::MainSystem' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::StorageSubSystem' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::StorageSubSystem::IAbstractStorage' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::Workgroup' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Medium" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupControl' -  (Class)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupControl::_abstractStorage' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupControl::WorkgroupControl' -  (Operation)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupControl::WorkgroupControl::abstractStorage' -  (Parameter)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupControl::WorkgroupControl::message' -  (Parameter)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupControl::WorkgroupFormCreateWorkgroup' -  (Operation)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupControl::WorkgroupFormModifyWorkgroup' -  (Operation)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupControl::WorkgroupFormModifyWorkgroup::workgroup' -  (Parameter)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Medium" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm' -  (Class)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_addPeopleButton' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_cancelButton' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_email' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_firstName' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_lastName' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_phone' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_saveChangesButton' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_userList' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_workgroupNameLabel' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::_workgroupNameTB' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::components' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::dataGridView1' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::InitializeComponent' -  (Operation)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::WorkgroupForm' -  (Operation)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::WorkgroupForm::workgroup' -  (Parameter)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm::workgroupFormBindingSource' -  (Property)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Collections' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Collections::Generic::List&lt;User‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::ComponentModel' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::ComponentModel::IContainer' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows::Forms' -  (Package)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows::Forms::BindingSource' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows::Forms::Button' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows::Forms::DataGridView' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows::Forms::DataGridViewTextBoxColumn' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows::Forms::Form' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows::Forms::Label' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLClassDiagram::System::Windows::Forms::TextBox' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UMLClassDiagram::Calendar_System::WorkgroupSubSystem::WorkgroupForm to UMLClassDiagram::System::Windows::Forms::Form (Generalization)" />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="High" Text="(2) type(s) fully reverse engineered." />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="High" Text="(13) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2014-10-10T14:03:06" Importance="High" Text="The reverse engineering operation completed with (1) error(s), and (0) warning(s)." />
+</Log>

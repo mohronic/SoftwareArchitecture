@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a51eaba8-a862-4824-9f2d-51f423c7983d"
+  name="StorageSubSystem"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="5b1e86a9-b999-4807-a402-5dbdf2661c9d"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCalendar_System.StorageSubSystem"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="0209cfba-6a04-4bae-8172-70bbc4db1e58"
+        name="IAbstractStorage"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="38764caf-c8d8-4c65-8471-4ecab6db3e8b"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTrondur%2FDocuments%2FGitHub%2FSoftwareArchitecture%2FCalendar_System%2FCalendar_System%2Fbin%2FDebug%2FCalendar_System.exe Namespace%3DCalendar_System.StorageSubSystem Type%3DIAbstractStorage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ca5da52a-ae18-4286-80a4-12e410dd2cc2"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5617f5db-9283-49c1-80c6-5e73e5a6e6ec">
+                <propertyInstance
+                  Id="6b211ccc-730c-4f01-a355-58c151ccb766"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d82716a6-95c8-4fcb-99bd-3ed0ddbcab0c">
+                <propertyInstance
+                  Id="78c49e7c-588d-4db5-b1e0-8a88c080f995"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="93a83d55-ba0e-4791-bf14-f223a3f1373b">
+                <propertyInstance
+                  Id="03d845f7-09ab-4ab0-8437-9816d4bd36dd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2904ae74-5985-4203-b57f-3f194af30e88">
+                <propertyInstance
+                  Id="5e6f660e-4e3d-46d5-b59f-8b5c2a598bcd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
