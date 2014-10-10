@@ -16,10 +16,9 @@ namespace Calendar_System.MainSystem
         private Button _loginButton;
         private IAbstractStorage _abstractStorage;
         
-        public LoginForm(CalendarControl calendarControl)
+        public LoginForm(CalendarControl calendarControl, IAbstractStorage abstractStorage)
         {
-            var factory = new DatabaseFactory();
-            _abstractStorage = factory.CreateStorage("test");
+            _abstractStorage = abstractStorage;
             _cControl = calendarControl;
             InitializeComponent();
             foreach (var user in _abstractStorage.GetUsers())

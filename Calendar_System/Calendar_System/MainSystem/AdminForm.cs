@@ -7,16 +7,14 @@ namespace Calendar_System.MainSystem
 {
     public class AdminForm : Form
     {
-        private IStorage _abstractStorage;
         private AdminControl _adminControl ;
         private Button _createAccountButton;
         private Button _createNewWorkgroupButton;
         private Button _modifyWorkgroupButton;
         private Button _modifyAccountButton;
 
-        public AdminForm(AdminControl adminControl, IStorage abstractStorage)
+        public AdminForm(AdminControl adminControl)
         {
-            _abstractStorage = abstractStorage;
             _adminControl = adminControl;
             InitializeComponent();
         }

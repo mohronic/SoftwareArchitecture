@@ -4,8 +4,8 @@ namespace Calendar_System.Utility
 {
     public class SyncControl
     {
-        private IStorage _abstractStorage;
-        public SyncControl(IStorage abstractStorage)
+        private IAbstractStorage _abstractStorage;
+        public SyncControl(IAbstractStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             SyncForm sf = new SyncForm(this);

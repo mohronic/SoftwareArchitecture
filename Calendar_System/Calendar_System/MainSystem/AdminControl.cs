@@ -7,10 +7,11 @@ namespace Calendar_System.AccountSubSystem
 {
     public class AdminControl
     {
-        IStorage _abstractStorage = new TestStorageImplementor();
-        public AdminControl()
+        IAbstractStorage _abstractStorage;
+        public AdminControl(IAbstractStorage abstractStorage)
         {
-            AdminForm adminClient = new AdminForm(this, _abstractStorage);
+            _abstractStorage = abstractStorage;
+            AdminForm adminClient = new AdminForm(this);
             adminClient.ShowDialog();
         }
         public void CreateAccountControl(string message)
@@ -20,7 +21,7 @@ namespace Calendar_System.AccountSubSystem
 
         public void CreateWorkgroupControl(string message)
         {
-            WorkgroupControl wc = new WorkgroupControl(message);
+            WorkgroupControl wc = new WorkgroupControl(message, _abstractStorage);
         }
     }
 }

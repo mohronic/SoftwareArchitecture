@@ -8,11 +8,12 @@ namespace Calendar_System.MainSystem
 {
     public class CalendarControl
     {
-        IStorage _abstractStorage = new TestStorageImplementor();
+        public AbstractStorage _abstractStorage;
         public User User { get; set; }
         public CalendarControl()
         {
-            LoginForm loginForm = new LoginForm(this);
+            _abstractStorage = new DatabaseFactory().CreateStorage("test");
+            LoginForm loginForm = new LoginForm(this, _abstractStorage);
             loginForm.ShowDialog();
         }
 
@@ -38,7 +39,7 @@ namespace Calendar_System.MainSystem
 
         public void CreateAdminControl()
         {
-            AdminControl adminControl = new AdminControl();
+            AdminControl adminControl = new AdminControl(_abstractStorage);
         }
     }
 }

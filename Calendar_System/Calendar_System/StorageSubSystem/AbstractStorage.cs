@@ -6,7 +6,7 @@ using Calendar_System.WorkgroupSubSystem;
 
 namespace Calendar_System.StorageSubSystem
 {
-    class AbstractStorage : IAbstractStorage
+    public class AbstractStorage : IAbstractStorage
     {
         private IStorage _storage;
 
@@ -14,6 +14,7 @@ namespace Calendar_System.StorageSubSystem
         {
             _storage = storage;
         }
+    
         public bool IsConnected()
         {
             return _storage.IsConnected();

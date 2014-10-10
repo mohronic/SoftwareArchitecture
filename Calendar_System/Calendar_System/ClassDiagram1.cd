@@ -25,7 +25,7 @@
   <Class Name="Calendar_System.AccountSubSystem.AdminControl" Collapsed="true">
     <Position X="12.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAEA=</HashCode>
       <FileName>MainSystem\AdminControl.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -127,12 +127,12 @@
   <Class Name="Calendar_System.MainSystem.AdminForm" Collapsed="true">
     <Position X="14" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAQAAAAAAAAAAACCAAABAAAAAgAAAAAAQA=</HashCode>
+      <HashCode>EAAAAABAAIAUAAAAAAAAAAACCAAAAAAgAAgAAAAAAQA=</HashCode>
       <FileName>MainSystem\AdminForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calendar_System.MainSystem.CalendarControl" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
+    <Position X="1.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAADAAAAAAAAAAAAAABACAAAAABABgAAAAAAAAAAAAA=</HashCode>
       <FileName>MainSystem\CalendarControl.cs</FileName>
@@ -181,7 +181,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Calendar_System.StorageSubSystem.AbstractStorage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IDAAAAAAAQAQAABEAAAAAAAAAQAIAFBAIAACAIAAwAA=</HashCode>
       <FileName>StorageSubSystem\AbstractStorage.cs</FileName>
@@ -279,14 +279,14 @@
   <Class Name="Calendar_System.WorkgroupSubSystem.WorkgroupControl" Collapsed="true">
     <Position X="12.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAADAAAAAAAAAAAAAA=</HashCode>
       <FileName>WorkgroupSubSystem\WorkgroupControl.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calendar_System.WorkgroupSubSystem.WorkgroupForm" Collapsed="true">
     <Position X="14" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIEAAAAAAAgABAAAAAGAAAAKAIgAAAAAEAAAAAAAABE=</HashCode>
+      <HashCode>AIEAAAAAAAgABAAAAAGAAAAKAIgAAAAAAAQAAAAAABE=</HashCode>
       <FileName>WorkgroupSubSystem\WorkgroupForm.cs</FileName>
     </TypeIdentifier>
   </Class>

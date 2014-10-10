@@ -7,7 +7,7 @@ namespace Calendar_System.MainSystem
 {
     public class ClientForm : Form
     {
-        private IStorage _abstractStorage;
+        private IAbstractStorage _abstractStorage;
         private CalendarControl _cControl;
         private Button _createEntryButton;
         private Button _modifyEntryButton;
@@ -15,7 +15,7 @@ namespace Calendar_System.MainSystem
         private Button _adminLoginButton;
         private ÁbstractCalendar _calendarView;
 
-        public ClientForm(CalendarControl cControl, IStorage abstractStorage)
+        public ClientForm(CalendarControl cControl, IAbstractStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             _cControl = cControl;

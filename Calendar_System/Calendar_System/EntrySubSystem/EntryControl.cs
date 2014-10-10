@@ -8,8 +8,8 @@ namespace Calendar_System.EntrySubSystem
 {
     public class EntryControl
     {
-        IStorage _abstractStorage;
-        public EntryControl(String message, IStorage abstractStorage)
+        IAbstractStorage _abstractStorage;
+        public EntryControl(String message, IAbstractStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             if (message.Equals("newEntry"))

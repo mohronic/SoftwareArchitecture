@@ -5,7 +5,7 @@ using Calendar_System.WorkgroupSubSystem;
 
 namespace Calendar_System.StorageSubSystem
 {
-    interface IAbstractStorage
+    public interface IAbstractStorage
     {
         bool IsConnected();
         void CreateUser(User user);

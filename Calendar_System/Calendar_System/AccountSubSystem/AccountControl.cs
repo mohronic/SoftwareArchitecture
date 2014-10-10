@@ -6,8 +6,8 @@ namespace Calendar_System.AccountSubSystem
 {
     public class AccountControl
     {
-        IStorage _abstractStorage;
-        public AccountControl(String message, IStorage abstractStorage)
+        IAbstractStorage _abstractStorage;
+        public AccountControl(String message, IAbstractStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             if (message.Equals("newAccount"))

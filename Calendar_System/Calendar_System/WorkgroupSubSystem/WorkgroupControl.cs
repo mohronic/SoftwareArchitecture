@@ -1,13 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using Calendar_System.AccountSubSystem;
+using Calendar_System.StorageSubSystem;
 
 namespace Calendar_System.WorkgroupSubSystem
 {
     public class WorkgroupControl
     {
-        public WorkgroupControl(string message)
+        private IAbstractStorage _abstractStorage;
+        public WorkgroupControl(string message, IAbstractStorage abstractStorage)
         {
+            _abstractStorage = abstractStorage;
             if (message == "newWorkgroup")
             {
                 WorkgroupFormCreateWorkgroup();
