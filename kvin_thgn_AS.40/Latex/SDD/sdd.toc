@@ -1,4 +1,4 @@
-\select@language {danish}
+\select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{2}
 \contentsline {subsection}{\numberline {1.1}Purpose of the system}{2}
 \contentsline {subsection}{\numberline {1.2}Design goals}{2}
