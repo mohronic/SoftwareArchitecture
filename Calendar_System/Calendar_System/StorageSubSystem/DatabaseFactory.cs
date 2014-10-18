@@ -7,7 +7,7 @@
     /// </summary>
     class DatabaseFactory
     {
-        AbstractStorage _storage;
+        private AbstractStorage _storage;
 
         public DatabaseFactory()
         {

@@ -25,7 +25,7 @@ namespace Calendar_System.WorkgroupSubSystem
 
         public void WorkgroupFormCreateWorkgroup()
         {
-            var wgf = new WorkgroupForm();
+            var wgf = new WorkgroupForm(new Workgroup());
             wgf.Show();
         }
 
@@ -33,6 +33,10 @@ namespace Calendar_System.WorkgroupSubSystem
         {
             var wgf = new WorkgroupForm(workgroup);
             wgf.Show();
+        }
+        public void SendWorkgroupToDb(Workgroup workgroup)
+        {
+            _abstractStorage.CreateWorkgroup(workgroup);
         }
     }
 }

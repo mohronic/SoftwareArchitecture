@@ -9,7 +9,7 @@ namespace Calendar_System.StorageSubSystem
     {
         bool IsConnected();
         void CreateUser(User user);
-        bool CheckPassword(User user, string password);
+        User CheckPassword(string userName, string password);
         void CreateEntry(Entry entry);
         void CreateWorkgroup(Workgroup workgroup);
         void DeleteEntry(Entry entry);

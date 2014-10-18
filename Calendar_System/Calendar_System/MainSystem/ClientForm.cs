@@ -7,6 +7,7 @@ namespace Calendar_System.MainSystem
 {
     public class ClientForm : Form
     {
+        private bool _isAdmin;
         private IAbstractStorage _abstractStorage;
         private CalendarControl _cControl;
         private Button _createEntryButton;
@@ -15,8 +16,9 @@ namespace Calendar_System.MainSystem
         private Button _adminLoginButton;
         private ÁbstractCalendar _calendarView;
 
-        public ClientForm(CalendarControl cControl, IAbstractStorage abstractStorage)
+        public ClientForm(CalendarControl cControl, IAbstractStorage abstractStorage, bool isAdmin)
         {
+            _isAdmin = isAdmin;
             _abstractStorage = abstractStorage;
             _cControl = cControl;
             _calendarView = new CalendarWeekly();
@@ -112,7 +114,7 @@ namespace Calendar_System.MainSystem
 
         private void _adminLoginButton_Click(object sender, EventArgs e)
         {
-            if (_cControl.User.Admin)
+            if (_isAdmin)
             {
                 _cControl.CreateAdminControl();
             }

@@ -6,7 +6,7 @@ namespace Calendar_System.AccountSubSystem
 {
     public class AccountControl
     {
-        IAbstractStorage _abstractStorage;
+        private IAbstractStorage _abstractStorage;
         public AccountControl(String message, IAbstractStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
@@ -24,14 +24,14 @@ namespace Calendar_System.AccountSubSystem
 
         public void AccountFormCreateAccount()
         {
-            var accountForm = new AccountForm(this);
-            accountForm.ShowDialog();
+            var accountForm = new AccountForm(this, new User());
+            accountForm.Show();
         }
 
         public void AccountFormModifyAccount(User user)
         {
             var accountForm = new AccountForm(this, user);
-            accountForm.ShowDialog();
+            accountForm.Show();
         }
 
         public void DeleteAccount(User user)
@@ -43,11 +43,9 @@ namespace Calendar_System.AccountSubSystem
             _abstractStorage.DeleteUser(user);
         }
 
-        public void SendAccountToDb(string firstName, string lastName, string email, string phone, bool admin)
+        public void SendAccountToDb(User user)
         {
-            var user = new User(firstName, lastName, email, phone, admin);
             _abstractStorage.CreateUser(user);
-            Console.Out.WriteLine(_abstractStorage.GetUsers().Count);
         }
     }
 }

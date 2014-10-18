@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calendar_System.EntrySubSystem.Adapter
 {
-    public class GoogleInvoker
+    class GoogleInvoker
     {
         List<ICommand> _commands = new List<ICommand>();
 

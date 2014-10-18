@@ -6,6 +6,8 @@ namespace Calendar_System.WorkgroupSubSystem
 {
     public class WorkgroupForm : Form
     {
+        private readonly WorkgroupControl _workgroupControl;
+        private Workgroup _workgroup;
         private List<User> _userList; 
         private TextBox _workgroupNameTB;
         private DataGridView dataGridView1;
@@ -19,18 +21,14 @@ namespace Calendar_System.WorkgroupSubSystem
         private Button _cancelButton;
         private Button _addPeopleButton;
         private Label _workgroupNameLabel;
-    
-        public WorkgroupForm()
-        {
-            InitializeComponent();   
-        }
 
         public WorkgroupForm(Workgroup workgroup)
         {
-            _workgroupNameTB.Text = workgroup.Name;
-            if (workgroup.UserList != null||workgroup.UserList.Count !=0)
+            InitializeComponent();
+            _workgroupNameTB.Text = workgroup.GetWorkgroupName();
+            if (workgroup.GetUserList() != null && workgroup.GetUserList().Count !=0)
             {
-                foreach (var user in workgroup.UserList)
+                foreach (var user in workgroup.GetUserList())
                 {
                     // Add users to list and display them
                 }
@@ -60,7 +58,7 @@ namespace Calendar_System.WorkgroupSubSystem
             this._workgroupNameLabel.AutoSize = true;
             this._workgroupNameLabel.Location = new System.Drawing.Point(13, 13);
             this._workgroupNameLabel.Name = "_workgroupNameLabel";
-            this._workgroupNameLabel.Size = new System.Drawing.Size(121, 17);
+            this._workgroupNameLabel.Size = new System.Drawing.Size(92, 13);
             this._workgroupNameLabel.TabIndex = 0;
             this._workgroupNameLabel.Text = "Workgroup name:";
             // 
@@ -68,7 +66,7 @@ namespace Calendar_System.WorkgroupSubSystem
             // 
             this._workgroupNameTB.Location = new System.Drawing.Point(141, 13);
             this._workgroupNameTB.Name = "_workgroupNameTB";
-            this._workgroupNameTB.Size = new System.Drawing.Size(340, 22);
+            this._workgroupNameTB.Size = new System.Drawing.Size(340, 20);
             this._workgroupNameTB.TabIndex = 1;
             // 
             // dataGridView1
@@ -116,6 +114,7 @@ namespace Calendar_System.WorkgroupSubSystem
             this._saveChangesButton.TabIndex = 3;
             this._saveChangesButton.Text = "Save changes";
             this._saveChangesButton.UseVisualStyleBackColor = true;
+            this._saveChangesButton.Click += new System.EventHandler(this._saveChangesButton_Click);
             // 
             // _cancelButton
             // 
@@ -150,6 +149,15 @@ namespace Calendar_System.WorkgroupSubSystem
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void _saveChangesButton_Click(object sender, System.EventArgs e)
+        {
+            if(_workgroup.UpdateWorkGroup(_workgroupNameTB.Text, _userList))
+            {
+                _workgroupControl.SendWorkgroupToDb(_workgroup);
+                this.Dispose();
+            }
         }
     }
 }

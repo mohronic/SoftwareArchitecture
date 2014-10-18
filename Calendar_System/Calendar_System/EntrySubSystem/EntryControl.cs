@@ -8,7 +8,7 @@ namespace Calendar_System.EntrySubSystem
 {
     public class EntryControl
     {
-        IAbstractStorage _abstractStorage;
+        private IAbstractStorage _abstractStorage;
         public EntryControl(String message, IAbstractStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
@@ -27,14 +27,14 @@ namespace Calendar_System.EntrySubSystem
         // Creates a new EntryForm from scratch.
         public void EntryFormCreateEntry()
         {
-            var entryForm = new EntryForm(this);
-            entryForm.ShowDialog();
+            var entryForm = new EntryForm(this, new Entry());
+            entryForm.Show();
         }
         // Creates a new EntryForm with an already existing Entry. Used when modifying an existing Entry.
         public void EntryFormModifyEntry(Entry entry)
         {
             var entryForm = new EntryForm(this, entry);
-            entryForm.ShowDialog();
+            entryForm.Show();
         }
 
         public void CreateAddPeopleForm()
@@ -53,9 +53,8 @@ namespace Calendar_System.EntrySubSystem
             _abstractStorage.DeleteEntry(entry);
         }
 
-        public void SendEntryToDb(DateTime startTime, DateTime endTime, string location, List<User> userList, string entryName)
+        public void SendEntryToDb(Entry entry)
         {
-            var entry = new Entry(startTime, endTime, location, userList, entryName);
             _abstractStorage.CreateEntry(entry);
         }
     }

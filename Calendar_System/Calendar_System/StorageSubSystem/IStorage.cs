@@ -23,6 +23,6 @@ namespace Calendar_System.StorageSubSystem
         List<Workgroup> GetWorkgroups();
         void DeleteWorkgroup(Workgroup wg);
         void SyncAccount();
-        bool CheckPassword(User user, string password);
+        User CheckPassword(string userName, string password);
     }
 }

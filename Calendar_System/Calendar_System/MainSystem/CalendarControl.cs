@@ -8,8 +8,8 @@ namespace Calendar_System.MainSystem
 {
     public class CalendarControl
     {
-        public AbstractStorage _abstractStorage;
-        public User User { get; set; }
+        private AbstractStorage _abstractStorage;
+        private User _user;
         public CalendarControl()
         {
             _abstractStorage = new DatabaseFactory().CreateStorage("test");
@@ -17,9 +17,9 @@ namespace Calendar_System.MainSystem
             loginForm.ShowDialog();
         }
 
-        public void SuccesfullLogin()
+        private void SuccesfullLogin()
         {
-            ClientForm calendarClient = new ClientForm(this, _abstractStorage);
+            ClientForm calendarClient = new ClientForm(this, _abstractStorage, _user.GetAdmin());
             calendarClient.ShowDialog();
         }
         public void CreateEntryControl(String message)
@@ -31,10 +31,15 @@ namespace Calendar_System.MainSystem
         {
             SyncControl sc = new SyncControl(_abstractStorage);
         }
-        public bool CheckLogin(User user, string password)
+        public bool CheckLogin(string userName, string password)
         {
+            _user = _abstractStorage.CheckPassword(userName, password);
+            if(_user == null)
+            {
+                return false;
+            }
+            SuccesfullLogin();
             return true;
-            //return _abstractStorage.CheckPassword(user, password);
         }
 
         public void CreateAdminControl()

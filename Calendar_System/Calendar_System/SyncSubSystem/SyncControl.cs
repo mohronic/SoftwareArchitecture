@@ -9,7 +9,7 @@ namespace Calendar_System.Utility
         {
             _abstractStorage = abstractStorage;
             SyncForm sf = new SyncForm(this);
-            sf.ShowDialog();
+            sf.Show();
         }
 
         public void SyncWithDb()

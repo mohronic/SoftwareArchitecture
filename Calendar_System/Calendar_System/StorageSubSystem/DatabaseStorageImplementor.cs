@@ -80,7 +80,7 @@ namespace Calendar_System.StorageSubSystem
             throw new NotImplementedException();
         }
 
-        public bool CheckPassword(User user, string password)
+        public User CheckPassword(string userName, string password)
         {
             throw new NotImplementedException();
         }

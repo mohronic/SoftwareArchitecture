@@ -17,7 +17,7 @@ namespace Calendar_System.StorageSubSystem
             _entryList = new List<Entry>();
             _userList = new List<User>();
             _workgroupList = new List<Workgroup>();
-            var user1 = new User("Hans", "Hansen", "hans@itu.dk", "42913392", true);
+            var user1 = new User("Hans", "Hansen", "hans@itu.dk", "42913392", "12345", true);
             _userList.Add(user1);
 
             Entry entry1 = new Entry(new DateTime(2014, 11, 10), new DateTime(2014, 12, 10), "Atrium", _userList, "Meeting");
@@ -25,8 +25,6 @@ namespace Calendar_System.StorageSubSystem
 
             Workgroup workgroup1 = new Workgroup("Lecturers", _userList);
             _workgroupList.Add(workgroup1);
-            _passwordDictionary = new Dictionary<User, string>();
-            _passwordDictionary.Add(user1, "12345");
         }
 
         public bool IsConnected()
@@ -39,7 +37,7 @@ namespace Calendar_System.StorageSubSystem
             List<Entry> entries = new List<Entry>();
             foreach (var entry in _entryList)
             {
-                if (entry.UserList.Contains(user))
+                if (entry.GetUserList().Contains(user))
                 {
                     entries.Add(entry);
                 }
@@ -105,18 +103,16 @@ namespace Calendar_System.StorageSubSystem
         {
             throw new NotImplementedException();
         }
-
-        public bool CheckPassword(User user, string password)
+        public User CheckPassword(string userName, string password)
         {
-            string value;
-            if (_passwordDictionary.TryGetValue(user, out value))
+            foreach (var user in _userList)
             {
-                if (value.Equals(password))
+                if(userName.Equals(user.GetFirstName() + " " + user.GetLastName()) && password.Equals(user.GetPassword()))
                 {
-                    return true;
-                }   
+                    return user;
+                }
             }
-            return false;
+            return null;
         }
     }
 }

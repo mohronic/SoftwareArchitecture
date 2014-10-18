@@ -25,9 +25,9 @@ namespace Calendar_System.StorageSubSystem
             _storage.CreateUser(user);
         }
 
-        public bool CheckPassword(User user, string password)
+        public User CheckPassword(string userName, string password)
         {
-            return _storage.CheckPassword(user, password);
+            return _storage.CheckPassword(userName, password);
         }
 
         public void CreateEntry(Entry entry)

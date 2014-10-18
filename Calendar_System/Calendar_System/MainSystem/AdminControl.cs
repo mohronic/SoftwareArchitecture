@@ -7,12 +7,12 @@ namespace Calendar_System.AccountSubSystem
 {
     public class AdminControl
     {
-        IAbstractStorage _abstractStorage;
+        private IAbstractStorage _abstractStorage;
         public AdminControl(IAbstractStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
             AdminForm adminClient = new AdminForm(this);
-            adminClient.ShowDialog();
+            adminClient.Show();
         }
         public void CreateAccountControl(string message)
         {

@@ -7,23 +7,57 @@ namespace Calendar_System.EntrySubSystem
 {
     class RecurringEntry : IEntry
     {
-        public string EntryName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Location { get; set; }
-        public List<User> UserList { get; set; }
-        public List<Entry> EntryList { get; set; }
+        private string _entryName;
+        private DateTime _startDate;
+        private DateTime _endDate;
+        private string _location;
+        private List<User> _userList;
+        private List<Entry> _entryList;
+        public string GetEntryName()
+        {
+            return _entryName;
+        }
+        public DateTime GetStartDate()
+        {
+            return _startDate;
+        }
+        public DateTime GetEndDate()
+        {
+            return _endDate;
+        }
+        public string GetLocation()
+        {
+            return _location;
+        }
+        public List<User> GetUserList()
+        {
+            return _userList;
+        }
         public void AddEntry(Entry entry)
         {
-            EntryList.Add(entry);
+            _entryList.Add(entry);
         }
         public void RemoveEntry(Entry entry)
         {
-            EntryList.Remove(entry);
+            _entryList.Remove(entry);
         }
         public Entry GetEntryAt(int index)
         {
-            return EntryList.ElementAt(index);
+            return _entryList.ElementAt(index);
+        }
+        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<User> userList, String entryName)
+        {
+            if (string.IsNullOrWhiteSpace(entryName))
+            {
+                return false;
+            }
+            // If some check fails return false;
+            _entryName = entryName;
+            _startDate = startDateTime.Date;
+            _endDate = endDateTime.Date;
+            _location = location;
+            _userList = userList;
+            return true;
         }
     }
 }

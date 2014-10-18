@@ -6,6 +6,7 @@ namespace Calendar_System.EntrySubSystem
     public class EntryForm : Form
     {
         private readonly EntryControl _entryControl;
+        private Entry _entry;
         private Label _entryNameLabel;
         private TextBox _entryNameTb;
         private Label _locationLabel;
@@ -24,22 +25,32 @@ namespace Calendar_System.EntrySubSystem
         private Button _addWorkgroupButton;
         public EntryForm(EntryControl entryControl, Entry entry)
         {
+            _entry = entry;
             _entryControl = entryControl;
             InitializeComponent();
-            _entryNameTb.Text = entry.EntryName;
-            _startDatePicker.Value = entry.StartDate;
-            _endDatePicker.Value = entry.EndDate;
-            _locationTb.Text = entry.Location;
-            _startTimePicker.Value = entry.StartDate;
-            _endTimePicker.Value = entry.EndDate;
+            _entryNameTb.Text = entry.GetEntryName();
+            _locationTb.Text = entry.GetLocation();
+            if (entry.GetStartDate() == DateTime.MinValue)
+            {
+                _startDatePicker.Value = DateTime.Now.Date;
+                _startTimePicker.Value = DateTime.Now;
+            }
+            else
+            {
+                _startDatePicker.Value = entry.GetStartDate().Date;
+                _startTimePicker.Value = entry.GetStartDate();
+            }
+            if (entry.GetEndDate() == DateTime.MinValue)
+            {
+                _endDatePicker.Value = DateTime.Now.Date;
+                _endTimePicker.Value = DateTime.Now;
+            }
+            else
+            {
+                _endDatePicker.Value = entry.GetEndDate().Date;
+                _endTimePicker.Value = entry.GetEndDate();
+            }
         }
-
-        public EntryForm(EntryControl entryControl)
-        {
-            _entryControl = entryControl;
-            InitializeComponent();
-        }
-
         private void InitializeComponent()
         {
             this._entryNameLabel = new System.Windows.Forms.Label();
@@ -237,11 +248,11 @@ namespace Calendar_System.EntrySubSystem
 
         private void _createEntryButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-            //_entryControl.SendEntryToDb(_startDatePicker.Value.Date + _startTimePicker.Value.TimeOfDay,
-            //_endDatePicker.Value.Date + _endTimePicker.Value.TimeOfDay, _locationTb.Text,
-            //_addPeopleForm.GetUserList(), _entryNameTb.Text);
-            //this.Dispose();
+            if(_entry.UpdateEntry(_startDatePicker.Value.Date + _startTimePicker.Value.TimeOfDay, _endDatePicker.Value.Date + _endTimePicker.Value.TimeOfDay, _locationTb.Text, null, _entryNameTb.Text))
+            {
+                _entryControl.SendEntryToDb(_entry);
+                this.Dispose();
+            }
         }
 
         private void _addWorkgroupButton_Click(object sender, EventArgs e)

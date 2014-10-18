@@ -79,8 +79,6 @@
     <Compile Include="WorkgroupSubSystem\Workgroup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="utility\Observable.cs" />
-    <Compile Include="utility\Observer.cs" />
     <Compile Include="AccountSubSystem\AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -4,7 +4,7 @@ using Calendar_System.Utility;
 
 namespace Calendar_System.MainSystem
 {
-    abstract class ÁbstractCalendar : Observer
+    abstract class ÁbstractCalendar
     {
         private List<Entry> _entryList;
     }

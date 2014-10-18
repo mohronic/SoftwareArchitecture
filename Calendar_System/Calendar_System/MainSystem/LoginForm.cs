@@ -15,15 +15,16 @@ namespace Calendar_System.MainSystem
         private ComboBox _userTB;
         private Button _loginButton;
         private IAbstractStorage _abstractStorage;
-        
+
         public LoginForm(CalendarControl calendarControl, IAbstractStorage abstractStorage)
         {
+            InitializeComponent();
             _abstractStorage = abstractStorage;
             _cControl = calendarControl;
-            InitializeComponent();
+
             foreach (var user in _abstractStorage.GetUsers())
             {
-                _userTB.Items.Add(user.FirstName + " " + user.LastName);
+                _userTB.Items.Add(user.GetFirstName() + " " + user.GetLastName());
             }
         }
 
@@ -108,16 +109,10 @@ namespace Calendar_System.MainSystem
 
         private void _loginButton_Click(object sender, EventArgs e)
         {
-            int selectedIndex = _userTB.SelectedIndex;
-            var user = _abstractStorage.GetUsers().ElementAt(selectedIndex);
-            bool loginStatus = _cControl.CheckLogin(user, _passwordTB.Text);
-            Console.Out.WriteLine(user.FirstName);
-            if (loginStatus)
-            {
-                this.Dispose();
-                _cControl.User = user;
-                _cControl.SuccesfullLogin();
-            }
+            string userName = _userTB.Text;
+            string password = _passwordTB.Text;
+            this.Dispose();
+            _cControl.CheckLogin(userName, password);
         }
 
         private void _cancelButton_Click(object sender, EventArgs e)

@@ -42,7 +42,7 @@ namespace Calendar_System
             List<Entry> entries2 = objectToSerialize.Entries;
             foreach (var entry in entries2)
             {
-                Console.Out.WriteLine(entry.EntryName);
+                Console.Out.WriteLine(entry.GetEntryName());
             }
         }
     }
