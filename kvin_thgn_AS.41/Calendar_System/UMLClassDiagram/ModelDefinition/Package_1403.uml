@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3b5f6320-990a-4dac-9f54-d7f404db7bd7"
+  name="Calendar_System"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b16b1391-9242-4a73-a0a8-4800164bf101"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCalendar_System"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4830a13f-b38a-48e3-9963-a59f0949cc33"
+        LastKnownName="WorkgroupSubSystem"
+        LastKnownLocation="Package1_1403.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a51eaba8-a862-4824-9f2d-51f423c7983d"
+        LastKnownName="StorageSubSystem"
+        LastKnownLocation="Package2_1403.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="511d1654-7297-4634-91ac-6cc8446b9129"
+        LastKnownName="AccountSubSystem"
+        LastKnownLocation="Package8_1403.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9dadb11b-d138-4bd3-acd5-db5ffd279b6b"
+        LastKnownName="MainSystem"
+        LastKnownLocation="Package10_1403.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

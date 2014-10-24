@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68DD76C4-AC63-4BE2-9D15-CB3AEC0293BA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Calendar_System</RootNamespace>
+    <AssemblyName>Calendar_System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountSubSystem\AccessDeniedException.cs" />
+    <Compile Include="AccountSubSystem\AccountControl.cs" />
+    <Compile Include="AccountSubSystem\AllUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSubSystem\IUser.cs" />
+    <Compile Include="AccountSubSystem\ProxyUser.cs" />
+    <Compile Include="EntrySubSystem\Adapter\AuthorizeCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\CreateEntryCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\GetEntryCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\GoogleInvoker.cs" />
+    <Compile Include="EntrySubSystem\Adapter\ModifyEntryCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\SendEntriesCommand.cs" />
+    <Compile Include="MainSystem\AdminControl.cs" />
+    <Compile Include="MainSystem\CalendarControl.cs" />
+    <Compile Include="EntrySubSystem\EntryControl.cs" />
+    <Compile Include="StorageSubSystem\AlreadyInDatabaseException.cs" />
+    <Compile Include="StorageSubSystem\NoConnectionException.cs" />
+    <Compile Include="StorageSubSystem\NotInDatabaseException.cs" />
+    <Compile Include="SyncSubSystem\SyncControl.cs" />
+    <Compile Include="WorkgroupSubSystem\WorkgroupControl.cs" />
+    <Compile Include="EntrySubSystem\Adapter\GetEntriesCommand.cs" />
+    <Compile Include="EntrySubSystem\Adapter\ICommand.cs" />
+    <Compile Include="EntrySubSystem\RecurringEntry.cs" />
+    <Compile Include="StorageSubSystem\AbstractStorage.cs" />
+    <Compile Include="EntrySubSystem\Adapter\GoogleAdapter.cs" />
+    <Compile Include="EntrySubSystem\Adapter\IAdapter.cs" />
+    <Compile Include="StorageSubSystem\DatabaseFactory.cs" />
+    <Compile Include="StorageSubSystem\DatabaseStorageImplementor.cs" />
+    <Compile Include="EntrySubSystem\Entry.cs" />
+    <Compile Include="StorageSubSystem\FileStorageImplementor.cs" />
+    <Compile Include="StorageSubSystem\IAbstractStorage.cs" />
+    <Compile Include="EntrySubSystem\IEntry.cs" />
+    <Compile Include="StorageSubSystem\TestStorageImplementor.cs" />
+    <Compile Include="StorageSubSystem\IStorage.cs" />
+    <Compile Include="utility\SerializeEntries.cs" />
+    <Compile Include="utility\Serializer.cs" />
+    <Compile Include="StorageSubSystem\TemporaryStorage.cs" />
+    <Compile Include="AccountSubSystem\User.cs" />
+    <Compile Include="WorkgroupSubSystem\Workgroup.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AccountSubSystem\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSystem\AddPeopleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSystem\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSystem\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSystem\CalendarInterface.cs" />
+    <Compile Include="MainSystem\CalendarMonthly.cs" />
+    <Compile Include="MainSystem\CalendarWeekly.cs" />
+    <Compile Include="EntrySubSystem\EntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSystem\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncSubSystem\SyncForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkgroupSubSystem\WorkgroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\Calendar_System.StorageSubSystem.AbstractStorage.datasource" />
+    <None Include="Properties\DataSources\Calendar_System.view.WorkgroupForm.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountSubSystem\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSubSystem\AllUsersForm.resx">
+      <DependentUpon>AllUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainSystem\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainSystem\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntrySubSystem\EntryForm.resx">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainSystem\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncSubSystem\SyncForm.resx">
+      <DependentUpon>SyncForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkgroupSubSystem\WorkgroupForm.resx">
+      <DependentUpon>WorkgroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
