@@ -11,7 +11,7 @@ namespace Calendar_System.EntrySubSystem
         DateTime GetEndDate();
         string GetLocation();
         IList<ProxyUser> GetUserList();
-        ProxyUser GetCreator();
+        int GetCreatorId();
         int? GetId();
         bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<ProxyUser> userList, String entryName);
     }

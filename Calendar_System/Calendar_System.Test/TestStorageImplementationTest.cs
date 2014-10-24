@@ -86,7 +86,7 @@ namespace Calendar_System.Test
         {
             _user = _abstractStorage.GetAllUsersFromDb().First();
             _entry = new Entry(new DateTime(2000, 12, 31), new DateTime(2000, 12, 31), "Here", new List<ProxyUser>(),
-                "This name", 2, _user);
+                "This name", 2, (int)_user.GetId());
             _abstractStorage.DeleteEntryFromDb(_user, _entry);
         }
         [TestMethod]

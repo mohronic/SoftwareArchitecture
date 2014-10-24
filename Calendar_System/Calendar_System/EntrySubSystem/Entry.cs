@@ -16,7 +16,7 @@ namespace Calendar_System.EntrySubSystem
         // If _id has been set, it should always be 0 or larger. If not set, it should be null.
         // @Invariant: 0 <= _id || _id == null;
         private int? _id;
-        private ProxyUser _creator;
+        private int _creatorId;
         public string GetEntryName()
         {
             return _entryName;
@@ -41,15 +41,15 @@ namespace Calendar_System.EntrySubSystem
         {
             return _id;
         }
-        public ProxyUser GetCreator()
+        public int GetCreatorId()
         {
-            return _creator;
+            return _creatorId;
         }
         public Entry()
         {
 
         }
-        public Entry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList, String entryName, int? id, ProxyUser creator)
+        public Entry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList, String entryName, int? id, int creatorId)
         {
             _entryName = entryName;
             _startDate = startDateTime.Date;
@@ -57,7 +57,7 @@ namespace Calendar_System.EntrySubSystem
             _location = location;
             _userList = userList;
             _id = id;
-            _creator = creator;
+            _creatorId = creatorId;
         }
 
         public Entry(SerializationInfo info, StreamingContext ctxt)

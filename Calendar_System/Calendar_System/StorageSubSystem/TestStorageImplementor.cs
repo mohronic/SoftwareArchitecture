@@ -20,7 +20,7 @@ namespace Calendar_System.StorageSubSystem
             var user1 = new ProxyUser("Hans", "Hansen", "hans@itu.dk", "42913392", "12345", true, 0, new List<Entry>());
             CreateUserInitializationOnly(user1);
 
-            var entry = new Entry(new DateTime(2014, 11, 10), new DateTime(2014, 12, 10), "Atrium", _userList.Values, "Meeting", 0, user1);
+            var entry = new Entry(new DateTime(2014, 11, 10), new DateTime(2014, 12, 10), "Atrium", _userList.Values, "Meeting", 0, (int)user1.GetId());
             CreateEntryInitializationOnly(0, entry);
 
             var workgroup1 = new Workgroup("Lecturers", _userList.Values, null);
