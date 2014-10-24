@@ -17,7 +17,7 @@ namespace Calendar_System.AccountSubSystem
             }
             if (message.Equals("modifyAccount"))
             {
-                IList<User> users = abstractStorage.GetUsers();
+                IList<ProxyUser> users = abstractStorage.GetAllUsersFromDb();
                 var allUsersForm = new AllUsersForm(users);
                 allUsersForm.ShowDialog();
                 //AccountFormModifyAccount(user);
@@ -26,28 +26,28 @@ namespace Calendar_System.AccountSubSystem
 
         public void AccountFormCreateAccount()
         {
-            var accountForm = new AccountForm(this, new User());
+            var accountForm = new AccountForm(this, new ProxyUser());
             accountForm.Show();
         }
 
-        public void AccountFormModifyAccount(User user)
+        public void AccountFormModifyAccount(ProxyUser user)
         {
             var accountForm = new AccountForm(this, user);
             accountForm.Show();
         }
 
-        public void DeleteAccount(User user)
+        public void DeleteAccount(ProxyUser user)
         {
             throw new NotImplementedException();
         }
-        public void DeleteAccountFromDb(User user)
+        public void DeleteAccountFromDb(ProxyUser user)
         {
-            _abstractStorage.DeleteUser(user);
+            _abstractStorage.DeleteUserFromDb(user);
         }
 
-        public void SendAccountToDb(User user)
+        public void SendAccountToDb(ProxyUser user)
         {
-            _abstractStorage.UserToDb(user);
+            _abstractStorage.SendUserToDb(user);
         }
     }
 }

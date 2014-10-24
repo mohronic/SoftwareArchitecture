@@ -8,17 +8,17 @@ namespace Calendar_System.StorageSubSystem
     public interface IAbstractStorage
     {
         bool IsConnected();
-        void UserToDb(User user);
-        User CheckPassword(string userName, string password);
-        void CreateEntry(Entry entry);
-        void CreateWorkgroup(Workgroup workgroup);
-        void DeleteEntry(Entry entry);
-        void DeleteUser(User user);
-        void DeleteWorkgroup(Workgroup workgroup);
-        List<Entry> GetEntriesForUser(User user);
-        void SetEntriesForUser(List<Entry> entries, User user);
-        IList<User> GetUsers();
-        IList<Workgroup> GetWorkgroups();
+        void SendUserToDb(ProxyUser user);
+        ProxyUser GetUserFromDb(int userId);
+        ProxyUser CheckPassword(string userName, string password);
+        void SendEntryToDb(ProxyUser user, Entry entry);
+        void SendWorkgroupToDb(Workgroup workgroup);
+        void DeleteEntryFromDb(ProxyUser user, Entry entry);
+        void DeleteUserFromDb(ProxyUser user);
+        void DeleteWorkgroupFromDb(Workgroup workgroup);
+        void SendUserEntriesToDb(List<Entry> entries, ProxyUser user);
+        IList<ProxyUser> GetAllUsersFromDb();
+        IList<Workgroup> GetAllWorkgroupsFromDb();
         void SyncAccount();
         void SetStorage(IStorage storage);
     }

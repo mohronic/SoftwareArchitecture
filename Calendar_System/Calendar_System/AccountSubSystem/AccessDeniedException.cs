@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calendar_System.StorageSubSystem
+namespace Calendar_System.AccountSubSystem
 {
-    class NoUserFoundException : Exception
+    public class AccessDeniedException : Exception
     {
-        public NoUserFoundException()
+        public AccessDeniedException()
         {
 
         }
-        public NoUserFoundException(string message)
+        public AccessDeniedException(string message)
             : base(message)
         {
 
         }
 
-        public NoUserFoundException(string message, Exception inner)
+        public AccessDeniedException(string message, Exception inner)
             : base(message, inner)
         {
 

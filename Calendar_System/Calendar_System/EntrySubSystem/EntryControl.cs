@@ -19,8 +19,8 @@ namespace Calendar_System.EntrySubSystem
             if (message.Equals("modifyEntry"))
             {
                 // Just to simulate editing. Searching will be enabled.
-                var user = _abstractStorage.GetUsers().First();
-                var entry = _abstractStorage.GetEntriesForUser(user).First();
+                var user = _abstractStorage.GetAllUsersFromDb().First();
+                var entry = user.GetEntryList().First();
                 EntryFormModifyEntry(entry);   
             }
         }
@@ -43,19 +43,19 @@ namespace Calendar_System.EntrySubSystem
             throw new NotImplementedException();
         }
 
-        public IList<User> GetAllUsersFromDb()
+        public IList<ProxyUser> GetAllUsersFromDb()
         {
-            return _abstractStorage.GetUsers();
+            return _abstractStorage.GetAllUsersFromDb();
         }
 
-        public void DeleteEntryFromDb(Entry entry)
+        public void DeleteEntryFromDb(ProxyUser user, Entry entry)
         {
-            _abstractStorage.DeleteEntry(entry);
+            _abstractStorage.DeleteEntryFromDb(user, entry);
         }
 
-        public void SendEntryToDb(Entry entry)
+        public void SendEntryToDb(ProxyUser user, Entry entry)
         {
-            _abstractStorage.CreateEntry(entry);
+            _abstractStorage.SendEntryToDb(user, entry);
         }
     }
 }

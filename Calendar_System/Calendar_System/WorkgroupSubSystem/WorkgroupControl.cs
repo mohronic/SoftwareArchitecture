@@ -18,7 +18,7 @@ namespace Calendar_System.WorkgroupSubSystem
             if (message == "modifyWorkgroup")
             {
                 // Simulates searching - not implemented yet.
-                var workgroup = new Workgroup("bla", new List<User>(), 1);
+                var workgroup = new Workgroup("bla", new List<ProxyUser>(), 1);
                 WorkgroupFormModifyWorkgroup(workgroup);
             }
         }
@@ -36,7 +36,7 @@ namespace Calendar_System.WorkgroupSubSystem
         }
         public void SendWorkgroupToDb(Workgroup workgroup)
         {
-            _abstractStorage.CreateWorkgroup(workgroup);
+            _abstractStorage.SendWorkgroupToDb(workgroup);
         }
     }
 }

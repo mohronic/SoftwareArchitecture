@@ -13,32 +13,31 @@ namespace Calendar_System.StorageSubSystem
             throw new NotImplementedException();
         }
 
-        public List<Entry> GetEntriesForUser(User user)
+        public List<Entry> GetEntriesForUser(ProxyUser user)
         {
             throw new NotImplementedException();
         }
 
-        public void SetEntriesForUser(List<Entry> entries, User user)
+        public void SetEntriesForUser(List<Entry> entries, ProxyUser user)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateEntry(Entry entry)
+        public void UpdateEntry(int userId, Entry entry)
         {
             throw new NotImplementedException();
         }
 
-        public void CreateEntry(Entry entry)
+        public void CreateEntry(int userId, Entry entry)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteEntry(int id)
+        public void DeleteEntry(int userId, int entryId)
         {
             throw new NotImplementedException();
         }
-
-        public void CreateUser(User user)
+        public void CreateUser(ProxyUser user)
         {
             throw new NotImplementedException();
         }
@@ -48,16 +47,16 @@ namespace Calendar_System.StorageSubSystem
             throw new NotImplementedException();
         }
 
-        public IList<User> GetAllUsers()
+        public IList<ProxyUser> GetAllUsers()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateUser(User user)
+        public void UpdateUser(ProxyUser user)
         {
             throw new NotImplementedException();
         }
-        public User GetUser(int id)
+        public ProxyUser GetUser(int id)
         {
             throw new NotImplementedException();
         }
@@ -66,12 +65,17 @@ namespace Calendar_System.StorageSubSystem
             throw new NotImplementedException();
         }
 
-        public IList<Workgroup> GetWorkgroups()
+        public Workgroup GetWorkgroup(int workgroupId)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteWorkgroup(Workgroup wg)
+        public IList<Workgroup> GetAllWorkgroups()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteWorkgroup(int workgroupId)
         {
             throw new NotImplementedException();
         }
@@ -81,7 +85,7 @@ namespace Calendar_System.StorageSubSystem
             throw new NotImplementedException();
         }
 
-        public User CheckPassword(string userName, string password)
+        public ProxyUser CheckPassword(string userName, string password)
         {
             throw new NotImplementedException();
         }

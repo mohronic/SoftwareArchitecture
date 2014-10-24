@@ -8,7 +8,7 @@ namespace Calendar_System.WorkgroupSubSystem
     {
         private readonly WorkgroupControl _workgroupControl;
         private Workgroup _workgroup;
-        private List<User> _userList; 
+        private List<ProxyUser> _userList; 
         private TextBox _workgroupNameTB;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn _firstName;

@@ -10,9 +10,9 @@ namespace Calendar_System.EntrySubSystem
         DateTime GetStartDate();
         DateTime GetEndDate();
         string GetLocation();
-        IList<User> GetUserList();
-        User GetCreator();
+        IList<ProxyUser> GetUserList();
+        ProxyUser GetCreator();
         int? GetId();
-        bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<User> userList, String entryName);
+        bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<ProxyUser> userList, String entryName);
     }
 }

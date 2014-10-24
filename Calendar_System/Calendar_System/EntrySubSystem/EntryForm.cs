@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using Calendar_System.AccountSubSystem;
+using Calendar_System.MainSystem;
 
 namespace Calendar_System.EntrySubSystem
 {
@@ -250,7 +252,7 @@ namespace Calendar_System.EntrySubSystem
         {
             if(_entry.UpdateEntry(_startDatePicker.Value.Date + _startTimePicker.Value.TimeOfDay, _endDatePicker.Value.Date + _endTimePicker.Value.TimeOfDay, _locationTb.Text, null, _entryNameTb.Text))
             {
-                _entryControl.SendEntryToDb(_entry);
+                _entryControl.SendEntryToDb((ProxyUser)CalendarControl.User, _entry);
                 this.Dispose();
             }
         }

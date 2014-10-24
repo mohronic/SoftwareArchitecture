@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing.Text;
+using System.Windows.Forms;
 using Calendar_System.AccountSubSystem;
 using Calendar_System.EntrySubSystem;
 using Calendar_System.StorageSubSystem;
@@ -10,7 +12,7 @@ namespace Calendar_System.MainSystem
     {
         private AbstractStorage _abstractStorage;
         // @Invariant: After SuccesfullLogin() _user is never null.
-        private User _user;
+        public static IUser User { get; private set; }
         public CalendarControl()
         {
             _abstractStorage = new DatabaseFactory().CreateStorage("test");
@@ -19,7 +21,7 @@ namespace Calendar_System.MainSystem
         }
         private void SuccesfullLogin()
         {
-            ClientForm calendarClient = new ClientForm(this, _abstractStorage, _user.GetAdmin());
+            ClientForm calendarClient = new ClientForm(this, _abstractStorage, User.GetAdmin());
             calendarClient.ShowDialog();
         }
         public void CreateEntryControl(String message)
@@ -33,8 +35,8 @@ namespace Calendar_System.MainSystem
         }
         public bool CheckLogin(string userName, string password)
         {
-            _user = _abstractStorage.CheckPassword(userName, password);
-            if(_user == null)
+            User = _abstractStorage.CheckPassword(userName, password);
+            if(User == null)
             {
                 return false;
             }

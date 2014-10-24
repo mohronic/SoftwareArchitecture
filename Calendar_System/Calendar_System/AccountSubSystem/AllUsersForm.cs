@@ -14,11 +14,11 @@ namespace Calendar_System.AccountSubSystem
         private DataGridViewTextBoxColumn _lastName;
 
         private ListBox listBox1;
-        public AllUsersForm(IList<User> users)
+        public AllUsersForm(IList<ProxyUser> users)
         {
             InitializeComponent(users);
         }
-        private void InitializeComponent(IList<User> users)
+        private void InitializeComponent(IList<ProxyUser> users)
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this._firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();

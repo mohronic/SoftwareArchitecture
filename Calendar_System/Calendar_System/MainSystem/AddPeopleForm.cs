@@ -6,16 +6,16 @@ namespace Calendar_System.MainSystem
 {
     public class AddPeopleForm : Form
     {
-        private List<User> AddedUsers { get; set; }
+        private List<ProxyUser> AddedUsers { get; set; }
 
         public AddPeopleForm()
         {
             if (AddedUsers == null)
             {
-                AddedUsers = new List<User>();
+                AddedUsers = new List<ProxyUser>();
             }
         }
-        public List<User> GetUserList()
+        public List<ProxyUser> GetUserList()
         {
             return AddedUsers;
         }
@@ -24,7 +24,7 @@ namespace Calendar_System.MainSystem
 
         private void ButtonEventAddUser() { }
 
-        public void AddUser(User user)
+        public void AddUser(ProxyUser user)
         {
             if (!AddedUsers.Contains(user))
             {
@@ -32,7 +32,7 @@ namespace Calendar_System.MainSystem
             }
         }
 
-        public void DeleteUser(User user)
+        public void DeleteUser(ProxyUser user)
         {
             if (AddedUsers.Contains(user))
             {
@@ -40,7 +40,7 @@ namespace Calendar_System.MainSystem
             }
         }
 
-        public bool ContainsUser(User user)
+        public bool ContainsUser(ProxyUser user)
         {
             return AddedUsers.Contains(user);
         }

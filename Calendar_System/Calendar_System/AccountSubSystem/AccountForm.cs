@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using Calendar_System.EntrySubSystem;
 
 namespace Calendar_System.AccountSubSystem
 {
     public class AccountForm : Form
     {
         private readonly AccountControl _accountControl;
-        private User _user;
+        private ProxyUser _user;
         private Label _lastNameLabel;
         private TextBox _lastNameTB;
         private TextBox _firstNameTB;
@@ -21,7 +24,7 @@ namespace Calendar_System.AccountSubSystem
         private TextBox _passwordTB;
         private Label _passwordLabel;
         private Label _firstNameLabel;
-        public AccountForm(AccountControl accountControl, User user)
+        public AccountForm(AccountControl accountControl, ProxyUser user)
         {
             _user = user;
             _accountControl = accountControl;
@@ -195,7 +198,16 @@ namespace Calendar_System.AccountSubSystem
 
         private void _saveAccountButton_Click(object sender, EventArgs e)
         {
-            if(_user.UpdateUser(_firstNameTB.Text, _lastNameTB.Text, _emailTB.Text, _phoneTB.Text, _passwordTB.Text, _adminCheckBox.Checked))
+            List<Entry> entryList;
+            if (_user.GetEntryList() == null)
+            {
+               entryList = new List<Entry>();
+            }
+            else
+            {
+                entryList = _user.GetEntryList();
+            }
+            if (_user.UpdateUser(_firstNameTB.Text, _lastNameTB.Text, _emailTB.Text, _phoneTB.Text, _passwordTB.Text, _adminCheckBox.Checked, entryList))
             {
                 _accountControl.SendAccountToDb(_user);
                 this.Dispose();

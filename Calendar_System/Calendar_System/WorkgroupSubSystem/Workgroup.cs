@@ -7,13 +7,13 @@ namespace Calendar_System.WorkgroupSubSystem
     public class Workgroup
     {
         private string _workgroupName;
-        private IList<User> _userList;
+        private IList<ProxyUser> _userList;
         private int? _id;
         public string GetWorkgroupName()
         {
             return _workgroupName;
         }
-        public IList<User> GetUserList()
+        public IList<ProxyUser> GetUserList()
         {
             return _userList;
         }
@@ -25,23 +25,23 @@ namespace Calendar_System.WorkgroupSubSystem
         {
 
         }
-        public Workgroup(String name, IList<User> userList, int? id)
+        public Workgroup(String name, IList<ProxyUser> userList, int? id)
         {
             _workgroupName = name;
             _userList = userList;
             _id = id;
         }
 
-        public void AddUser(User user)
+        public void AddUser(ProxyUser user)
         {
             _userList.Add(user);
         }
 
-        public void RemoveUser(User user)
+        public void RemoveUser(ProxyUser user)
         {
             _userList.Remove(user);
         }
-        public bool UpdateWorkGroup(string name, List<User> userList)
+        public bool UpdateWorkGroup(string name, List<ProxyUser> userList)
         { 
             if(string.IsNullOrWhiteSpace(name))
             {

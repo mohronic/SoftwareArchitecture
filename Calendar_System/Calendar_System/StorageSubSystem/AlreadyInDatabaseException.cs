@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Calendar_System.StorageSubSystem
 {
-    class EntryNotFoundException : Exception
+    public class AlreadyInDatabaseException : Exception
     {
-        public EntryNotFoundException()
+        public AlreadyInDatabaseException()
         {
 
         }
-        public EntryNotFoundException(string message)
+        public AlreadyInDatabaseException(string message)
             : base(message)
         {
 
         }
 
-        public EntryNotFoundException(string message, Exception inner)
+        public AlreadyInDatabaseException(string message, Exception inner)
             : base(message, inner)
         {
 

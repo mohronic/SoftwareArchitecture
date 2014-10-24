@@ -46,10 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountSubSystem\AccessDeniedException.cs" />
     <Compile Include="AccountSubSystem\AccountControl.cs" />
     <Compile Include="AccountSubSystem\AllUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AccountSubSystem\IUser.cs" />
+    <Compile Include="AccountSubSystem\ProxyUser.cs" />
     <Compile Include="EntrySubSystem\Adapter\AuthorizeCommand.cs" />
     <Compile Include="EntrySubSystem\Adapter\CreateEntryCommand.cs" />
     <Compile Include="EntrySubSystem\Adapter\GetEntryCommand.cs" />
@@ -59,9 +62,9 @@
     <Compile Include="MainSystem\AdminControl.cs" />
     <Compile Include="MainSystem\CalendarControl.cs" />
     <Compile Include="EntrySubSystem\EntryControl.cs" />
+    <Compile Include="StorageSubSystem\AlreadyInDatabaseException.cs" />
     <Compile Include="StorageSubSystem\NoConnectionException.cs" />
-    <Compile Include="StorageSubSystem\EntryNotFoundException.cs" />
-    <Compile Include="StorageSubSystem\UserNotFoundException.cs" />
+    <Compile Include="StorageSubSystem\NotInDatabaseException.cs" />
     <Compile Include="SyncSubSystem\SyncControl.cs" />
     <Compile Include="WorkgroupSubSystem\WorkgroupControl.cs" />
     <Compile Include="EntrySubSystem\Adapter\GetEntriesCommand.cs" />
@@ -115,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\Calendar_System.StorageSubSystem.AbstractStorage.datasource" />
     <None Include="Properties\DataSources\Calendar_System.view.WorkgroupForm.datasource" />
   </ItemGroup>

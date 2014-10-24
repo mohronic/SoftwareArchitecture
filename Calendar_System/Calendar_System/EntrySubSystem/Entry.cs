@@ -12,11 +12,11 @@ namespace Calendar_System.EntrySubSystem
         private DateTime _startDate;
         private DateTime _endDate;
         private string _location;
-        private IList<User> _userList;
+        private IList<ProxyUser> _userList;
         // If _id has been set, it should always be 0 or larger. If not set, it should be null.
         // @Invariant: 0 <= _id || _id == null;
         private int? _id;
-        private User _creator;
+        private ProxyUser _creator;
         public string GetEntryName()
         {
             return _entryName;
@@ -33,7 +33,7 @@ namespace Calendar_System.EntrySubSystem
         {
             return _location;
         }
-        public IList<User> GetUserList()
+        public IList<ProxyUser> GetUserList()
         {
             return _userList;
         }
@@ -41,7 +41,7 @@ namespace Calendar_System.EntrySubSystem
         {
             return _id;
         }
-        public User GetCreator()
+        public ProxyUser GetCreator()
         {
             return _creator;
         }
@@ -49,7 +49,7 @@ namespace Calendar_System.EntrySubSystem
         {
 
         }
-        public Entry(DateTime startDateTime, DateTime endDateTime, String location, IList<User> userList, String entryName, int? id, User creator)
+        public Entry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList, String entryName, int? id, ProxyUser creator)
         {
             _entryName = entryName;
             _startDate = startDateTime.Date;
@@ -66,7 +66,7 @@ namespace Calendar_System.EntrySubSystem
             _startDate = (DateTime)info.GetValue("StartTime", typeof(DateTime));
             _endDate = (DateTime) info.GetValue("EndTime", typeof (DateTime));
             _location = (string)info.GetValue("Location", typeof(string));
-            _userList = (List<User>)info.GetValue("UserList", typeof(List<User>));
+            _userList = (List<ProxyUser>)info.GetValue("UserList", typeof(List<ProxyUser>));
             _id = (int)info.GetValue("Id", typeof(int));
         }
 
@@ -79,7 +79,7 @@ namespace Calendar_System.EntrySubSystem
             info.AddValue("UserList", _userList);
             info.AddValue("Id", _id);
         }
-        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<User> userList, string entryName)
+        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<ProxyUser> userList, string entryName)
         {
             if(string.IsNullOrWhiteSpace(entryName))
             {

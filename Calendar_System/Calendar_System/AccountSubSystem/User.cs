@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
+using Calendar_System.EntrySubSystem;
 
 namespace Calendar_System.AccountSubSystem
 {
     [Serializable()]
-    public class User : ISerializable, IComparable
+    public class User : ISerializable, IComparable, IUser
     {
         private string _firstName;
         private string _lastName;
@@ -12,6 +14,7 @@ namespace Calendar_System.AccountSubSystem
         private string _phone;
         private string _password;
         private bool _admin;
+        private List<Entry> _entryList; 
         // If _id has been set, it should always be 0 or larger. If not set, it should be null.
         // @Invariant: 0 <= _id || _id == null;
         private int? _id;
@@ -40,11 +43,15 @@ namespace Calendar_System.AccountSubSystem
         {
             return _password;
         }
+        public List<Entry> GetEntryList()
+        {
+            return _entryList;
+        }
         public int? GetId()
         {
             return _id;
         }
-        public User(string firstName, string lastName, string email, string phone, string password, bool admin, int? id)
+        public User(string firstName, string lastName, string email, string phone, string password, bool admin, int? id, List<Entry> entryList)
         {
             _firstName = firstName;
             _lastName = lastName;
@@ -53,6 +60,7 @@ namespace Calendar_System.AccountSubSystem
             _password = password;
             _admin = admin;
             _id = id;
+            _entryList = entryList;
         }
         public User()
         {
@@ -67,6 +75,7 @@ namespace Calendar_System.AccountSubSystem
             _password = (string)info.GetValue("Password", typeof(string));
             _admin = (bool)info.GetValue("Admin", typeof(bool));
             _id = (int)info.GetValue("Id", typeof(int));
+            _entryList = (List<Entry>) info.GetValue("EntryList", typeof (List<Entry>));
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -78,19 +87,20 @@ namespace Calendar_System.AccountSubSystem
             info.AddValue("Password", _password);
             info.AddValue("Admin", _admin);
             info.AddValue("Id", _id);
+            info.AddValue("EntryList", _entryList);
         }
 
         public int CompareTo(object obj)
         {
             if (obj != null) return 1;
-            User otherUser = obj as User;
-            if (otherUser._id == _id)
+            ProxyUser otherUser = obj as ProxyUser;
+            if (otherUser.GetId() == _id)
             {
                 return 0;
             }
             return 1;
         }
-        public bool UpdateUser(string firstName, string lastName, string email, string phone, string password, bool admin)
+        public bool UpdateUser(string firstName, string lastName, string email, string phone, string password, bool admin, List<Entry> entryList)
         {
             if(string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrWhiteSpace(password))
             {
@@ -103,6 +113,7 @@ namespace Calendar_System.AccountSubSystem
             _phone = phone;
             _admin = admin;
             _password = password;
+            _entryList = entryList;
             return true;
         }
     }

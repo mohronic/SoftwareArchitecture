@@ -18,32 +18,5 @@ namespace Calendar_System
         {
             CalendarControl cControl = new CalendarControl();
         }
-        /// <summary>
-        /// Serialization test
-        /// </summary>
-        static void Main2()
-        {
-            var factory = new DatabaseFactory();
-            var abstractStorage = factory.CreateStorage("test");
-            var user = abstractStorage.GetUsers().First();
-            List<Entry> entries = abstractStorage.GetEntriesForUser(user);
-            
-            //save the car list to a file
-            SerializeEntries objectToSerialize = new SerializeEntries();
-            objectToSerialize.Entries = entries;
-
-            Serializer serializer = new Serializer();
-            serializer.SerializeObject("tempEntries.txt", objectToSerialize);
-
-            //the car list has been saved to outputFile.txt
-            //read the file back from outputFile.txt
-
-            objectToSerialize = serializer.DeSerializeObject("tempEntries.txt");
-            List<Entry> entries2 = objectToSerialize.Entries;
-            foreach (var entry in entries2)
-            {
-                Console.Out.WriteLine(entry.GetEntryName());
-            }
-        }
     }
 }

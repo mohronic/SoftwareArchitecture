@@ -12,15 +12,15 @@ namespace Calendar_System.EntrySubSystem
         private DateTime _endDate;
         private string _location;
         private int? _id;
-        private User _creator;
-        private IList<User> _userList;
+        private ProxyUser _creator;
+        private IList<ProxyUser> _userList;
         private IList<Entry> _entryList;
 
         public RecurringEntry()
         {
 
         }
-        public RecurringEntry(string entryName, DateTime startDate, DateTime endDate, string location, int id, User creator, IList<User>userList, IList<Entry> entryList)
+        public RecurringEntry(string entryName, DateTime startDate, DateTime endDate, string location, int id, ProxyUser creator, IList<ProxyUser>userList, IList<Entry> entryList)
         {
             _entryName = entryName;
             _startDate = startDate;
@@ -51,11 +51,11 @@ namespace Calendar_System.EntrySubSystem
         {
             return _id;
         }
-        public User GetCreator()
+        public ProxyUser GetCreator()
         {
             return _creator;
         }
-        public IList<User> GetUserList()
+        public IList<ProxyUser> GetUserList()
         {
             return _userList;
         }
@@ -71,7 +71,7 @@ namespace Calendar_System.EntrySubSystem
         {
             return _entryList.ElementAt(index);
         }
-        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<User> userList, String entryName)
+        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<ProxyUser> userList, String entryName)
         {
             if (string.IsNullOrWhiteSpace(entryName))
             {

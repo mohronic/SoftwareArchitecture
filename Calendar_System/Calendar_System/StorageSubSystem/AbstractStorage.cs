@@ -20,47 +20,46 @@ namespace Calendar_System.StorageSubSystem
             return _storage.IsConnected();
         }
 
-        public void CreateUser(User user)
+        public void CreateUser(ProxyUser user)
         {
             _storage.CreateUser(user);
         }
 
-        public User CheckPassword(string userName, string password)
+        public ProxyUser GetUserFromDb(int userId)
+        {
+            return _storage.GetUser(userId);
+        }
+
+        public ProxyUser CheckPassword(string userName, string password)
         {
             return _storage.CheckPassword(userName, password);
         }
 
-        public void CreateEntry(Entry entry)
+        public void SendEntryToDb(ProxyUser user, Entry entry)
         {
-            _storage.CreateEntry(entry);
+            _storage.CreateEntry((int)user.GetId(), entry);
         }
 
-        public void CreateWorkgroup(Workgroup workgroup)
+        public void SendWorkgroupToDb(Workgroup workgroup)
         {
             _storage.CreateWorkgroup(workgroup);
         }
 
-        public void DeleteEntry(Entry entry)
+        public void DeleteEntryFromDb(ProxyUser user, Entry entry)
         {
-            _storage.DeleteEntry((int)entry.GetId());
+            _storage.DeleteEntry((int)user.GetId(), (int)entry.GetId());
         }
 
-        public void DeleteUser(User user)
+        public void DeleteUserFromDb(ProxyUser user)
         {
             _storage.DeleteUser((int)user.GetId());
         }
 
-        public void DeleteWorkgroup(Workgroup workgroup)
+        public void DeleteWorkgroupFromDb(Workgroup workgroup)
         {
-            _storage.DeleteWorkgroup(workgroup);
+            _storage.DeleteWorkgroup((int)workgroup.GetId());
         }
-
-        public List<Entry> GetEntriesForUser(User user)
-        {
-            return _storage.GetEntriesForUser(user);
-        }
-
-        public void SetEntriesForUser(List<Entry> entries, User user)
+        public void SendUserEntriesToDb(List<Entry> entries, ProxyUser user)
         {
             if (IsConnected())
             {
@@ -75,21 +74,21 @@ namespace Calendar_System.StorageSubSystem
             }
         }
 
-        public IList<User> GetUsers()
+        public IList<ProxyUser> GetAllUsersFromDb()
         {
             return _storage.GetAllUsers();
         }
 
-        public IList<Workgroup> GetWorkgroups()
+        public IList<Workgroup> GetAllWorkgroupsFromDb()
         {
-            return _storage.GetWorkgroups();
+            return _storage.GetAllWorkgroups();
         }
 
         public void SyncAccount()
         {
             _storage.SyncAccount();
         }
-        public void UserToDb(User user)
+        public void SendUserToDb(ProxyUser user)
         {
             if(user.GetId() == null)
             {

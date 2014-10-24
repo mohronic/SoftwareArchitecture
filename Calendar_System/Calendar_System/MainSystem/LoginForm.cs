@@ -22,7 +22,7 @@ namespace Calendar_System.MainSystem
             _abstractStorage = abstractStorage;
             _cControl = calendarControl;
 
-            foreach (var user in _abstractStorage.GetUsers())
+            foreach (var user in _abstractStorage.GetAllUsersFromDb())
             {
                 _userTB.Items.Add(user.GetFirstName() + " " + user.GetLastName());
             }
