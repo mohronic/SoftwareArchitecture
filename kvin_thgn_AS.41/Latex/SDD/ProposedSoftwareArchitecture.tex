@@ -2,8 +2,16 @@
 
 \subsection{Overview}
 The following chapter will go through: the chosen architecture patterns and design of the calendar system, the design patterns used to implement it and how the control flow of the program.
-\subsection{Subsystem decomposition}
+\newline
+The figure below shows the class diagram of the proprosed system:
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.3]{ClassDiagram}
+\caption{Subsystems and their decomposition}
+\end{figure}
+
+\subsection{Subsystem decomposition}
 The figure shows the subsystem decomposition of the User part of the program. The system is decomposed into subsystems which has logic handling one thing each, which means there’s a subsystem for entries, accounts, workgroups and sync. 
 There’s a subsystem for handling the client (meaning the general UI) and directing the control flow. Then there’s a storage subsystem handling all interactions with the different storages (file and server storage). Finally there is the server subsystem holding the parts of the logic and model, handled by the server.
 Control, model and view are still separated, but the logic has been split across multiple subsystems each handling something different.
