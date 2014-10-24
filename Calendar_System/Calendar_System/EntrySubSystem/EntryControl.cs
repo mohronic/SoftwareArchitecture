@@ -43,7 +43,7 @@ namespace Calendar_System.EntrySubSystem
             throw new NotImplementedException();
         }
 
-        public List<User> GetAllUsersFromDb()
+        public IList<User> GetAllUsersFromDb()
         {
             return _abstractStorage.GetUsers();
         }

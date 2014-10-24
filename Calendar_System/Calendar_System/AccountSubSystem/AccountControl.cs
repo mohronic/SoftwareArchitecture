@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Calendar_System.StorageSubSystem;
+using System.Collections.Generic;
 
 namespace Calendar_System.AccountSubSystem
 {
@@ -16,9 +17,10 @@ namespace Calendar_System.AccountSubSystem
             }
             if (message.Equals("modifyAccount"))
             {
-                // Only to simulate account modification. Searching will be implemented.
-                var user = _abstractStorage.GetUsers().First();
-                AccountFormModifyAccount(user);
+                IList<User> users = abstractStorage.GetUsers();
+                var allUsersForm = new AllUsersForm(users);
+                allUsersForm.ShowDialog();
+                //AccountFormModifyAccount(user);
             }
         }
 
@@ -45,7 +47,7 @@ namespace Calendar_System.AccountSubSystem
 
         public void SendAccountToDb(User user)
         {
-            _abstractStorage.CreateUser(user);
+            _abstractStorage.UserToDb(user);
         }
     }
 }

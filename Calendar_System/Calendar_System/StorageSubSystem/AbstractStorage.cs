@@ -42,12 +42,12 @@ namespace Calendar_System.StorageSubSystem
 
         public void DeleteEntry(Entry entry)
         {
-            _storage.DeleteEntry(entry);
+            _storage.DeleteEntry((int)entry.GetId());
         }
 
         public void DeleteUser(User user)
         {
-            _storage.DeleteUser(user);
+            _storage.DeleteUser((int)user.GetId());
         }
 
         public void DeleteWorkgroup(Workgroup workgroup)
@@ -75,12 +75,12 @@ namespace Calendar_System.StorageSubSystem
             }
         }
 
-        public List<User> GetUsers()
+        public IList<User> GetUsers()
         {
-            return _storage.GetUsers();
+            return _storage.GetAllUsers();
         }
 
-        public List<Workgroup> GetWorkgroups()
+        public IList<Workgroup> GetWorkgroups()
         {
             return _storage.GetWorkgroups();
         }
@@ -89,17 +89,17 @@ namespace Calendar_System.StorageSubSystem
         {
             _storage.SyncAccount();
         }
-
-        public void UpdateEntry(Entry entry)
+        public void UserToDb(User user)
         {
-            _storage.UpdateEntry(entry);
+            if(user.GetId() == null)
+            {
+                _storage.CreateUser(user);
+            }
+            else
+            {
+                _storage.UpdateUser(user);
+            }
         }
-
-        public void UpdateUser(User user)
-        {
-            _storage.UpdateUser(user);
-        }
-
         public void SetStorage(IStorage storage)
         {
             _storage = storage;

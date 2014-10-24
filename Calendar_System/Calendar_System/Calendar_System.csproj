@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{68DD76C4-AC63-4BE2-9D15-CB3AEC0293BA}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Calendar_System</RootNamespace>
     <AssemblyName>Calendar_System</AssemblyName>
@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountSubSystem\AccountControl.cs" />
+    <Compile Include="AccountSubSystem\AllUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EntrySubSystem\Adapter\AuthorizeCommand.cs" />
     <Compile Include="EntrySubSystem\Adapter\CreateEntryCommand.cs" />
     <Compile Include="EntrySubSystem\Adapter\GetEntryCommand.cs" />
@@ -56,6 +59,9 @@
     <Compile Include="MainSystem\AdminControl.cs" />
     <Compile Include="MainSystem\CalendarControl.cs" />
     <Compile Include="EntrySubSystem\EntryControl.cs" />
+    <Compile Include="StorageSubSystem\NoConnectionException.cs" />
+    <Compile Include="StorageSubSystem\EntryNotFoundException.cs" />
+    <Compile Include="StorageSubSystem\UserNotFoundException.cs" />
     <Compile Include="SyncSubSystem\SyncControl.cs" />
     <Compile Include="WorkgroupSubSystem\WorkgroupControl.cs" />
     <Compile Include="EntrySubSystem\Adapter\GetEntriesCommand.cs" />
@@ -109,11 +115,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\Calendar_System.StorageSubSystem.AbstractStorage.datasource" />
     <None Include="Properties\DataSources\Calendar_System.view.WorkgroupForm.datasource" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AccountSubSystem\AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSubSystem\AllUsersForm.resx">
+      <DependentUpon>AllUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainSystem\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>

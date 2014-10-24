@@ -12,6 +12,9 @@ namespace Calendar_System.AccountSubSystem
         private string _phone;
         private string _password;
         private bool _admin;
+        // If _id has been set, it should always be 0 or larger. If not set, it should be null.
+        // @Invariant: 0 <= _id || _id == null;
+        private int? _id;
         // TODO Add enum for workgroup maybe list?     
         public string GetFirstName()
         {
@@ -37,7 +40,11 @@ namespace Calendar_System.AccountSubSystem
         {
             return _password;
         }
-        public User(string firstName, string lastName, string email, string phone, string password, bool admin)
+        public int? GetId()
+        {
+            return _id;
+        }
+        public User(string firstName, string lastName, string email, string phone, string password, bool admin, int? id)
         {
             _firstName = firstName;
             _lastName = lastName;
@@ -45,6 +52,7 @@ namespace Calendar_System.AccountSubSystem
             _phone = phone;
             _password = password;
             _admin = admin;
+            _id = id;
         }
         public User()
         {
@@ -58,6 +66,7 @@ namespace Calendar_System.AccountSubSystem
             _phone = (string)info.GetValue("Phone", typeof(string));
             _password = (string)info.GetValue("Password", typeof(string));
             _admin = (bool)info.GetValue("Admin", typeof(bool));
+            _id = (int)info.GetValue("Id", typeof(int));
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -68,14 +77,14 @@ namespace Calendar_System.AccountSubSystem
             info.AddValue("Phone", _phone);
             info.AddValue("Password", _password);
             info.AddValue("Admin", _admin);
+            info.AddValue("Id", _id);
         }
 
         public int CompareTo(object obj)
         {
             if (obj != null) return 1;
             User otherUser = obj as User;
-            if (otherUser._firstName == _firstName && otherUser._lastName == _lastName && otherUser._phone == _phone && 
-                otherUser._email == _email && otherUser._password == _password && otherUser._admin == _admin)
+            if (otherUser._id == _id)
             {
                 return 0;
             }

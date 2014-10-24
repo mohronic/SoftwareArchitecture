@@ -35,7 +35,7 @@ namespace Calendar_System.StorageSubSystem
             throw new NotImplementedException();
         }
 
-        public void DeleteEntry(Entry entry)
+        public void DeleteEntry(int id)
         {
             throw new NotImplementedException();
         }
@@ -45,12 +45,12 @@ namespace Calendar_System.StorageSubSystem
             throw new NotImplementedException();
         }
 
-        public void DeleteUser(User user)
+        public void DeleteUser(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<User> GetUsers()
+        public IList<User> GetAllUsers()
         {
             throw new NotImplementedException();
         }
@@ -59,13 +59,16 @@ namespace Calendar_System.StorageSubSystem
         {
             throw new NotImplementedException();
         }
-
+        public User GetUser(int id)
+        {
+            throw new NotImplementedException();
+        }
         public void CreateWorkgroup(Workgroup wg)
         {
             throw new NotImplementedException();
         }
 
-        public List<Workgroup> GetWorkgroups()
+        public IList<Workgroup> GetWorkgroups()
         {
             throw new NotImplementedException();
         }

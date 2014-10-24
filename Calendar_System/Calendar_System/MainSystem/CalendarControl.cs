@@ -9,6 +9,7 @@ namespace Calendar_System.MainSystem
     public class CalendarControl
     {
         private AbstractStorage _abstractStorage;
+        // @Invariant: After SuccesfullLogin() _user is never null.
         private User _user;
         public CalendarControl()
         {
@@ -16,7 +17,6 @@ namespace Calendar_System.MainSystem
             LoginForm loginForm = new LoginForm(this, _abstractStorage);
             loginForm.ShowDialog();
         }
-
         private void SuccesfullLogin()
         {
             ClientForm calendarClient = new ClientForm(this, _abstractStorage, _user.GetAdmin());

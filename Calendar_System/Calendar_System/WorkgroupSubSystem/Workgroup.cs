@@ -7,23 +7,29 @@ namespace Calendar_System.WorkgroupSubSystem
     public class Workgroup
     {
         private string _workgroupName;
-        private List<User> _userList;
+        private IList<User> _userList;
+        private int? _id;
         public string GetWorkgroupName()
         {
             return _workgroupName;
         }
-        public List<User> GetUserList()
+        public IList<User> GetUserList()
         {
             return _userList;
+        }
+        public int? GetId()
+        {
+            return _id;
         }
         public Workgroup()
         {
 
         }
-        public Workgroup(String name, List<User> userList)
+        public Workgroup(String name, IList<User> userList, int? id)
         {
             _workgroupName = name;
             _userList = userList;
+            _id = id;
         }
 
         public void AddUser(User user)

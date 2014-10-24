@@ -18,7 +18,7 @@ namespace Calendar_System.WorkgroupSubSystem
             if (message == "modifyWorkgroup")
             {
                 // Simulates searching - not implemented yet.
-                var workgroup = new Workgroup("bla", new List<User>());
+                var workgroup = new Workgroup("bla", new List<User>(), 1);
                 WorkgroupFormModifyWorkgroup(workgroup);
             }
         }

@@ -5,14 +5,32 @@ using Calendar_System.AccountSubSystem;
 
 namespace Calendar_System.EntrySubSystem
 {
-    class RecurringEntry : IEntry
+    public class RecurringEntry : IEntry
     {
         private string _entryName;
         private DateTime _startDate;
         private DateTime _endDate;
         private string _location;
-        private List<User> _userList;
-        private List<Entry> _entryList;
+        private int? _id;
+        private User _creator;
+        private IList<User> _userList;
+        private IList<Entry> _entryList;
+
+        public RecurringEntry()
+        {
+
+        }
+        public RecurringEntry(string entryName, DateTime startDate, DateTime endDate, string location, int id, User creator, IList<User>userList, IList<Entry> entryList)
+        {
+            _entryName = entryName;
+            _startDate = startDate;
+            _endDate = endDate;
+            _location = location;
+            _id = id;
+            _creator = creator;
+            _userList = userList;
+            _entryList = entryList;
+        }
         public string GetEntryName()
         {
             return _entryName;
@@ -29,7 +47,15 @@ namespace Calendar_System.EntrySubSystem
         {
             return _location;
         }
-        public List<User> GetUserList()
+        public int? GetId()
+        {
+            return _id;
+        }
+        public User GetCreator()
+        {
+            return _creator;
+        }
+        public IList<User> GetUserList()
         {
             return _userList;
         }
