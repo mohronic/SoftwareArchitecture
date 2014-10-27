@@ -5,7 +5,7 @@ using Calendar_System.AccountSubSystem;
 
 namespace Calendar_System.EntrySubSystem
 {
-    [Serializable()]
+    [Serializable]
     public class Entry : IEntry, ISerializable
     {
         private string _entryName;
@@ -69,9 +69,9 @@ namespace Calendar_System.EntrySubSystem
             _userList = (List<ProxyUser>)info.GetValue("UserList", typeof(List<ProxyUser>));
             _id = (int)info.GetValue("Id", typeof(int));
         }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
         {
+            
             info.AddValue("EntryName", _entryName);
             info.AddValue("StartTime", _startDate);
             info.AddValue("EndTime", _endDate);

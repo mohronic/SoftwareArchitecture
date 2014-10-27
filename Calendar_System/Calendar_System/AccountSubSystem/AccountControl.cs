@@ -7,7 +7,7 @@ namespace Calendar_System.AccountSubSystem
 {
     public class AccountControl
     {
-        private IAbstractStorage _abstractStorage;
+        private readonly IAbstractStorage _abstractStorage;
         public AccountControl(String message, IAbstractStorage abstractStorage)
         {
             _abstractStorage = abstractStorage;
