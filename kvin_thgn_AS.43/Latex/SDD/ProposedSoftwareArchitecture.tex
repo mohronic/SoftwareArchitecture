@@ -25,7 +25,8 @@ Control, model and view are still separated, but the logic has been split across
 \pagebreak
 
 \subsection{Hardware/software mapping}
-The figure shows the mapping of subsystems to hardware. All of the subsystems except ServerSubsystem are part of the client part of the system, meaning it runs on the computer a User is using. The ServerSubsystem runs on the centralised server, allowing all clients to use it’s functionality.
+The figure shows the mapping of subsystems to hardware. All of the subsystems except ServerSubsystem are part of the client part of the system, meaning it runs on the computer a User is using. 
+The StorageSubsystem runs on the client, communicating with the ServerSubsystem and in cases when the client is offline, uses the local cashed version of the calendar. The ServerSubsystem runs on the centralised server, allowing all clients to use it’s functionality.
 
 \begin{figure}[h]
 \centering

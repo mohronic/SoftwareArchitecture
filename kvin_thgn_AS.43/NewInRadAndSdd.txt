@@ -1,0 +1,5 @@
+RAD:
+Nothing new in RAD
+
+SDD:
+small change in HW/SW section, describing ServerSubsystem and StorageSubsystem.
