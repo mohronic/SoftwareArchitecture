@@ -6,7 +6,7 @@ using Calendar_System.WorkgroupSubSystem;
 
 namespace Calendar_System.StorageSubSystem
 {
-    class FileStorageImplementor : IStorage
+    public class FileStorageImplementor : IStorage
     {
         public bool IsConnected()
         {
@@ -86,6 +86,11 @@ namespace Calendar_System.StorageSubSystem
         }
 
         public ProxyUser CheckPassword(string userName, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetConnection(bool connection)
         {
             throw new NotImplementedException();
         }

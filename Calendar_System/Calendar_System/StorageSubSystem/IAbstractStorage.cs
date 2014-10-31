@@ -21,5 +21,6 @@ namespace Calendar_System.StorageSubSystem
         IList<Workgroup> GetAllWorkgroupsFromDb();
         void SyncAccount();
         void SetStorage(IStorage storage);
+        Workgroup GetWorkgroup(int workgroupId);
     }
 }

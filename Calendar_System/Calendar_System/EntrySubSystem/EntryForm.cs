@@ -255,6 +255,11 @@ namespace Calendar_System.EntrySubSystem
                 _entryControl.SendEntryToDb((ProxyUser)CalendarControl.User, _entry);
                 this.Dispose();
             }
+            else
+            {
+                Console.WriteLine(DateTime.MaxValue);
+                throw new UpdateFailedException();
+            }
         }
 
         private void _addWorkgroupButton_Click(object sender, EventArgs e)

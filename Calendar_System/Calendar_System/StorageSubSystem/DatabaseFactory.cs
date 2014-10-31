@@ -5,13 +5,23 @@
     /// This means that this class will be used in the factory pattern and the strategy pattern. We also felt
     /// that there was no need for a abstract factory - only a factory.
     /// </summary>
-    class DatabaseFactory
+    public class DatabaseFactory
     {
         private AbstractStorage _storage;
 
         public DatabaseFactory()
         {
+            _storage = new AbstractStorage(null);
+        }
 
+        public AbstractStorage GetDatabase()
+        {
+            if (_storage != null)
+            {
+                return _storage;
+            }
+            SetOfflineStorage();
+            return _storage;
         }
         public AbstractStorage CreateStorage(string databaseType)
         {

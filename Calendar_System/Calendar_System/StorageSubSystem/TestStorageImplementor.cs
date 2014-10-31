@@ -10,11 +10,13 @@ namespace Calendar_System.StorageSubSystem
     public class TestStorageImplementor : IStorage
     {
         private SortedList<int?, ProxyUser> _userList;
-        private int _userIdNumber;
+        private int _userId;
         private SortedList<int?, Workgroup> _workgroupList;
         private int _workgroupId;
+        private bool _connected;
         public TestStorageImplementor()
         {
+            SetConnection(true);
             _userList = new SortedList<int?, ProxyUser>();
             _workgroupList = new SortedList<int?, Workgroup>();
             var user1 = new ProxyUser("Hans", "Hansen", "hans@itu.dk", "42913392", "12345", true, 0, new List<Entry>());
@@ -23,15 +25,20 @@ namespace Calendar_System.StorageSubSystem
             var entry = new Entry(new DateTime(2014, 11, 10), new DateTime(2014, 12, 10), "Atrium", _userList.Values, "Meeting", 0, (int)user1.GetId());
             CreateEntryInitializationOnly(0, entry);
 
-            var workgroup1 = new Workgroup("Lecturers", _userList.Values, null);
-            CreateWorkgroup(workgroup1);
+            var workgroup1 = new Workgroup("Lecturers", _userList.Values, 0);
+            CreateWorkgroupInitializationOnly(workgroup1);
         }
-
+        private void CreateWorkgroupInitializationOnly(Workgroup workgroup)
+        {
+            if (!IsConnected()) { throw new NoConnectionException(); }
+            _workgroupList.Add(_workgroupId, workgroup);
+            _workgroupId++;
+        }
         private void CreateUserInitializationOnly(ProxyUser user)
         {
             if (!IsConnected()) { throw new NoConnectionException(); }
-            _userList.Add(_userIdNumber, user);
-            _userIdNumber++;
+            _userList.Add(_userId, user);
+            _userId++;
         }
         private void CreateEntryInitializationOnly(int userId, Entry entry)
         {
@@ -41,7 +48,7 @@ namespace Calendar_System.StorageSubSystem
 
         public bool IsConnected()
         {
-            return true;
+            return _connected;
         }
         public List<Entry> GetEntriesForUser(ProxyUser user)
         {
@@ -88,10 +95,10 @@ namespace Calendar_System.StorageSubSystem
 
         public void CreateUser(ProxyUser user)
         {
-            _userIdNumber++;
+            _userId++;
             if (!IsConnected()) { throw new NoConnectionException(); }
             if (user.GetId() != null) { throw new AlreadyInDatabaseException("User ID: " + user.GetId()); }
-            _userList.Add(_userIdNumber, user);
+            _userList.Add(_userId, user);
         }
 
         public void DeleteUser(int id)
@@ -146,7 +153,6 @@ namespace Calendar_System.StorageSubSystem
         public Workgroup GetWorkgroup(int workgroupId)
         {
             if (!IsConnected()) { throw new NoConnectionException(); }
-            if (!_workgroupList.ContainsKey(workgroupId)) { throw new NotInDatabaseException(); }
             Workgroup workgroup;
             if (!_workgroupList.TryGetValue(workgroupId, out workgroup)) { throw new NotInDatabaseException(); }
             return workgroup;
@@ -167,6 +173,11 @@ namespace Calendar_System.StorageSubSystem
                 }
             }
             return null;
+        }
+
+        public void SetConnection(bool connection)
+        {
+            _connected = connection;
         }
     }
 }

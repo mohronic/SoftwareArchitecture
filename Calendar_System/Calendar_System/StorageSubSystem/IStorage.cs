@@ -44,5 +44,6 @@ namespace Calendar_System.StorageSubSystem
         void DeleteWorkgroup(int workgroupId);
         void SyncAccount();
         ProxyUser CheckPassword(string userName, string password);
+        void SetConnection(bool connection);
     }
 }

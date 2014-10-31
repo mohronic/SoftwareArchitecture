@@ -71,7 +71,6 @@ namespace Calendar_System.Test
             int postCount = _abstractStorage.GetAllUsersFromDb().First().GetEntryList().Count;
             Assert.AreEqual(preCount + 1, postCount);
         }
-
         [TestMethod]
         [ExpectedException(typeof(AlreadyInDatabaseException))]
         public void CreateExistingEntryTest()

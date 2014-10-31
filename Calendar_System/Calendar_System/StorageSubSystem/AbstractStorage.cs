@@ -103,5 +103,15 @@ namespace Calendar_System.StorageSubSystem
         {
             _storage = storage;
         }
+
+        public IStorage GetStorage()
+        {
+            return _storage;
+        }
+
+        public Workgroup GetWorkgroup(int workgroupId)
+        {
+            return _storage.GetWorkgroup(workgroupId);
+        }
     }
 }

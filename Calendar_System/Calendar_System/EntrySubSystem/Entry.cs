@@ -17,39 +17,49 @@ namespace Calendar_System.EntrySubSystem
         // @Invariant: 0 <= _id || _id == null;
         private int? _id;
         private int _creatorId;
+
         public string GetEntryName()
         {
             return _entryName;
         }
+
         public DateTime GetStartDate()
         {
             return _startDate;
         }
+
         public DateTime GetEndDate()
         {
             return _endDate;
         }
+
         public string GetLocation()
         {
             return _location;
         }
+
         public IList<ProxyUser> GetUserList()
         {
             return _userList;
         }
+
         public int? GetId()
         {
             return _id;
         }
+
         public int GetCreatorId()
         {
             return _creatorId;
         }
+
         public Entry()
         {
 
         }
-        public Entry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList, String entryName, int? id, int creatorId)
+
+        public Entry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList,
+            String entryName, int? id, int creatorId)
         {
             _entryName = entryName;
             _startDate = startDateTime.Date;
@@ -62,16 +72,17 @@ namespace Calendar_System.EntrySubSystem
 
         public Entry(SerializationInfo info, StreamingContext ctxt)
         {
-            _entryName = (string)info.GetValue("EntryName", typeof(string));
-            _startDate = (DateTime)info.GetValue("StartTime", typeof(DateTime));
+            _entryName = (string) info.GetValue("EntryName", typeof (string));
+            _startDate = (DateTime) info.GetValue("StartTime", typeof (DateTime));
             _endDate = (DateTime) info.GetValue("EndTime", typeof (DateTime));
-            _location = (string)info.GetValue("Location", typeof(string));
-            _userList = (List<ProxyUser>)info.GetValue("UserList", typeof(List<ProxyUser>));
-            _id = (int)info.GetValue("Id", typeof(int));
+            _location = (string) info.GetValue("Location", typeof (string));
+            _userList = (List<ProxyUser>) info.GetValue("UserList", typeof (List<ProxyUser>));
+            _id = (int) info.GetValue("Id", typeof (int));
         }
+
         public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            
+
             info.AddValue("EntryName", _entryName);
             info.AddValue("StartTime", _startDate);
             info.AddValue("EndTime", _endDate);
@@ -79,13 +90,23 @@ namespace Calendar_System.EntrySubSystem
             info.AddValue("UserList", _userList);
             info.AddValue("Id", _id);
         }
+
         public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<ProxyUser> userList, string entryName)
         {
-            if(string.IsNullOrWhiteSpace(entryName))
+            if (string.IsNullOrWhiteSpace(entryName))
             {
                 return false;
             }
-            // If some check fails return false;
+            if (startDateTime < DateTime.Now || startDateTime > DateTime.MaxValue)
+            {
+                // Errorframe: Start time to early 
+                return false;
+            }
+            if (endDateTime > DateTime.MaxValue || endDateTime < startDateTime)
+            {
+                //Errorframe: End time too late
+                return false;
+            }
             _entryName = entryName;
             _startDate = startDateTime.Date;
             _endDate = endDateTime.Date;

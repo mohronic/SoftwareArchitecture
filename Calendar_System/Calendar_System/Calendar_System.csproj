@@ -59,6 +59,7 @@
     <Compile Include="EntrySubSystem\Adapter\GoogleInvoker.cs" />
     <Compile Include="EntrySubSystem\Adapter\ModifyEntryCommand.cs" />
     <Compile Include="EntrySubSystem\Adapter\SendEntriesCommand.cs" />
+    <Compile Include="EntrySubSystem\UpdateFailedException.cs" />
     <Compile Include="MainSystem\AdminControl.cs" />
     <Compile Include="MainSystem\CalendarControl.cs" />
     <Compile Include="EntrySubSystem\EntryControl.cs" />

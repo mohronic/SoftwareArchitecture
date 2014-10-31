@@ -6,14 +6,11 @@ using Calendar_System.WorkgroupSubSystem;
 
 namespace Calendar_System.StorageSubSystem
 {
-    class DatabaseStorageImplementor : IStorage
+    public class DatabaseStorageImplementor : IStorage
     {
         public bool IsConnected()
         {
-            // Mock connect
-            var random = new Random();
-            var next = random.Next(2);
-            return next.Equals(0);
+            throw new NotImplementedException();
         }
         public List<Entry> GetEntriesForUser(ProxyUser user)
         {
@@ -88,6 +85,11 @@ namespace Calendar_System.StorageSubSystem
         }
 
         public ProxyUser CheckPassword(string userName, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetConnection(bool connection)
         {
             throw new NotImplementedException();
         }
