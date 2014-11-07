@@ -257,7 +257,6 @@ namespace Calendar_System.EntrySubSystem
             }
             else
             {
-                Console.WriteLine(DateTime.MaxValue);
                 throw new UpdateFailedException();
             }
         }

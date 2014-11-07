@@ -71,7 +71,7 @@ namespace Calendar_System.EntrySubSystem
         {
             return _entryList.ElementAt(index);
         }
-        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<ProxyUser> userList, String entryName)
+        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList, String entryName)
         {
             if (string.IsNullOrWhiteSpace(entryName))
             {

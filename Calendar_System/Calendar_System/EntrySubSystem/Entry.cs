@@ -53,9 +53,9 @@ namespace Calendar_System.EntrySubSystem
             return _creatorId;
         }
 
-        public Entry()
+        public Entry(int creatorId)
         {
-
+            _creatorId = creatorId;
         }
 
         public Entry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList,
@@ -90,8 +90,17 @@ namespace Calendar_System.EntrySubSystem
             info.AddValue("UserList", _userList);
             info.AddValue("Id", _id);
         }
-
-        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<ProxyUser> userList, string entryName)
+        /// <summary>
+        /// Updates the entry information. Returns true, if the information was updated and false if it failed.
+        /// </summary>
+        /// <param name="startDateTime">Date and time of the start of the entry. Method returns false, if it is before now.</param>
+        /// <param name="endDateTime">Date and time of the end of the entry. Method returns false, if it is before now, or 
+        /// if it is before startDateTime.</param>
+        /// <param name="location">Location of the entry. Method doesn't check for location = null or whitespace.</param>
+        /// <param name="userList">List of users invited to the entry. Method doesn't check, if list is null, empty or not empty.</param>
+        /// <param name="entryName">Name of the entry. Method returns false, if it is null or whitespace.</param>
+        /// <returns></returns>
+        public bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList, string entryName)
         {
             if (string.IsNullOrWhiteSpace(entryName))
             {

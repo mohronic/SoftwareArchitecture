@@ -50,12 +50,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DatabaseFactoryStateBasedTest.cs" />
-    <Compile Include="StorageImplementorPolymorphismTest.cs" />
-    <Compile Include="UpdateEntryEquivalenceTest.cs" />
-    <Compile Include="TestStorageImplementationTest.cs" />
+    <Compile Include="DatabaseFactoryTest.cs" />
+    <Compile Include="EntryTest.cs" />
+    <Compile Include="AbstractStorageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CreateWorkgroupWhiteboxTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Calendar_System\Calendar_System.csproj">

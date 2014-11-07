@@ -10,17 +10,19 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Calendar_System.Test
 {
     [TestClass]
-    public class TestStorageImplementationTest
+    public class AbstractStorageTest
     {
         private ProxyUser _user;
         private Entry _entry;
         private List<Entry> _entryList; 
         private AbstractStorage _abstractStorage;
+        private IStorage _storage;
 
         [TestInitialize]
         public void SetUpTests()
         {
-            _abstractStorage = new AbstractStorage(new TestStorageImplementor());
+            _storage = new TestStorageImplementor();
+            _abstractStorage = new AbstractStorage(_storage);
         }
         /// <summary>
         /// Test for create entry, just close the window when it runs, since it isn't needed.
@@ -66,7 +68,7 @@ namespace Calendar_System.Test
             _user = _abstractStorage.GetAllUsersFromDb().First();
             _entryList = _user.GetEntryList();
             int preCount = _entryList.Count;
-            _entry = new Entry();
+            _entry = new Entry((int)_user.GetId());
             _abstractStorage.SendEntryToDb(_user, _entry);
             int postCount = _abstractStorage.GetAllUsersFromDb().First().GetEntryList().Count;
             Assert.AreEqual(preCount + 1, postCount);
@@ -98,6 +100,27 @@ namespace Calendar_System.Test
             _abstractStorage.DeleteEntryFromDb(_user, _entry);
             int postCount = _abstractStorage.GetAllUsersFromDb().First().GetEntryList().Count;
             Assert.AreEqual(preCount - 1, postCount);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(NoConnectionException))]
+        public void NoConnectionExeptionTest()
+        {
+            _storage.SetConnection(false);
+            _abstractStorage.GetWorkgroup(2);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(NotInDatabaseException))]
+        public void NotInDatabaseExceptionTest()
+        {
+            _storage.SetConnection(true);
+            _abstractStorage.GetWorkgroup(1000);
+        }
+        [TestMethod]
+        public void GetWorkgroupTest()
+        {
+            var workgroup = _abstractStorage.GetAllWorkgroupsFromDb().First();
+            var workgroupId = workgroup.GetId();
+            Assert.AreEqual(workgroup, _abstractStorage.GetWorkgroup((int)workgroupId));
         }
     }
 }

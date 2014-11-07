@@ -13,6 +13,6 @@ namespace Calendar_System.EntrySubSystem
         IList<ProxyUser> GetUserList();
         int GetCreatorId();
         int? GetId();
-        bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, List<ProxyUser> userList, String entryName);
+        bool UpdateEntry(DateTime startDateTime, DateTime endDateTime, String location, IList<ProxyUser> userList, String entryName);
     }
 }

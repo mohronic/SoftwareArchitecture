@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Calendar_System.AccountSubSystem;
+using Calendar_System.MainSystem;
 using Calendar_System.StorageSubSystem;
 
 namespace Calendar_System.EntrySubSystem
@@ -27,7 +28,7 @@ namespace Calendar_System.EntrySubSystem
         // Creates a new EntryForm from scratch.
         public void EntryFormCreateEntry()
         {
-            var entryForm = new EntryForm(this, new Entry());
+            var entryForm = new EntryForm(this, new Entry((int)CalendarControl.User.GetId()));
             entryForm.Show();
         }
         // Creates a new EntryForm with an already existing Entry. Used when modifying an existing Entry.
