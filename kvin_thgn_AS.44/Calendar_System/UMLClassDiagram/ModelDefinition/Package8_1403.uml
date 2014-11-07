@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="511d1654-7297-4634-91ac-6cc8446b9129"
+  name="AccountSubSystem"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="0051c168-60a1-4c26-bbba-152ebfc9ef2a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCalendar_System.AccountSubSystem"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="eb736c55-897c-487d-a29b-15925fb92323"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c6d3ac03-d3c8-4c3d-980c-d637a3a72eea"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTrondur%2FDocuments%2FGitHub%2FSoftwareArchitecture%2FCalendar_System%2FCalendar_System%2Fbin%2FDebug%2FCalendar_System.exe Namespace%3DCalendar_System.AccountSubSystem Type%3DUser"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ab7e4a07-340c-49bc-b3c7-942514e403fd"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c991d76-6de5-4b21-b6b1-ae51fd462223">
+                <propertyInstance
+                  Id="637b0240-e429-4f37-ad6c-0493ceb76018"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d4f362f0-9eb6-4a3f-97b8-ccd39960614c">
+                <propertyInstance
+                  Id="a5df7788-f88e-48d3-a7d5-0b26c27a36cd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="18833017-0a5b-45cd-9cf6-8206b6ec25b9">
+                <propertyInstance
+                  Id="88d293f6-1a74-43d7-90bf-9be6fcf9e429"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2fe9dde3-c5da-441c-8df4-582a78a63b9d">
+                <propertyInstance
+                  Id="2836786d-faf9-4c4f-8d72-d27ed32a2c92"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="16853d24-fc2c-4641-b3fe-0df81a10e70e">
+                <propertyInstance
+                  Id="709dc0ca-a221-4c04-aea2-3743066b1e6c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
