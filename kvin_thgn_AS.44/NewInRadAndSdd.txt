@@ -1,5 +1,0 @@
-RAD:
-Nothing new in RAD
-
-SDD:
-Small change to service diagram
